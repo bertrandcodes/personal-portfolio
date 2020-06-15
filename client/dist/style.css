@@ -142,3 +142,105 @@ box-shadow: inset 0.2em 0.2em 0.3em rgba(0,0,0,0.5);
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
+
+/*
+  ========================================
+  Home
+  ========================================
+*/
+
+/*
+  ========================================
+  Applications
+  ========================================
+*/
+
+/*
+  ========================================
+  Blog
+  ========================================
+*/
+
+.blog-section {
+    max-width: 680px;
+    margin: 60px auto 25px auto;
+    width: 100%;
+}
+
+h2 {
+    font-weight: normal;
+    margin-top: -10px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+h4 {
+    font-weight: normal;
+    font-style: italic;
+}
+
+.blog-container {
+    /* max-width: 680px; */
+    margin: 25px auto 25px auto;
+    /* width: 100%; */
+}
+
+.blog-text {
+    text-align: left;
+    line-height: 32px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 21px;
+    letter-spacing: -0.003em;
+    font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.blog-image {
+    max-width: 100%;
+    display: block;
+    margin: 40px auto 40px auto;
+}
+
+.blog-question {
+    text-align: left;
+    color: grey;
+    line-height: 32px;
+    margin-top: 2em;
+    font-size: 21px;
+    letter-spacing: -0.003em;
+    margin-bottom: -0.46em;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.asterisk {
+    text-align: left;
+    font-style: italic;
+    color: red;
+    line-height: 32px;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/*
+  ========================================
+  Resume
+  ========================================
+*/
+
+.pdfContainer {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 960px;
+    text-align: center;
+    padding: 0;
+  }
+
+/*
+  ========================================
+  Contact
+  ========================================
+*/

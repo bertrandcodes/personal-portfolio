@@ -31,6 +31,7 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-use": "15.2.4",
     "react-router-dom": "5.2.0",
     "path": "0.12.7",
     "express": "4.17.1",
