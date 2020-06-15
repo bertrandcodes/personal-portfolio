@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
+import ScrollIndicator from './ScrollIndicator.jsx';
 
 export default function Blog() {
 
   return (
     <div className="blog-section">
+      <ScrollIndicator/>
       <div className="blog-container">
         <center>
           <h1>A Dive Into System Design</h1>
