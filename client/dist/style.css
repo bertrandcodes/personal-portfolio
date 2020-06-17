@@ -1,7 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Muli:wght@300&family=Open+Sans:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Muli:wght@300&family=Open+Sans:wght@300&display=swap'); */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 body {
-    font-family: "Century Gothic", 'Lato', sans-serif;
+    /* font-family: "Century Gothic", 'Lato', sans-serif; */
+    font-family: Bowlby One SC;
+    /* background-color: rgb(230, 230, 230); */
 }
 
 /*
@@ -31,14 +81,16 @@ z-index: 10;
 }
 
 .et-hero-tab {
+font-family: "Century Gothic", 'Lato', sans-serif;
 display: flex;
 justify-content: center;
 align-items: center;
 flex: 1;
-color: #000;
+/* color: #000; */
+color: rgb(112, 112, 112);
 letter-spacing: 0.1rem;
 transition: all 0.5s ease;
-text-decoration: none;
+text-decoration: none !important;
 }
 
 .et-hero-tab:hover:not(.et-hero-tab--active) {
@@ -48,12 +100,22 @@ transition: all 0.5s ease;
 }
 
 .et-hero-tab--active {
-color:white;
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 1;
+/* color: rgb(112, 112, 112) !important; */
+color: black !important;
+letter-spacing: 0.1rem;
+transition: all 0.5s ease;
+text-decoration: none !important;
+/* color:white !important;
 text-shadow: 1.25px 1.25px rgb(71, 71, 71);
 transition: all 0.2s linear;
-background: rgba(178, 185, 192, 0.945);
-box-shadow: inset 0.2em 0.2em 0.3em rgba(0,0,0,0.5);
+background: rgb(165, 171, 173);
+box-shadow: inset 0.2em 0.2em 0.3em rgba(0,0,0,0.5); */
 
+/* background: rgb(147, 199, 255); */
 /* box-shadow: inset 3px 3px 0px 0px rgba(0,0,0,0.5); */
 }
 
@@ -103,19 +165,6 @@ box-shadow: inset 0.2em 0.2em 0.3em rgba(0,0,0,0.5);
     }
 }
 
-/* .et-hero-tabs-container--active {
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: rgb(214, 214, 214);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(0%);
-    transition: transform 0.5s ease-in;
-} */
 .et-hero-tabs-container--active {
     transform: translateX(0%);
 }
@@ -149,6 +198,156 @@ box-shadow: inset 0.2em 0.2em 0.3em rgba(0,0,0,0.5);
   ========================================
 */
 
+.background-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 50% 0%;
+    z-index: -1;
+}
+
+.overlay {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+.background-div {
+    position : relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 4%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.about-me {
+    position: absolute;
+    color: white;
+    letter-spacing: 0.003em;
+    height: 60px;
+    padding-top: 15px;
+    overflow: hidden;
+    /* font-style: italic; */
+}
+
+.line-1{
+    /* position: relative; */
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border-right: 2px solid rgba(255,255,255,.75);
+    /* font-family: Bowlby One SC; */
+    /* font-size: 180%; */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+.anim-typewriter{
+    animation: typewriter 2.5s steps(44) 1s 1 normal both,
+               blinkTextCursor 1s steps(44) 12 normal;
+    border-right: .15em solid transparent;
+
+  }
+  @keyframes typewriter{
+    0% {width: 0;}
+    15% {width: 4.3em;}
+    30% {width: 4.3em;}
+    100% {width: 15.5em;}
+    /* from{width: 0;}
+    to{width: 15.4em;} */
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+  .experiences {
+      /* font-family: 'Bungee'; */
+      font-size: 16px;
+      color: white;
+      /* transform: scaleY(1.2); */
+      text-align: center;
+      width: 100%;
+      animation: slide 3.5s ease-in;
+      animation-delay: 1s;
+      animation-fill-mode: both;
+      /* text-shadow: 1px 1px black; */
+}
+
+@keyframes slide {
+    0% {margin-top: 120px;
+    opacity: 0;}
+    100% {margin-top: 0px;
+    opacity: 1;}
+}
+
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+
+.home-button {
+    position: absolute;
+    bottom: 199px;
+    width: 100px;
+    text-decoration: none;
+    animation: buttonFade 5s;
+}
+
+@keyframes buttonFade {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+a.animated-button.thar-three {
+    color: #fff;
+    /* color: rgb(247, 143, 24); */
+	cursor: pointer;
+	display: block;
+	position: relative;
+	border: 2px solid rgb(247, 143, 24);
+	transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+a.animated-button.thar-three:hover {
+	color: white !important;
+	background-color: rgb(247, 143, 24);
+	text-shadow: nthree;
+}
+a.animated-button.thar-three:hover:before {
+	left: 0%;
+	right: auto;
+	width: 100%;
+}
+a.animated-button.thar-three:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 0px;
+	z-index: -1;
+	content: '';
+	color: #000 !important;
+	background: rgb(247, 143, 24);
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
 /*
   ========================================
   Applications
@@ -165,6 +364,7 @@ box-shadow: inset 0.2em 0.2em 0.3em rgba(0,0,0,0.5);
     max-width: 680px;
     margin: 60px auto 25px auto;
     width: 100%;
+    font-family: "Century Gothic", 'Lato', sans-serif;
 }
 
 h2 {
