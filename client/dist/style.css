@@ -57,7 +57,11 @@ table {
 body {
   /* font-family: "Century Gothic", 'Lato', sans-serif; */
   font-family: Bowlby One SC;
-  background-color: #f3f3f3;
+  background-color: #e2e2e296;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /*
@@ -541,7 +545,8 @@ nav {
   text-transform: uppercase;
   color: white;
   background-color: black;
-  border: none;
+  border: none !important;
+  outline: 0 !important;
 }
 
 .btn:hover {
@@ -550,6 +555,7 @@ nav {
 
 .btn:focus {
   outline: 0;
+  box-shadow: none !important;
 }
 
 @media (hover: hover) and (min-width: 600px) {
@@ -622,13 +628,16 @@ marquee {
 }
 
 .app-div {
+  display: flex;
+  flex-direction: column;
   border: 4px double silver;
   margin: 45px 45px;
   padding: 45px 45px 45px 45px;
   border-radius: 24px;
-  height: 750px;
+  height: 1000px;
   width: 90%;
   box-shadow: 1px 1px 4px black;
+  background-color: white;
 }
 
 .app-text {
@@ -642,6 +651,41 @@ marquee {
   border-top: 3px solid black;
   margin: 1.5em 0;
   padding: 0;
+}
+
+.video {
+  display: block;
+  width: 90%;
+  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.app-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  height: 100%;
+}
+
+.app-bullets {
+  margin: auto;
+  height: 100%;
+  width: 70%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+.app-github {
+  margin: auto;
+}
+
+ul {
+  list-style: circle;
+}
+
+li {
+  margin: 15px 0;
 }
 
 /*
