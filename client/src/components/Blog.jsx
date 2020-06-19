@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ScrollIndicator from './ScrollIndicator.jsx';
 
 export default function Blog() {
