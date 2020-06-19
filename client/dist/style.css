@@ -57,7 +57,7 @@ table {
 body {
   /* font-family: "Century Gothic", 'Lato', sans-serif; */
   font-family: Bowlby One SC;
-  background-color: #e2e2e296;
+  background-color: #e2e2e296 !important;
 }
 
 html {
@@ -245,7 +245,9 @@ nav {
   letter-spacing: 0.003em;
   height: 60px;
   padding-top: 15px;
+  font-size: 16px;
   overflow: hidden;
+  font-family: Bowlby One SC;
   /* font-style: italic; */
 }
 
@@ -254,7 +256,7 @@ nav {
   top: 50%;
   width: 24em;
   margin: 0 auto;
-  margin-bottom: 5px;
+  margin-bottom: -5px;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   /* font-family: Bowlby One SC; */
   /* font-size: 180%; */
@@ -317,7 +319,8 @@ nav {
   }
 }
 .button_body {
-  font-family: Roboto;
+  /* font-family: "Century Gothic", 'Lato', sans-serif; */
+  font-family: Bowlby One SC;
   height: 500px;
   position: absolute;
   width: 100vw;
@@ -535,7 +538,7 @@ nav {
   line-height: 1.35;
 }
 
-.btn {
+.btn1 {
   cursor: pointer;
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
@@ -549,11 +552,11 @@ nav {
   outline: 0 !important;
 }
 
-.btn:hover {
+.btn1:hover {
   background-color: #0d0d0d;
 }
 
-.btn:focus {
+.btn1:focus {
   outline: 0;
   box-shadow: none !important;
 }
@@ -608,7 +611,6 @@ nav {
 }
 .marquee-div {
   margin-left: 50px;
-  height: 50px;
   margin-right: 50px;
   background-color: #fde3a9;
 }
@@ -634,7 +636,6 @@ marquee {
   margin: 45px 45px;
   padding: 45px 45px 45px 45px;
   border-radius: 24px;
-  height: 1000px;
   width: 90%;
   box-shadow: 1px 1px 4px black;
   background-color: white;
@@ -668,12 +669,57 @@ marquee {
   height: 100%;
 }
 
+.tech-bar {
+  display: block;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  margin: 50px 50px 50px 50px;
+  width: 90%;
+  padding: 0;
+}
+
+.tech-used {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16 px;
+  word-spacing: 80px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 1200px) {
+  .tech-used {
+    word-spacing: 55px;
+  }
+}
+@media (max-width: 900px) {
+  .tech-used {
+    word-spacing: 35px;
+  }
+}
+@media (max-width: 730px) {
+  .tech-used {
+    word-spacing: 5px;
+  }
+}
 .app-bullets {
   margin: auto;
-  height: 100%;
-  width: 70%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 20px;
+}
+
+.info-button {
+  background-image: url(./info.png);
+  background-position: center;
+  background-size: contain;
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+  outline: none !important;
+  transition: 0.5s;
+}
+
+.info-button:hover {
+  border-radius: 10px;
+  transition: 0.5s;
 }
 
 .app-github {
@@ -682,10 +728,38 @@ marquee {
 
 ul {
   list-style: circle;
+  margin-right: 7%;
+  margin-left: 7%;
 }
 
 li {
   margin: 15px 0;
+}
+
+button {
+  outline: none !important;
+}
+
+.github-button {
+  background-image: url(./github.png);
+  background-position: center;
+  background-size: contain;
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  outline: none !important;
+  transition: 0.5s;
+}
+
+.github-button:hover {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.github-text {
+  margin: 10px;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 /*
@@ -698,6 +772,7 @@ li {
   margin: 60px auto 25px auto;
   width: 100%;
   font-family: "Century Gothic", "Lato", sans-serif;
+  font-weight: 200;
 }
 
 h2 {
