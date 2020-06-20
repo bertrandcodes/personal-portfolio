@@ -487,6 +487,59 @@ nav {
 
 /*
   ========================================
+  About
+  ========================================
+*/
+#about-body {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-image: url(./1.jpg);
+  background-size: cover;
+}
+
+.about-main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4%;
+  height: 80vh;
+  width: 100%;
+}
+
+.about-image {
+  background-image: url(./botanical.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-left: 10%;
+  height: 100%;
+  width: 40%;
+}
+
+.about-border {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 5%;
+  height: 100%;
+  width: 40%;
+  -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 20px, black 21px);
+}
+
+.about-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 12%;
+  opacity: 1 !important;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+
+/*
+  ========================================
   Applications
   ========================================
 */
@@ -956,9 +1009,5 @@ h4 {
   Contact
   ========================================
 */
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
