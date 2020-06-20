@@ -57,7 +57,9 @@ table {
 body {
   /* font-family: "Century Gothic", 'Lato', sans-serif; */
   font-family: Bowlby One SC;
-  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  // height: 100%;
 //   background-color: #f3f3f3;
 background-color: #e2e2e296 !important;
 }
@@ -65,6 +67,10 @@ background-color: #e2e2e296 !important;
 html {
     scroll-behavior: smooth;
     height: 100%;
+}
+
+#app {
+  min-height: 100vh;
 }
 
 /*
@@ -77,10 +83,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #d6d6d6;
+  // background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
   top: 5px;
   position: sticky;
   z-index: 10;
+  // opacity: 0.7;
   /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); */
 }
 
@@ -91,7 +99,9 @@ nav {
   width: 100%;
   height: 70px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
-  background: #fff;
+  // background: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  // opacity: 0.7;
   z-index: 10;
   /* position: sticky; */
 }
@@ -103,7 +113,7 @@ nav {
   align-items: center;
   flex: 1;
   /* color: #000; */
-  color: #707070;
+  color: rgb(112, 112, 112);
   letter-spacing: 0.1rem;
   transition: all 0.5s ease;
   text-decoration: none !important;
@@ -111,8 +121,9 @@ nav {
 
 .et-hero-tab:hover:not(.et-hero-tab--active) {
   color: black;
-  background: #e7e7e7;
+  background: rgb(231, 231, 231, 0.7);
   transition: all 0.5s ease;
+  color: rgb(112, 112, 112);
 }
 
 .et-hero-tab--active {
@@ -120,23 +131,16 @@ nav {
   justify-content: center;
   align-items: center;
   flex: 1;
-  /* color: rgb(112, 112, 112) !important; */
   color: black !important;
   letter-spacing: 0.1rem;
   transition: all 0.5s ease;
   text-decoration: none !important;
-  /* color:white !important;
-  text-shadow: 1.25px 1.25px rgb(71, 71, 71);
-  transition: all 0.2s linear;
-  background: rgb(165, 171, 173);
-  box-shadow: inset 0.2em 0.2em 0.3em rgba(0,0,0,0.5); */
-  /* background: rgb(147, 199, 255); */
-  /* box-shadow: inset 3px 3px 0px 0px rgba(0,0,0,0.5); */
 }
 
 .burger {
   display: none;
   cursor: pointer;
+  // margin-top: 15px;
 }
 
 .burger div {
@@ -144,6 +148,8 @@ nav {
   height: 3px;
   background-color: black;
   margin: 5px;
+  margin-right: auto;
+  margin-left: auto;
   transition: all 0.3s ease;
 }
 
@@ -157,12 +163,20 @@ nav {
     overflow-x: hidden;
   }
 
+  nav {
+    background-color: white;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    // opacity: 1;
+  }
+
   .et-hero-tabs-container {
     position: absolute;
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: #d6d6d6;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,6 +184,7 @@ nav {
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
     box-shadow: none;
+    // opacity: 1;
   }
 
   .et-hero-tab {
@@ -179,6 +194,13 @@ nav {
 
   .burger {
     display: block;
+    position: relative;
+    // float: right;
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // right: 0;
+    // left: 0;
   }
 }
 .et-hero-tabs-container--active {
@@ -284,7 +306,7 @@ nav {
   margin-bottom: 30px;
   height: 100px;
   width: 100px;
-  z-index: 100;
+  z-index: 9;
   border-radius: 50%;
   animation: faceFade 1.35s;
   border-style: ridge;
@@ -505,19 +527,30 @@ nav {
 
 #about-body{
   position: absolute;
-  height: 100vh;
+  top: 0;
+  height: 100%;
   width: 100%;
   background-image: url(./1.jpg);
   background-size: cover;
+  animation: aboutFade 1s;
   // background-color: rgb(61, 131, 61);
   // background-color: rgb(245, 232, 46);
   // background-color: rgb(112, 112, 112);
 }
 
+@keyframes aboutFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .about-main {
   display: flex;
   flex-direction: row;
-  margin-top: 4%;
+  margin-top: 10%;
   height: 80vh;
   width: 100%;
 }
@@ -530,6 +563,18 @@ nav {
   margin-left: 10%;
   height: 100%;
   width: 40%;
+  animation: aboutImageEntry 1s;
+}
+
+@keyframes aboutImageEntry {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .about-border {
@@ -541,6 +586,18 @@ nav {
   height: 100%;
   width: 40%;
   -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 20px, black 21px);
+  animation: aboutTextEntry 1s;
+}
+
+@keyframes aboutTextEntry {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .about-text {
