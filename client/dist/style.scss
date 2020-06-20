@@ -308,18 +308,20 @@ nav {
   width: 100px;
   z-index: 9;
   border-radius: 50%;
-  animation: faceFade 1.35s;
+  // animation: faceFade 1.35s;
+  // animation: faceFade 1.5s;
+  animation: faceFade 2.2s;
   border-style: ridge;
   border-width: 5px;
   border-color: grey;
   // transition: 0.1s linear;
 }
 
-.my-face:hover {
-  height: 103px;
-  width: 103px;
-  // transition: 0.1s linear;
-}
+// .my-face:hover {
+//   height: 103px;
+//   width: 103px;
+//   // transition: 0.1s linear;
+// }
 
 @keyframes faceFade {
   0% {
@@ -448,6 +450,10 @@ nav {
 }
 .button:hover .button__border-circle {
   transform: translateX(60px);
+  // background-image: url(./1.jpg);
+  // background-attachment: fixed;
+  // transition: 0.5s ease-in;
+  // z-index: 100;
 }
 
 .button:hover .button__mask-circle {
@@ -550,7 +556,7 @@ nav {
 .about-main {
   display: flex;
   flex-direction: row;
-  margin-top: 10%;
+  margin-top: 8%;
   height: 80vh;
   width: 100%;
 }
@@ -560,9 +566,9 @@ nav {
   background-position: center;
   background-size: cover;
   position: relative;
-  margin-left: 10%;
+  margin-left: 9%;
   height: 100%;
-  width: 40%;
+  width: 35%;
   animation: aboutImageEntry 1s;
 }
 
@@ -582,10 +588,12 @@ nav {
   // background-color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.3);
   // opacity: 0.5;
-  margin-left: 5%;
-  height: 100%;
-  width: 40%;
-  -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 20px, black 21px);
+  margin-left: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  height: 90%;
+  width: 45%;
+  // -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 20px, black 21px);
   animation: aboutTextEntry 1s;
 }
 
