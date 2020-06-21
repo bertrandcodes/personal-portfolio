@@ -39,7 +39,7 @@ class Navbar extends React.Component {
                 <div className="et-hero-tabs-container">
                     {/* <div className={burger ? "et-hero-tabs-container--active" : "et-hero-tabs-container"}> */}
                         <NavLink exact activeClassName="et-hero-tab--active" className="et-hero-tab" to="/">Home</NavLink>
-                        <NavLink activeClassName="et-hero-tab--active" className="et-hero-tab" to="/about">About Me</NavLink>
+                        <NavLink activeClassName="et-hero-tab--active" className="et-hero-tab" to="/about">About</NavLink>
                         <NavLink activeClassName="et-hero-tab--active" className="et-hero-tab" to="/applications">Applications</NavLink>
                         <NavLink activeClassName="et-hero-tab--active" className="et-hero-tab" to="/blog">Blog</NavLink>
                         <NavLink activeClassName="et-hero-tab--active" className="et-hero-tab" to="/resume">Resume</NavLink>

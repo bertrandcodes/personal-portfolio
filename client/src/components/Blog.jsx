@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ScrollIndicator from './ScrollIndicator.jsx';
 
 export default function Blog() {
@@ -166,7 +166,7 @@ export default function Blog() {
       </div>
       <h3>Conclusion</h3>
       <div className="blog-container">
-        <p className="blog-text">At the end of the day, we learned a lot about what it takes for a production level site to handle traffic.
+        <p className="blog-text">At the end of the day, my team and I learned a lot about what it takes for a production level site to handle traffic.
         We were exposed to the limitations of certain strategies and realized that tradeoffs were required when it came to optimizing a server. As it holds true for most cases in programming, there’s no one-size-fits-all method for server improvement. Overall, the main take away would be to keep benchmarking and testing new strategies to further optimize results. I hope you enjoyed following me on this journey and gained some knowledge or even inspiration from it. Remember, stay focused and always stay learning!</p>
       </div>
     </div>
