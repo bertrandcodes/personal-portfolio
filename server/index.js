@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const router = require('./router');
 
 const port = 9001;
 const app = express();
@@ -16,5 +17,8 @@ app.get('/*', function(req, res) {
       }
     })
   })
+
+app.use('/', router)
+
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

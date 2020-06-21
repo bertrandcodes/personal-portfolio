@@ -3,9 +3,15 @@ import React, { Fragment } from 'react';
 export default function About () {
 
     return(
-      <Fragment>
-          <p>about</p>
-          <p>see my projects</p>
-      </Fragment>
+      <div id="about-body">
+      <div className="about-main">
+          <div className="about-image"/>
+          <div className="about-border">
+            <div className="about-text">
+              
+            </div>
+          </div>
+      </div>
+      </div>
     );
   };
