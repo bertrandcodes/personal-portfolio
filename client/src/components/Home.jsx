@@ -7,10 +7,10 @@ export default function Home() {
     <div className="main">
       <div className="background-div">
         <div className="overlay" />
-        <video autoPlay={true} loop={true} muted={true}>
-          <source src="typing.mp4" type="video/mp4" />
+        {/* <video autoPlay={true} loop={true} muted={true}> */}
+          {/* <source src="typing.mp4" type="video/mp4"/> */}
           <img className="background-image" src="sample.jpg" alt="mountains and lake"></img>
-        </video>
+        {/* </video> */}
         {/* <img className="background-image" src="sample.jpg"></img> */}
 
         <div className="home-body">
