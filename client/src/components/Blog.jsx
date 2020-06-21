@@ -11,7 +11,7 @@ export default function Blog() {
           <h1>A Dive Into System Design</h1>
           <h2>Operationalize and Scale a Web App</h2>
         </center>
-        <img className="blog-image" src="servers.jpg"></img>
+        <img className="blog-image" src="servers.jpg" alt="graphic depicting computer servers the cloud"></img>
       </div>
       <div className="blog-container">
         <p className="blog-question"><i>What does it take to generate and insert ten million data points into a database efficiently? What strategies can we implement to handle thousands of user requests per second on our service?</i></p>
@@ -29,11 +29,11 @@ export default function Blog() {
       <div className="blog-container">
         <p className="blog-text">With a generator function up and running, I ran into a new challenge. Turns out writing data into a JSON file temporarily took up a sizable chunk of RAM space. How was I supposed to run this function ten million times without overloading my machine? After some digging, I found the answer in “fs.createWriteStream” and its “drain” method.</p>
       </div>
-      <img className="blog-image" src="drain.jpg"></img>
+      <img className="blog-image" src="drain.jpg" alt="code for drain and stream"></img>
       <div className="blog-container">
         <p className="blog-text">According to <a href="https://areknawo.com/node-js-file-streams-explained/" target="_blank">documentation</a>, everytime we call the write() method we write data to an internal buffer. Once this buffer reaches its capacity (or exceeds its highWaterMark property), the drain event fires to prevent more data from being written while simultaneously “flushing” the previously occupied memory. Doing so prevents high memory bottlenecks and crashes.</p>
       </div>
-      <img className="blog-image" src="finished.jpg"></img>
+      <img className="blog-image" src="finished.jpg" alt="finished in 256.51 seconds"></img>
       <div className="blog-container">
         <p className="blog-text">And just like that, I had successfully occupied my JSON file with 10 million unique nike shoe objects in a little under 5 minutes.*</p>
       </div>
@@ -56,11 +56,11 @@ export default function Blog() {
       <h4>
         MongoDB:
       </h4>
-      <img className="blog-image" src="mongospeed.jpg"></img>
+      <img className="blog-image" src="mongospeed.jpg" alt="query speed on mongodb"></img>
       <h4>
         PostgreSQL:
       </h4>
-      <img className="blog-image" src="postgresspeed.jpg"></img>
+      <img className="blog-image" src="postgresspeed.jpg" alt="query speed on postgresql"></img>
       <div className="blog-container">
         <p className="blog-text">Sure enough, PostgreSQL saw an all around faster querying speed.</p>
       </div>
@@ -68,15 +68,15 @@ export default function Blog() {
       <div className="blog-container">
         <p className="blog-text">Now it was time to simulate virtual users making multiple queries on our local machine. I opted to use <a href="https://k6.io/open-source/" target="_blank">k6</a> as it mimicked traffic spikes by rapidly increasing and decreasing the load in stages.</p>
       </div>
-      <img className="blog-image" src="k6.jpg"></img>
+      <img className="blog-image" src="k6.jpg" alt="k6 setup"></img>
       <div className="blog-container">
         <p className="blog-text">What this test is saying is that over the duration of ‘X’ seconds, slowly ramp up to ‘X’ amount of virtual users making requests. At our breaking point, we aimed to ramp up to 300 requests over 20 seconds. While certainly not a lot to handle, it was interesting to see how it would affect the speed of my laptop’s response time (otherwise known as latency).</p>
       </div>
-      <img className="blog-image" src="k6metrics.jpg"></img>
+      <img className="blog-image" src="k6metrics.jpg" alt="k6 metrics"></img>
       <div className="blog-container">
         <p className="blog-text">While the above data may seem confusing at first, pay close attention to the line "http_req_waiting". This represents the time waiting for a response from the remote host. <a href="https://newrelic.com/" target="_blank">New Relic</a> does a clearer job of depicting the latency.</p>
       </div>
-      <img className="blog-image" src="newrelic.jpg"></img>
+      <img className="blog-image" src="newrelic.jpg" alt="newrelic metrics"></img>
       <div className="blog-container">
         <p className="blog-text">On average, a request takes 365 ms to process. According to k6, at the peak of 300 virtual users, a request could take as long as two whole seconds! Compared to individual query times of around 1-2 ms, this was certainly a loss in performance. To do better, we needed to scale.</p>
       </div>
@@ -87,11 +87,11 @@ export default function Blog() {
       <div className="blog-container">
         <p className="blog-text">Starting off with a single instance, I simulated 500 responses per second (RPS) over 1 minute using <a href="https://loader.io/" target="_blank">Loader.io</a>.</p>
       </div>
-      <img className="blog-image" src="80ms.jpg"></img>
+      <img className="blog-image" src="80ms.jpg" alt="80ms at 500rps"></img>
       <div className="blog-container">
         <p className="blog-text">80 ms response time on average at a 0% error rate. Not bad; certainly better than our local machine. Now how about 1000 RPS?</p>
       </div>
-      <img className="blog-image" src="497ms.jpg"></img>
+      <img className="blog-image" src="497ms.jpg" alt="497ms at 1000rps"></img>
       <div className="blog-container">
         <p className="blog-text">The RPS climbed dramatically and the error rate shot up to 34.8%. Certainly not the user experience we would want to see on a production level site. Let’s see how we improved those numbers.</p>
       </div>
@@ -102,50 +102,50 @@ export default function Blog() {
       <div className="blog-container">
         <p className="blog-text">While there was a brief learning curve, the setup went smoothly given clear <a href="http://nginx.org/en/docs/http/load_balancing.html" target="_blank">documentation</a> on what to do. After launching a second EC2 instance and a separate NGINX instance, I linked the three together in the configuration file like so:</p>
       </div>
-      <img className="blog-image" src="config.jpg"></img>
+      <img className="blog-image" src="config.jpg" alt="2 servers config"></img>
       <div className="blog-container">
         <p className="blog-text">Now requests being sent to the NGINX server’s endpoint would be distributed between both servers, thus lessening the strain on each individual one. It’s important to note that only one database is being shared between the two servers.</p>
       </div>
       <div className="blog-container">
         <p className="blog-text">With two servers and a functioning load balancer, I booted up Loader.io again:</p>
       </div>
-      <img className="blog-image" src="532ms.jpg"></img>
+      <img className="blog-image" src="532ms.jpg" alt="532ms at 1000rps"></img>
       <div className="blog-container">
         <p className="blog-text">Where 1000 RPS had previously drawn an error rate of 34.8% and a latency of almost 500 ms, we now had a 0% error rate at a latency of 74 ms. Woot!</p>
       </div>
       <div className="blog-container">
         <p className="blog-text">Let’s see how far we can take this… (<a href="https://www.dropbox.com/home/SDC%20Metrics" target="_blank">Click here</a> to see all results collected, I’ll only be showing significant ones here)</p>
       </div>
-      <img className="blog-image" src="424ms.jpg"></img>
+      <img className="blog-image" src="424ms.jpg" alt="424ms at 2400rps"></img>
       <div className="blog-container">
         <p className="blog-text">We made it all the way to 2400 RPS before reaching an error threshold of 50%. An incredible feat compared to a single running server. However, error rates started increasing at as little as 1500 RPS. For a practical user experience, we could not allow for errors like that. We had to do even better.</p>
       </div>
       <div className="blog-container">
         <p className="blog-text">I scaled up to five separate instances and recorded the results each step of the way. Once again, all relevant metrics are captured in a dropbox <a href="https://www.dropbox.com/home/SDC%20Metrics" target="_blank">here</a>.</p>
       </div>
-      <img className="blog-image" src="aws.jpg"></img>
+      <img className="blog-image" src="aws.jpg" alt="aws setup"></img>
       <div className="blog-container">
         <p className="blog-text">Along the way I noticed a few things. As shown above, the difference between one server and two was night and day. However returns certainly diminished by server four and five.</p>
       </div>
       <h4>
         2500 RPS at server 4:
       </h4>
-      <img className="blog-image" src="436ms.jpg"></img>
+      <img className="blog-image" src="436ms.jpg" alt="436ms at 2500rps"></img>
       <h4>
         2500 RPS at server 5:
       </h4>
-      <img className="blog-image" src="362ms.jpg"></img>
+      <img className="blog-image" src="362ms.jpg" alt="362ms at 2500rps"></img>
       <div className="blog-container">
         <p className="blog-text">As depicted above, performance rates were actually worse with five servers. External factors or not, it was time to employ new strategies. The NGINX documentation mentioned two possible options for load balancing. The default was "round-robin", where requests would be sent to each server following the same order. There was also the option of "least-conn", where requests would be sent to the server most available to handle a new request. We tried that out:</p>
       </div>
       <h4>
         2800 RPS round-robin:
       </h4>
-      <img className="blog-image" src="roundrobin.jpg"></img>
+      <img className="blog-image" src="roundrobin.jpg" alt="379ms at 2800rps round-robin"></img>
       <h4>
         2800 RPS least-conn:
       </h4>
-      <img className="blog-image" src="leastconn.jpg"></img>
+      <img className="blog-image" src="leastconn.jpg" alt="391ms at 714rps least-conn"></img>
       <div className="blog-container">
         <p className="blog-text">As pictured, we achieved a dip in latency and error rate when after switching over to least-conn. Not bad!</p>
       </div>
@@ -153,14 +153,14 @@ export default function Blog() {
       <div className="blog-container">
         <p className="blog-text">Another optimization tweak NGINX offered was <a href="https://www.nginx.com/blog/nginx-caching-guide/" target="_blank">data caching</a>. The idea of caching is that data gets stored in an accessible location, such that next time the data is called the server needs not reach all the way into the database to acquire it.</p>
       </div>
-      <img className="blog-image" src="caching.jpg"></img>
+      <img className="blog-image" src="caching.jpg" alt="5 servers config"></img>
       <div className="blog-container">
         <p className="blog-text">Notice the least_conn and caching directives. With this in play, we ran our Loader.io again.</p>
       </div>
       <div className="blog-container">
         <p className="blog-text">After <a href="https://www.dropbox.com/home/SDC%20Metrics" target="_blank">multiple tests</a>, I arrived at the highest RPS with 0% error rate.</p>
       </div>
-      <img className="blog-image" src="420ms.jpg"></img>
+      <img className="blog-image" src="420ms.jpg" alt="420ms at 2100rps"></img>
       <div className="blog-container">
         <p className="blog-text">I was able to handle 2100 RPS with 67 ms latency. It took 4 load balancers, least_conn, and caching to achieve this result. Compared to 80 ms latency at 500 RPS, I would say the experimenting has led to a success.</p>
       </div>
