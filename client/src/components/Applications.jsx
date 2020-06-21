@@ -3,6 +3,8 @@ import ScrollIndicator from './ScrollIndicator.jsx';
 import Modal from 'react-bootstrap/Modal';
 import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
+
 // import ModalBody from 'react-bootstrap/ModalBody';
 // import ModalHeader from 'react-bootstrap/ModalHeader';
 // import ModalFooter from 'react-bootstrap/ModalFooter';
@@ -33,6 +35,10 @@ export default function Applications() {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>Applications | Bertrand Shao</title>
+        <meta name="description" content="Check out stuff I made. Many more exciting apps to come."></meta>
+      </Helmet>
       <ScrollIndicator />
       <div className="page-body">
         <main className="page-content">
@@ -69,7 +75,7 @@ export default function Applications() {
                   <Modal.Title>adidas Product Page Mock-up</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <ul>
+                  <ul>
                     <li>Utilized React along with ​reconciliation logic​ to emulate a fully functioning Adidas product page</li>
                     <li>Deployed proxy server on ​AWS EC2​ instance while adhering to ​service oriented architecture​ principles</li>
                     <li>Dockerized​ web app to ensure consistent runtime environment and cross-platform execution</li>
@@ -108,7 +114,7 @@ export default function Applications() {
             <source src="sdc.mp4" type="video/mp4" />
           </video>
           <div className="tech-bar">
-          <center><p className="tech-used">PostgreSQL | AWS | NodeJS | NGINX</p></center>
+            <center><p className="tech-used">PostgreSQL | AWS | NodeJS | NGINX</p></center>
           </div>
           <div className="app-info">
             <div className="app-bullets">
@@ -118,16 +124,16 @@ export default function Applications() {
                   <Modal.Title>System Design Capstone</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <ul>
+                  <ul>
                     <li>Increased data set from 100 to 10,000,000 unique records efficiently using ​draining​ and ​streaming​ techniques</li>
                     <li>Horizontally scaled​ a legacy code base deployed over ​5 AWS T2 micro instances​ capable of handling ​2100 requests per second(average latency 67 ms, error rate 0.0%)</li>
                     <li>Implemented Nginx as a ​round-robin/least-conn​​load balancer ​and​ cache​ to further reduce latency by 27%</li>
                   </ul>
                 </Modal.Body>
                 <Modal.Footer>
-                <NavLink style={{color: "black"}} to="/blog">
-                <button>Learn More</button>
-                </NavLink>
+                  <NavLink style={{ color: "black" }} to="/blog">
+                    <button>Learn More</button>
+                  </NavLink>
                   <button onClick={hideModal2}>Exit</button>
                 </Modal.Footer>
               </Modal>

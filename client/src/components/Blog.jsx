@@ -1,10 +1,16 @@
 import React from 'react';
 import ScrollIndicator from './ScrollIndicator.jsx';
+import { Helmet } from 'react-helmet';
 
 export default function Blog() {
 
   return (
     <div className="blog-section">
+            <Helmet>
+        <title>Blog | Bertrand Shao</title>
+        <meta name="description" content="Blog by Bertrand Shao. Learn about a system design capstone (SDC)."></meta>
+        <meta name="keywords" content="system design capstone, SDC, Hack Reactor, bootcamp, ten million records, mongodb, postgresql"></meta>
+      </Helmet>
       <ScrollIndicator/>
       <div className="blog-container">
         <center>

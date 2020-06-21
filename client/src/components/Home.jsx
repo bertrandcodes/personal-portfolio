@@ -1,10 +1,15 @@
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function Home() {
 
   return (
     <div className="main">
+      <Helmet>
+        <title>Home | Bertrand Shao</title>
+        <meta name="description" content="Begin your journey here. Find out about the latest creative web projects I've been working on. Try out some cool applications."></meta>
+      </Helmet>
       <div className="background-div">
         <div className="overlay" />
         {/* <video autoPlay={true} loop={true} muted={true}> */}
