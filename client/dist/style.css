@@ -56,8 +56,7 @@ table {
 }
 
 body {
-  /* font-family: "Century Gothic", 'Lato', sans-serif; */
-  font-family: Bowlby One SC;
+  font-family: "Century Gothic", "Lato", sans-serif;
   margin: 0;
   min-height: 100%;
   background-color: #e2e2e296 !important;
@@ -499,8 +498,9 @@ nav {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: url(./1.jpg);
+  background-image: url(./botanical.png);
   background-size: cover;
+  background-position: center;
   animation: aboutFade 1s;
 }
 
@@ -554,17 +554,18 @@ nav {
   margin: auto;
   background-color: rgba(255, 255, 255, 0.3);
   height: 100%;
-  width: 50%;
+  width: 70%;
+  animation: divEntry 1s;
 }
 
-@keyframes aboutTextEntry {
+@keyframes divEntry {
   from {
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(100px);
   }
   to {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
 }
 .about-text {
@@ -573,26 +574,55 @@ nav {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 9%;
+  margin: 4%;
   opacity: 1 !important;
   display: block;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.6);
   z-index: 10;
+  overflow: scroll;
+  padding: 50px;
+}
+
+.about-paragraphs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: Bowlby One SC;
+  font-size: 18px;
+}
+
+.about-paragraphs-first {
+  font-family: Bowlby One SC;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.about-paragraphs-last {
+  font-family: Bowlby One SC;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: right;
+  font-size: 18px;
+}
+
+span {
+  font-style: italic;
 }
 
 .iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  margin-bottom: 5%;
   position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
 }
 
 .iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
 }
 
 /*
@@ -706,7 +736,7 @@ nav {
 }
 
 .copy {
-  font-family: var(--font-serif);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.125rem;
   font-style: italic;
   line-height: 1.35;
@@ -951,13 +981,17 @@ button {
   font-weight: 200;
 }
 
+.blog-section h1 {
+  font-weight: 700 !important;
+}
+
 h2 {
   font-weight: normal;
   margin-top: -10px;
 }
 
 h3 {
-  font-weight: 700;
+  font-weight: 700 !important;
   font-size: 25px;
 }
 
@@ -1055,9 +1089,7 @@ h4 {
   ========================================
 */
 .pdfContainer {
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 50px;
   height: 960px;
   text-align: center;
   padding: 0;
@@ -1084,13 +1116,13 @@ h4 {
   position: relative;
   text-align: center;
   margin: 8% auto 8% auto;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Century Gothic", "Lato", sans-serif;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Century Gothic", "Lato", sans-serif;
   height: 100%;
   width: 100%;
 }
@@ -1124,6 +1156,11 @@ form {
   align-items: center;
 }
 
+@media screen and (max-width: 375px) {
+  #footer {
+    height: 250px;
+  }
+}
 @font-face {
   font-family: "icomoon";
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?3qkin2");
