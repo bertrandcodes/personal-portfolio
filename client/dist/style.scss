@@ -55,8 +55,9 @@ table {
 }
 
 body {
-  /* font-family: "Century Gothic", 'Lato', sans-serif; */
-  font-family: Bowlby One SC;
+  // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Century Gothic", 'Lato', sans-serif;
+  // font-family: Bowlby One SC;
   margin: 0;
   min-height: 100%;
   // height: 100%;
@@ -107,7 +108,7 @@ nav {
 }
 
 .et-hero-tab {
-  font-family: "Century Gothic", "Lato", sans-serif;
+  font-family: "Century Gothic", 'Lato', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -536,8 +537,9 @@ nav {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: url(./1.jpg);
+  background-image: url(./botanical.png);
   background-size: cover;
+  background-position: center;
   animation: aboutFade 1s;
   // background-color: rgb(61, 131, 61);
   // background-color: rgb(245, 232, 46);
@@ -608,46 +610,76 @@ nav {
   // margin-top: 1%;
   // margin-bottom: 1%;
   height: 100%;
-  width: 50%;
+  width: 70%;
   // -webkit-mask-image: radial-gradient(circle 10px at 0 0, transparent 0, transparent 20px, black 21px);
-  // animation: aboutTextEntry 1s;
+  animation: divEntry 1s;
 }
 
-@keyframes aboutTextEntry {
+@keyframes divEntry {
   from {
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(100px);
   }
   to {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
 }
 
 .about-text {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-  margin: 9%;
+  margin: 4%;
   // border: 1px solid black;
   opacity: 1 !important;
   display: block;
-  background-color: rgb(255, 255, 255,0.9);
+  background-color: rgb(255, 255, 255,0.6);
   z-index: 10;
+  overflow: scroll;
+  padding: 50px;
 }
 
-.iframe-container{
+.about-paragraphs {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: Bowlby One SC;
+  font-size: 18px;
+}
+
+.about-paragraphs-first {
+  font-family: Bowlby One SC;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.about-paragraphs-last {
+  font-family: Bowlby One SC;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: right;
+  font-size: 18px;
+}
+
+span {
+  font-style: italic;
+}
+
+.iframe-container {
+  overflow: hidden;
+  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+  padding-top: 56.25%;
+  margin-bottom: 5%;
   position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; 
-  height: 0;
 }
-
-.iframe-container iframe{
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+ 
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
 }
 
 /*
@@ -767,7 +799,7 @@ nav {
 }
 
 .copy {
-  font-family: var(--font-serif);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.125rem;
   font-style: italic;
   line-height: 1.35;
@@ -1024,8 +1056,12 @@ button {
   max-width: 680px;
   margin: 60px auto 100px auto;
   width: 100%;
-  font-family: "Century Gothic", "Lato", sans-serif;
+  font-family: "Century Gothic", 'Lato', sans-serif;
   font-weight: 200;
+}
+
+.blog-section h1 {
+  font-weight: 700 !important;
 }
 
 h2 {
@@ -1034,7 +1070,7 @@ h2 {
 }
 
 h3 {
-  font-weight: 700;
+  font-weight: 700 !important;
   font-size: 25px;
 }
 
@@ -1134,9 +1170,7 @@ h4 {
 */
 
 .pdfContainer {
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 50px;
   height: 960px;
   text-align: center;
   padding: 0;
@@ -1158,20 +1192,23 @@ h4 {
   border: solid 1px black;
   border-radius: 20px;
   box-shadow: 5px 5px 10px grey;
-  
 }
+
+// .contact-div h1 {
+//   font-weight: 700 !important;
+// }
 
 .contact-header {
   position: relative;
   text-align: center;
   margin: 8% auto 8% auto;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Century Gothic", 'Lato', sans-serif;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Century Gothic", 'Lato', sans-serif;
   // align-items: center;
   height: 100%;
   width: 100%;
@@ -1203,10 +1240,16 @@ form {
   color: rgb(0, 0, 0);
   position: relative;
   height: 195px;
-  font-family: "Century Gothic", "Lato", sans-serif;
+  font-family: "Century Gothic", 'Lato', sans-serif;
   font-size: 14px;
   align-items: center;
   // margin-top: 5%;
+}
+
+@media screen and (max-width:375px){
+  #footer {
+    height: 250px;
+  }
 }
 
 @font-face {
