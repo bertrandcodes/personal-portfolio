@@ -4,6 +4,7 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
+import Footer from './Footer.jsx';
 
 export default function Contact() {
 
@@ -119,6 +120,7 @@ export default function Contact() {
                         )}
                 </Formik>
             </div>
+            <Footer/>
         </Fragment>
     );
 };

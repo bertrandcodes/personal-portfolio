@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Footer from './Footer.jsx';
 
 export default function Home() {
 
   return (
+    <Fragment>
     <div className="main">
       <Helmet>
         <title>Home | Bertrand Shao</title>
@@ -12,11 +14,11 @@ export default function Home() {
       </Helmet>
       <div className="background-div">
         <div className="overlay" />
-        {/* <video autoPlay={true} loop={true} muted={true}> */}
-          {/* <source src="typing.mp4" type="video/mp4"/> */}
-          <img className="background-image" src="sample.jpg" alt="mountains and lake"></img>
-        {/* </video> */}
-        {/* <img className="background-image" src="sample.jpg"></img> */}
+        <video autoPlay={true} loop={true} muted={true}>
+          <source src="code.mp4" type="video/mp4"/>
+          <img className="background-image" src="1.jpg" alt="mountains and lake"></img>
+        </video>
+        {/* <img className="background-image" src="1.jpg" alt="mountains and lake"></img> */}
 
         <div className="home-body">
         <NavLink className="my-face" to="/about" />
@@ -46,5 +48,7 @@ export default function Home() {
 
       </div>
     </div>
+    <Footer/>
+    </Fragment>
   );
 };

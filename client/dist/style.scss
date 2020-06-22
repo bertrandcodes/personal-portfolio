@@ -5,7 +5,7 @@
 */
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
-html, body, div, span, applet, object, iframe, p, blockquote, pre,
+html, body, div, span, applet, object, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -633,7 +633,7 @@ nav {
   // border: 1px solid black;
   opacity: 1 !important;
   display: block;
-  background-color: rgb(255, 255, 255,0.6);
+  background-color: rgb(255, 255, 255,0.7);
   z-index: 10;
   overflow: scroll;
   padding: 50px;
@@ -668,18 +668,32 @@ span {
 .iframe-container {
   overflow: hidden;
   // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
-  padding-top: 56.25%;
+  padding-top: 37%;
   margin-bottom: 5%;
+  justify-content: center;
   position: relative;
 }
  
 .iframe-container iframe {
-   border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;
+  border: 0;
+  height: 100%;
+  left: 22%;
+  position: absolute;
+  top: 0;
+  width: 56%;
+}
+
+@media (max-width: 580px) {
+  .iframe-container {
+    padding-top: 75%
+  }
+  .iframe-container iframe {
+    width: 100%;
+    left: 0;
+  }
+  .about-border {
+    width: 100%;
+  }
 }
 
 /*
@@ -1060,9 +1074,9 @@ button {
   font-weight: 200;
 }
 
-.blog-section h1 {
-  font-weight: 700 !important;
-}
+// .blog-section h1 {
+//   font-weight: 700 !important;
+// }
 
 h2 {
   font-weight: normal;
