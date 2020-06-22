@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
+import Footer from './Footer.jsx';
 
 // import ModalBody from 'react-bootstrap/ModalBody';
 // import ModalHeader from 'react-bootstrap/ModalHeader';
@@ -157,6 +158,7 @@ export default function Applications() {
           </div>
         </div>
       </div>
+      <Footer/>
     </Fragment>
   );
 };

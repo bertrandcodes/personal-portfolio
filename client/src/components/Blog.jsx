@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ScrollIndicator from './ScrollIndicator.jsx';
 import { Helmet } from 'react-helmet';
+import Footer from './Footer.jsx';
 
 export default function Blog() {
 
   return (
+    <Fragment>
     <div className="blog-section">
             <Helmet>
         <title>Blog | Bertrand Shao</title>
@@ -176,7 +178,8 @@ export default function Blog() {
         We were exposed to the limitations of certain strategies and realized that tradeoffs were required when it came to optimizing a server. As it holds true for most cases in programming, there’s no one-size-fits-all method for server improvement. Overall, the main take away would be to keep benchmarking and testing new strategies to further optimize results. I hope you enjoyed following me on this journey and gained some knowledge or even inspiration from it. Remember, stay focused and always stay learning!</p>
       </div>
     </div>
-
+    <Footer/>
+    </Fragment>
   );
 };
 

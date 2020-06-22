@@ -6,7 +6,7 @@
 */
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
-html, body, div, span, applet, object, iframe, p, blockquote, pre,
+html, body, div, span, applet, object, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -577,7 +577,7 @@ nav {
   margin: 4%;
   opacity: 1 !important;
   display: block;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   z-index: 10;
   overflow: scroll;
   padding: 50px;
@@ -611,20 +611,35 @@ span {
 
 .iframe-container {
   overflow: hidden;
-  padding-top: 56.25%;
+  padding-top: 37%;
   margin-bottom: 5%;
+  justify-content: center;
   position: relative;
 }
 
 .iframe-container iframe {
   border: 0;
   height: 100%;
-  left: 0;
+  left: 22%;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 56%;
 }
 
+@media (max-width: 580px) {
+  .iframe-container {
+    padding-top: 75%;
+  }
+
+  .iframe-container iframe {
+    width: 100%;
+    left: 0;
+  }
+
+  .about-border {
+    width: 100%;
+  }
+}
 /*
   ========================================
   Applications
@@ -979,10 +994,6 @@ button {
   width: 100%;
   font-family: "Century Gothic", "Lato", sans-serif;
   font-weight: 200;
-}
-
-.blog-section h1 {
-  font-weight: 700 !important;
 }
 
 h2 {
