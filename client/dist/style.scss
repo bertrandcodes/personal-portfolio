@@ -1198,14 +1198,24 @@ h4 {
 
 .contact-div {
   position: relative;
-  background-color: white;
-  height: 50%;
+  // background-color: white;
+  // height: 50%;
   width: 600px;
-  padding: 0 5% 5% 5%;
-  margin: 5% auto 10% auto;
-  border: solid 1px black;
-  border-radius: 20px;
-  box-shadow: 5px 5px 10px grey;
+  // padding: 0 5% 5% 5%;
+  margin: 6% auto 6% auto;
+  // border: solid 1px black;
+  // border-radius: 20px;
+  // box-shadow: 5px 5px 10px grey;
+  // display: flex;
+  // flex-direction: column;
+  border: 4px double silver;
+  // margin: 45px 45px;
+  padding: 40px 45px 45px 45px;
+  border-radius: 24px;
+  // height: 50%;
+  // width: 90%;
+  box-shadow: 1px 1px 4px black;
+  background-color: white;
 }
 
 // .contact-div h1 {
@@ -1215,14 +1225,14 @@ h4 {
 .contact-header {
   position: relative;
   text-align: center;
-  margin: 8% auto 8% auto;
-  font-family: "Century Gothic", 'Lato', sans-serif;
+  margin: 0 auto 45px auto;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  font-family: "Century Gothic", 'Lato', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   // align-items: center;
   height: 100%;
   width: 100%;
