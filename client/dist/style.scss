@@ -286,6 +286,11 @@ nav {
   background: rgba(0, 0, 0, 0.7);
 }
 
+video {
+  object-fit: cover;
+  width: 100%;
+}
+
 .home-body {
   display: flex;
   flex-direction: column;
