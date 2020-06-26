@@ -183,9 +183,27 @@ nav {
     align-items: center;
     width: 40%;
     transform: translateX(100%);
-    transition: transform 0.3s ease-in;
+    transition: transform;
     box-shadow: none;
+    display: none;
     // opacity: 1;
+  }
+
+  .et-hero-tabs-container--active {
+    transform: translateX(0%);
+    display: flex;
+    animation: sideSlide 0.3s ease-in;
+  }
+
+  @keyframes sideSlide {
+    from {
+      transform: translateX(100%);
+      // display: none;
+    }
+    to {
+      transform: translateX(0%);
+      display: flex;
+    }
   }
 
   .et-hero-tab {
@@ -196,16 +214,7 @@ nav {
   .burger {
     display: block;
     position: relative;
-    // float: right;
-    // position: absolute;
-    // top: 0;
-    // bottom: 0;
-    // right: 0;
-    // left: 0;
   }
-}
-.et-hero-tabs-container--active {
-  transform: translateX(0%);
 }
 
 @keyframes navLinkFade {

@@ -21,7 +21,7 @@ class Navbar extends React.Component {
       if (link.style.animation) {
         link.style.animation = "";
       } else {
-        link.style.animation = `navLinkFade 1.25s ease forwards ${
+        link.style.animation = `navLinkFade 1s ease forwards ${
           index / 7 + 0.25
         }s`;
       }
