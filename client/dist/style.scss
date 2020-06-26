@@ -295,7 +295,7 @@ nav {
   background: rgba(0, 0, 0, 0.7);
 }
 
-video {
+.home-video {
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -969,7 +969,7 @@ marquee {
 .app-info {
     display: flex;
     flex-direction: row;
-    margin-top: 25px;
+    margin-top: 15px;
     height: 100%;
 }
 
@@ -978,8 +978,9 @@ marquee {
     background-color: rgb(235, 235, 235);
     // height: 200px;
     border-radius: 20px;
-    margin: 50px 50px 50px 50px;
-    width: 90%;
+    margin: 8% 5% 5% 5%;
+    // margin: 50px 50px 50px 50px;
+    // width: 90%;
     padding: 0;
 }
 
@@ -1006,6 +1007,7 @@ marquee {
 
 @media (max-width: 730px) {
     .tech-used {
+      padding: 15px;
         word-spacing: 5px;
     }
 }
@@ -1298,7 +1300,7 @@ form {
 
 @media screen and (max-width:375px){
   #footer {
-    height: 250px;
+    height: 180px;
   }
 }
 
