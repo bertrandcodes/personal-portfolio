@@ -10,7 +10,7 @@ export default function Footer() {
                     <li><a href="https://www.linkedin.com/in/bertrandshao/" class="icon-linkedin">LinkedIn</a></li>
                     <li><a href="https://github.com/bertrandcodes" class="icon-github">GitHub</a></li>
                     <li><a href="https://www.facebook.com/bertrand.shao" class="icon-facebook">Facebook</a></li>
-                    <li><a href="https://www.instagram.com/bertrand_money/" class="icon-instagram">Instagram</a></li>
+                    {/* <li><a href="https://www.instagram.com/bertrand_money/" class="icon-instagram">Instagram</a></li> */}
                     {/* <li><a href="https://twitter.com/" class="icon-twitter">Twitter</a></li> */}
                     {/* <li><a href="https://twitch.tv" class="icon-twitch">Twitch</a></li> */}
                     {/* <li><a href="https://pinterest.com" class="icon-pinterest">Pinterest</a></li> */}

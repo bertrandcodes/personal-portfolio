@@ -16,7 +16,7 @@ export default function Home() {
         </Helmet>
         <div className="background-div">
           <div className="overlay" />
-          <video autoPlay={true} loop={true} muted={true}>
+          <video className="home-video" autoPlay={true} loop={true} muted={true}>
             <source src="code.mp4" type="video/mp4" />
             <img
               className="background-image"
