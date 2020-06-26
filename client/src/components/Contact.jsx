@@ -1,31 +1,56 @@
-import React, { Fragment } from 'react';
-import { Form, Row, Button } from 'react-bootstrap';
-import { Formik } from 'formik';
-import * as yup from 'yup';
-import axios from 'axios';
-import { Helmet } from 'react-helmet';
-import Footer from './Footer.jsx';
+import React, { Fragment } from "react";
+import { Form, Row, Button } from "react-bootstrap";
+import { Formik } from "formik";
+import * as yup from "yup";
+import axios from "axios";
+import { Helmet } from "react-helmet";
+import Footer from "./Footer.jsx";
 
 export default function Contact() {
+  const schema = yup.object({
+    first: yup.string().required("What's your first name?"),
+    last: yup.string().required("Last name too!"),
+    email: yup
+      .string()
+      .email("Must be a valid email address")
+      .required("Please enter your email"),
+    message: yup.string().required("What's on your mind?"),
+  });
 
-    const schema = yup.object({
-        first: yup.string().required("What's your first name?"),
-        last: yup.string().required("Last name too!"),
-        email: yup.string()
-            .email("Must be a valid email address")
-            .required("Please enter your email"),
-        message: yup.string().required("What's on your mind?")
-    });
+  return (
+    <Fragment>
+      <Helmet>
+        <title>Contact Me | Bertrand Shao</title>
+        <meta
+          name="description"
+          content="Contact me and learn more. I won't bite."
+        ></meta>
+      </Helmet>
+      <div className="contact-div">
+        <h1 className="contact-header">Let's get in touch.</h1>
 
-    return (
-        <Fragment>
-            <Helmet>
-                <title>Contact Me | Bertrand Shao</title>
-                <meta name="description" content="Contact me and learn more. I won't bite."></meta>
-            </Helmet>
-            <div className="contact-div">
-                <h1 className="contact-header">Let's get in touch.</h1>
-                <Formik
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>
+              <div classname="contact-input">Your Name: </div><input type="text" name="name" />
+            </label>
+          </p>
+          <p>
+            <label>
+            <div classname="contact-input">Your Email: </div><input type="email" name="email" />
+            </label>
+          </p>
+          <p>
+            <label>
+            <div classname="contact-input">Message: </div><textarea name="message"></textarea>
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+
+        {/* <Formik
                     validationSchema={schema}
                     onSubmit={(initialValues) => {
                         axios.post('/contact', {
@@ -118,9 +143,9 @@ export default function Contact() {
                                 <Button type="submit" variant="primary">Send</Button>
                             </Form>
                         )}
-                </Formik>
-            </div>
-            <Footer/>
-        </Fragment>
-    );
-};
+                </Formik> */}
+      </div>
+      <Footer />
+    </Fragment>
+  );
+}
