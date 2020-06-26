@@ -1237,6 +1237,7 @@ h4 {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   // align-items: center;
   height: 100%;
@@ -1252,6 +1253,15 @@ form {
   margin-left: 5px;
   margin-right: 5px;
 }
+
+.contact-input {
+  margin: auto 5px auto 5px;
+}
+
+// label {
+//   display: flex !important;
+//   flex-direction: column !important;
+// }
 
 /*
   ========================================

@@ -1137,6 +1137,7 @@ h4 {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   height: 100%;
   width: 100%;
@@ -1150,6 +1151,10 @@ form {
 .form-group {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.contact-input {
+  margin: auto 5px auto 5px;
 }
 
 /*

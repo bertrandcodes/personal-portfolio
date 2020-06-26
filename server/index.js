@@ -18,6 +18,6 @@ app.get('/*', function(req, res) {
     })
   })
 
-app.use('/', router)
+// app.use('/', router)
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
