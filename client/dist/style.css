@@ -1010,11 +1010,20 @@ button {
 .blog-section {
   max-width: 680px;
   margin: 60px auto 100px auto;
-  width: 100%;
   font-family: "Century Gothic", "Lato", sans-serif;
   font-weight: 200;
 }
 
+@media screen and (max-width: 775px) {
+  .blog-section {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .blog-text {
+    font-size: 16px;
+  }
+}
 h2 {
   font-weight: normal;
   margin-top: -10px;
