@@ -4,7 +4,6 @@ import App from "./components/App.jsx";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import rootReducer from "./redux/reducers/index.js";
-// import burgerMenu from "./redux/reducers/burgerMenu.js";
 
 const store = createStore(
   rootReducer
