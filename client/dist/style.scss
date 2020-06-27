@@ -700,9 +700,9 @@ nav {
   // animation: aboutImageEntry 1s;
 }
 
-@media screen and (max-width: 768px) {
-  .about-image {
-    display: none;
+@media screen and (max-width: 375px) {
+  .about-main {
+    margin-top: 100px;
   }
 }
 
