@@ -146,6 +146,11 @@ html {
   min-height: 100vh;
 }
 
+@media screen and (max-width: 375px) {
+  #app {
+    min-height: 0vh;
+  }
+}
 /*
   ========================================
   Navigation Bar
@@ -363,7 +368,6 @@ nav {
 @media screen and (max-width: 375px) {
   .home-video {
     display: none;
-    z-index: -100;
   }
 
   .background-div {
