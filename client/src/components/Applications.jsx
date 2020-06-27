@@ -2,15 +2,8 @@ import React, { Fragment } from "react";
 import ScrollIndicator from "./ScrollIndicator.jsx";
 import Modal from "react-bootstrap/Modal";
 import { NavLink } from "react-router-dom";
-import Button from "react-bootstrap";
 import { Helmet } from "react-helmet";
 import Footer from "./Footer.jsx";
-
-// import ModalBody from 'react-bootstrap/ModalBody';
-// import ModalHeader from 'react-bootstrap/ModalHeader';
-// import ModalFooter from 'react-bootstrap/ModalFooter';
-// import ModalTitle from 'react-bootstrap/ModalTitle';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Applications() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -128,13 +121,6 @@ export default function Applications() {
               </Modal>
 
               <p className="github-text">Info</p>
-
-              {/* <ul>
-                    <li>Utilized React along with ​reconciliation logic​ to emulate a fully functioning Adidas product page</li>
-                    <li>Deployed proxy server on ​AWS EC2​ instance while adhering to ​service oriented architecture​ principles</li>
-                    <li>Dockerized​ web app to ensure consistent runtime environment and cross-platform execution</li>
-                    <li>Refactored codebase using Redux</li>
-                  </ul> */}
             </div>
             <div className="app-github">
               <a
@@ -200,13 +186,6 @@ export default function Applications() {
               </Modal>
 
               <p className="github-text">Info</p>
-
-              {/* <ul>
-                    <li>Utilized React along with ​reconciliation logic​ to emulate a fully functioning Adidas product page</li>
-                    <li>Deployed proxy server on ​AWS EC2​ instance while adhering to ​service oriented architecture​ principles</li>
-                    <li>Dockerized​ web app to ensure consistent runtime environment and cross-platform execution</li>
-                    <li>Refactored codebase using Redux</li>
-                  </ul> */}
             </div>
             <div className="app-github">
               <a
@@ -223,21 +202,4 @@ export default function Applications() {
       <Footer />
     </Fragment>
   );
-}
-
-{
-  /* <div className="l-container">
-<div className="b-game-card">
-  <div className="b-game-card__cover" style={{backgroundImage: "url(https://lh3.googleusercontent.com/proxy/faJrJNfpZ-VX_m_kh-U92GExae0su8OeKhSonrKu1D5qvCQvb9Z0ReFhCx6xKsryKmVqTQOJGdEpvs4-chktL8IAisBi840)"}}></div>
-</div>
-<div className="b-game-card">
-  <div className="b-game-card__cover"></div>
-</div>
-<div className="b-game-card">
-  <div className="b-game-card__cover" ></div>
-</div>
-<div className="b-game-card">
-  <div className="b-game-card__cover" ></div>
-</div>
-</div> */
 }

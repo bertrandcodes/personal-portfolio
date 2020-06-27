@@ -522,13 +522,3 @@ export default function Blog() {
     </Fragment>
   );
 }
-
-{
-  /* <div className="blog-container">
-  <p className="blog-text"></p>
-</div> */
-}
-
-{
-  /* <a href="" target="_blank">documentation</a> */
-}

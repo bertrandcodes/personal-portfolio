@@ -1,5 +1,4 @@
 require('dotenv').config();
-var helpers = require('../db/dbhelpers');
 const nodemailer = require('nodemailer');
 
 const controller = {
@@ -9,8 +8,6 @@ const controller = {
           service: 'Gmail',
           port: 465,
           auth: {
-            // user: `${gmail.user}`,
-            // pass: `${gmail.password}`
             user: process.env.EMAIL,
             pass: process.env.PASSWORD
           }
@@ -37,13 +34,6 @@ const controller = {
           });
     
       }
-    // post: (req, res) => {
-    //     var item = req.body
-    //     helpers
-    //         .post(item)
-    //         .then(() => res.send(200).end(console.log('posted')))
-    //         .catch((err) => res.send(err))
-    //   }
 }
 
 module.exports = controller;
