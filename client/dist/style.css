@@ -148,7 +148,7 @@ html {
 
 @media screen and (max-width: 375px) {
   #app {
-    min-height: 0vh;
+    overflow: hidden;
   }
 }
 /*
