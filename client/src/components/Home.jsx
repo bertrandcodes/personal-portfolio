@@ -20,7 +20,7 @@ export default function Home() {
             <source src="code.mp4" type="video/mp4" />
             <img
               className="background-image"
-              src="1.jpg"
+              src="mountainlake.jpg"
               alt="mountains and lake"
             ></img>
           </video>
