@@ -46,7 +46,7 @@ export default class Contact extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form onSubmit={this.handleSubmit} method="post" netlify>
+      <form onSubmit={this.handleSubmit}>
         <p>
           <label>
             Your Name:{" "}
