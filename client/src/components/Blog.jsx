@@ -22,7 +22,7 @@ export default function Blog() {
         <div className="blog-container">
           <center>
             <h1>A Dive Into System Design</h1>
-            <h2>Operationalize and Scale a Web App</h2>
+            <h2 className="blog-h2">Operationalize and Scale a Web App</h2>
           </center>
           <img
             className="blog-image"
