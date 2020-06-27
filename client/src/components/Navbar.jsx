@@ -31,13 +31,10 @@ class Navbar extends React.Component {
   }
 
   render() {
-    // const { burger, toggleBurger } = this.props;
-
     return (
       <Fragment>
         <nav>
           <div className="et-hero-tabs-container">
-            {/* <div className={burger ? "et-hero-tabs-container--active" : "et-hero-tabs-container"}> */}
             <NavLink
               exact
               activeClassName="et-hero-tab--active"
@@ -83,7 +80,6 @@ class Navbar extends React.Component {
             </NavLink>
           </div>
           <div className="burger" onClick={() => this.navSlide()}>
-            {/* <div className="burger" onClick={() => toggleBurger()}> */}
             <div className="line1"></div>
             <div className="line2"></div>
             <div className="line3"></div>

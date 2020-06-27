@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
 export default function About() {
@@ -12,7 +12,6 @@ export default function About() {
         ></meta>
       </Helmet>
       <div className="about-main">
-        {/* <div className="about-image" /> */}
         <div className="about-border">
           <div className="about-text">
             <div className="iframe-container">

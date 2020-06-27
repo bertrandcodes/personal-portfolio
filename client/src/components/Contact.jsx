@@ -61,17 +61,17 @@ export default class Contact extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <p>
             <label>
-              <div className="contact-input">Your Name: {" "}</div><input type="text" value={name} name="name" onChange={this.handleChange}/>
+              <p className="contact-input">Your Name: {" "}</p><input type="text" value={name} name="name" onChange={this.handleChange}/>
             </label>
           </p>
           <p>
             <label>
-            <div className="contact-input">Your Email: {" "}</div><input type="email" value={email} name="email" onChange={this.handleChange}/>
+            <p className="contact-input">Your Email: {" "}</p><input type="email" value={email} name="email" onChange={this.handleChange}/>
             </label>
           </p>
           <p>
             <label>
-            <div className="contact-input">Message: {" "}</div><textarea value={message} name="message" onChange={this.handleChange}></textarea>
+            <p className="contact-input">Message: {" "}</p><textarea value={message} name="message" onChange={this.handleChange}></textarea>
             </label>
           </p>
           <p>

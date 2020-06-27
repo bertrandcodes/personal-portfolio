@@ -4,10 +4,10 @@ mongoose.connect('mongodb://localhost/messages', { useNewUrlParser: true, useUni
   .then(() => console.log('connected mongodb'));
 
 var messageSchema = mongoose.Schema({
-    first: String,
-    last: String,
-    email: String,
-    message: String
+  first: String,
+  last: String,
+  email: String,
+  message: String
 })
 
 var Message = mongoose.model('Message', messageSchema)
