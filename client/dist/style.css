@@ -634,10 +634,10 @@ nav {
 
 @keyframes aboutFade {
   from {
-    height: 10%;
+    opacity: 0;
   }
   to {
-    height: 100%;
+    opacity: 1;
   }
 }
 .about-text {
