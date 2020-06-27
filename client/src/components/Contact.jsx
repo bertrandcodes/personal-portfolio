@@ -26,6 +26,7 @@ export default function Contact() {
           content="Contact me and learn more. I won't bite."
         ></meta>
       </Helmet>
+      <div className="contact-page">
       <div className="contact-div">
         <h1 className="contact-header">Let's get in touch.</h1>
 
@@ -144,6 +145,7 @@ export default function Contact() {
                             </Form>
                         )}
                 </Formik> */}
+      </div>
       </div>
       <Footer />
     </Fragment>
