@@ -149,6 +149,7 @@ html {
 @media screen and (max-width: 375px) {
   #app {
     overflow: hidden;
+    min-height: 0vh;
   }
 }
 /*
@@ -254,15 +255,12 @@ nav {
     align-items: center;
     width: 40%;
     transform: translateX(100%);
-    transition: transform;
+    transition: transform 0.25s ease-in;
     box-shadow: none;
-    display: none;
   }
 
   .et-hero-tabs-container--active {
     transform: translateX(0%);
-    display: flex;
-    animation: sideSlide 0.25s ease-in;
   }
 
   @keyframes sideSlide {
@@ -607,7 +605,7 @@ nav {
 #about-body {
   position: absolute;
   top: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-image: url(./botanical.png);
   background-size: cover;
