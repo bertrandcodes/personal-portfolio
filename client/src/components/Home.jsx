@@ -16,7 +16,12 @@ export default function Home() {
         </Helmet>
         <div className="background-div">
           <div className="overlay" />
-          <video className="home-video" autoPlay={true} loop={true} muted={true}>
+          <video
+            className="home-video"
+            autoPlay={true}
+            loop={true}
+            muted={true}
+          >
             <source src="code.mp4" type="video/mp4" />
             <img
               className="background-image"
@@ -24,7 +29,6 @@ export default function Home() {
               alt="mountains and lake"
             ></img>
           </video>
-          {/* <img className="background-image" src="1.jpg" alt="mountains and lake"></img> */}
 
           <div className="home-body">
             <NavLink className="my-face" to="/about" />
@@ -48,10 +52,6 @@ export default function Home() {
               </NavLink>
             </div>
           </div>
-
-          {/* <div className="home-button">
-          <NavLink className="btn btn-sm animated-button thar-three" to="/about">Enter</NavLink>
-        </div> */}
         </div>
       </div>
       <Footer />
