@@ -268,7 +268,7 @@ nav {
   .et-hero-tabs-container--active {
     transform: translateX(0%);
     display: flex;
-    animation: sideSlide 0.3s ease-in;
+    animation: sideSlide 0.25s ease-in;
   }
 
   @keyframes sideSlide {
@@ -1382,8 +1382,13 @@ form {
   margin: auto 5px auto 5px;
 }
 
+input {
+  width: 300px;
+}
+
 textarea {
   height: 100px;
+  width: 300px;
 }
 
 /*
