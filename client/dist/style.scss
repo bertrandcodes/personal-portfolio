@@ -1219,6 +1219,12 @@ h4 {
   padding: 0;
 }
 
+@media screen and (max-width:375px){
+  .pdfContainer {
+    margin: 0;
+  }
+}
+
 /*
   ========================================
   Contact
