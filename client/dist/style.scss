@@ -385,6 +385,7 @@ nav {
 @media screen and (max-width:375px) {
   .home-video {
     display: none;
+    z-index: -100;
   }
 
   .background-div {
@@ -1171,7 +1172,7 @@ button {
 
 .blog-section {
   max-width: 680px;
-  margin: 60px auto 100px auto;
+  margin: 60px auto 60px auto;
   // width: 100%;
   font-family: "Century Gothic", 'Lato', sans-serif;
   font-weight: 200;
