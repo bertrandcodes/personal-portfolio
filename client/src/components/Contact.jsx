@@ -30,7 +30,7 @@ export default function Contact() {
       <div className="contact-div">
         <h1 className="contact-header">Let's get in touch.</h1>
 
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" netlify>
           <p>
             <label>
               <div classname="contact-input">Your Name: </div><input type="text" name="name" />
