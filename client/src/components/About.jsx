@@ -57,7 +57,7 @@ export default function About() {
             </div>
             <div className="about-paragraphs">
               I don’t think I found a fix to that bug that day. But what I found
-              instead was an answer to a life time of uncertainty. I discovered
+              instead was an answer to a lifetime of uncertainty. I discovered
               an interest in looking at code. That led to an interest in playing
               with it. Before long I was exposed to a field with endless paths
               and a hobby with infinite creative potential. Here was a world
