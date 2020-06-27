@@ -1210,9 +1210,15 @@ h4 {
   Contact
   ========================================
 */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact-div {
   position: relative;
-  width: 600px;
+  width: 50%;
   margin: 6% auto 6% auto;
   border: 4px double silver;
   padding: 40px 45px 45px 45px;
@@ -1228,6 +1234,11 @@ h4 {
   }
   to {
     opacity: 1;
+  }
+}
+@media screen and (max-width: 375px) {
+  .contact-div {
+    width: 90%;
   }
 }
 .contact-header {
@@ -1258,6 +1269,10 @@ form {
 
 .contact-input {
   margin: auto 5px auto 5px;
+}
+
+textarea {
+  height: 100px;
 }
 
 /*
