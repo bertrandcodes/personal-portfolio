@@ -20,8 +20,6 @@ export default class Contact extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  /* Here’s the juicy bit for posting the form submission */
-
   handleSubmit(e) {
     fetch("/", {
       method: "POST",
@@ -33,7 +31,7 @@ export default class Contact extends React.Component {
         message: this.state.message,
       }),
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Messaged recieved loud and clear!"))
       .catch((error) => alert(error));
 
     e.preventDefault();
@@ -75,7 +73,7 @@ export default class Contact extends React.Component {
             </label>
           </p>
           <p>
-            <button type="submit">Send</button>
+            <button type="submit" class="btn btn-dark">Send</button>
           </p>
         </form>
 
