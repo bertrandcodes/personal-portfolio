@@ -27,7 +27,6 @@ export default class Home extends React.Component {
   render() {
     return (
       <Fragment>
-        {console.log(this.state.mobile)}
         <div className="main">
           <Helmet>
             <title>Home | Bertrand Shao</title>
