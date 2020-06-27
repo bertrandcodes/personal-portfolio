@@ -382,6 +382,19 @@ nav {
   z-index: -10;
 }
 
+@media screen and (max-width:375px) {
+  .home-video {
+    display: none;
+  }
+
+  .background-div {
+    background-image: url(./mountainlake.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 .home-body {
   display: flex;
   flex-direction: column;
