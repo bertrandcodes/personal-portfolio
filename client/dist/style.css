@@ -236,7 +236,7 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: whitesmoke;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,6 +244,7 @@ nav {
     transform: translateX(100%);
     transition: transform 0.25s ease-in;
     box-shadow: none;
+    background-image: linear-gradient(white 10%, #c3c3c3b8 70%);
   }
 
   .et-hero-tabs-container--active {
