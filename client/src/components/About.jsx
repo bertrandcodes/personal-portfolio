@@ -34,7 +34,7 @@ export default function About() {
               For some reason, I just didn’t know.
             </div>
             <div className="about-paragraphs">
-              The same feeling that would peak my interest was the same feeling
+              The same feeling that would pique my interest was the same feeling
               that left me unsatisfied. My hobbies ranged far and wide and yet
               they always seemed at odds with one another. My mind worked well
               with numbers and data while my heart yearned for a creative
