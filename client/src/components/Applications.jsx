@@ -52,7 +52,7 @@ export default function Applications() {
           </div>
           <div className="card">
             <div className="content">
-              <h2 className="title">System Design Capstone</h2>
+              <h2 className="title">System Design</h2>
               <p className="copy">
                 Increased a database to hold 10,000,000 records and horizontally
                 scaled servers for speed.
@@ -137,7 +137,7 @@ export default function Applications() {
       <div className="apps">
         <a name="SDC"></a>
         <div className="app-div">
-          <h1 className="app-text">System Design Capstone</h1>
+          <h1 className="app-text">System Design</h1>
           <div className="line"></div>
           <video className="video" autoPlay={true} loop={true} muted={true}>
             <source src="sdc.mp4" type="video/mp4" />
@@ -158,7 +158,7 @@ export default function Applications() {
                 centered
               >
                 <Modal.Header>
-                  <Modal.Title>System Design Capstone</Modal.Title>
+                  <Modal.Title>System Design</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <ul>
