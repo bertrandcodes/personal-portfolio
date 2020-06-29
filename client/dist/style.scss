@@ -374,6 +374,16 @@ nav {
   }
 }
 
+@media screen and (max-width:370px) {
+  .about-me {
+    font-size: 14px;
+  }
+
+  .experiences {
+    font-size: 14px;
+  }
+}
+
 .home-body {
   display: flex;
   flex-direction: column;
@@ -442,7 +452,7 @@ nav {
 }
 
 .anim-typewriter {
-  animation: typewriter 2.5s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) 7 normal;
+  animation: typewriter 2.5s steps(44) 1s 1 normal both, blinkTextCursor 1s steps(44) 4 normal;
   border-right: 0.15em solid transparent;
 }
 
