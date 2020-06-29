@@ -8,6 +8,7 @@ class Navbar extends React.Component {
     super(props);
     this.state = {};
     this.navSlide = this.navSlide.bind(this);
+    this.closeNav = this.closeNav.bind(this);
   }
 
   navSlide() {
@@ -30,11 +31,30 @@ class Navbar extends React.Component {
     burger.classList.toggle("toggle");
   }
 
+  closeNav() {
+    const nav = document.querySelector(".et-hero-tabs-container");
+    const navLinks = document.querySelectorAll(".et-hero-tab");
+
+    nav.classList.toggle("et-hero-tabs-container--active");
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.25
+        }s`;
+      }
+    });
+  }
+
   render() {
     return (
       <Fragment>
         <nav>
-          <div className="et-hero-tabs-container">
+          <div
+            className="et-hero-tabs-container"
+            onClick={() => this.closeNav()}
+          >
             <NavLink
               exact
               activeClassName="et-hero-tab--active"
