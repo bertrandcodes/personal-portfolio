@@ -372,15 +372,9 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
   }
-}
 
-@media screen and (max-width:370px) {
   .about-me {
-    font-size: 14px;
-  }
-
-  .experiences {
-    font-size: 14px;
+    width: 100%;
   }
 }
 
