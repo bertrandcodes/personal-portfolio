@@ -6,7 +6,8 @@ import { toggleBurger } from "../redux/actions/index";
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+    };
     this.navSlide = this.navSlide.bind(this);
     this.closeNav = this.closeNav.bind(this);
   }
@@ -17,7 +18,6 @@ class Navbar extends React.Component {
     const navLinks = document.querySelectorAll(".et-hero-tab");
 
     nav.classList.toggle("et-hero-tabs-container--active");
-
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
@@ -37,22 +37,25 @@ class Navbar extends React.Component {
     const burger = document.querySelector(".burger");
 
     burger.classList.toggle("toggle");
-
     nav.classList.toggle("et-hero-tabs-container--active");
-    navLinks.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `navLinkFade 0.5s ease forwards ${
-          index / 7 + 0.25
-        }s`;
-      }
-    });
+
+    if (this.props.mobile) {
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = "";
+        } else {
+          link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.25
+          }s`;
+        }
+      });
+    }
   }
 
   render() {
     return (
       <Fragment>
+        {this.state.mobile}
         <nav>
           <div
             className="et-hero-tabs-container"

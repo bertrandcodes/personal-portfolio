@@ -11,13 +11,28 @@ import About from "./About.jsx";
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      mobile: false,
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+  }
+
+  resize() {
+    if (window.screen.width <= 768) {
+      this.setState({ mobile: true });
+    } else {
+      this.setState({ mobile: false });
+    }
   }
 
   render() {
     return (
       <Router>
-        <Navbar />
+        <Navbar mobile={this.state.mobile} />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
