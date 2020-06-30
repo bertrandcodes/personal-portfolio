@@ -34,6 +34,9 @@ class Navbar extends React.Component {
   closeNav() {
     const nav = document.querySelector(".et-hero-tabs-container");
     const navLinks = document.querySelectorAll(".et-hero-tab");
+    const burger = document.querySelector(".burger");
+
+    burger.classList.toggle("toggle");
 
     nav.classList.toggle("et-hero-tabs-container--active");
     navLinks.forEach((link, index) => {
