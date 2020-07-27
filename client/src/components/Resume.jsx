@@ -16,7 +16,7 @@ export default function Resume() {
         <iframe
           width="100%"
           height="100%"
-          src="https://docdro.id/V9UOz0d"
+          src="https://docdro.id/vijzBpy"
           frameBorder="0"
           allowtransparency="true"
           allowFullScreen
