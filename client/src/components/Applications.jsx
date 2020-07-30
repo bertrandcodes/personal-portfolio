@@ -64,12 +64,24 @@ export default function Applications() {
           </div>
           <div className="card">
             <div className="content">
-              <h2 className="title">Adidas Mock-Up</h2>
+              <h2 className="title">Squad Goals</h2>
               <p className="copy">
-                A fully-functional clone of an Adidas product page done in
-                Redux.
+                A mobile-first web app that holds you accountable to goals with
+                the help of teammates and friends.
               </p>
-              <a href="#FEC">
+              <a href="#SQUAD">
+                <button className="btn1">View</button>
+              </a>
+            </div>
+          </div>
+          <div className="card">
+            <div className="content">
+              <h2 className="title">Hire Mee</h2>
+              <p className="copy">
+                An app that helps manage all information related to the jobs
+                you're applying for.
+              </p>
+              <a href="#HIRE">
                 <button className="btn1">View</button>
               </a>
             </div>
@@ -79,7 +91,7 @@ export default function Applications() {
       <div className="marquee-div">
         <marquee>
           &lt;React.js&gt; &lt;Redux&gt; &lt;Node.js&gt; &lt;Express&gt;
-          &lt;Socket.io&gt; &lt;MongoDB&gt; &lt;PostgreSQL&gt;
+          &lt;Firebase&gt; &lt;MongoDB&gt; &lt;PostgreSQL&gt;
         </marquee>
       </div>
       <div className="apps">

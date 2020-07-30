@@ -833,6 +833,14 @@ span {
   background-image: url(./gears.jpg);
 }
 
+.card:nth-child(3):before {
+  background-image: url(./handstogether.jpg);
+}
+
+.card:nth-child(4):before {
+  background-image: url(./hireme.png);
+}
+
 .content {
   position: relative;
   display: flex;
