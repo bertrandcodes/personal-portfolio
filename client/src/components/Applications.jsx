@@ -62,6 +62,18 @@ export default function Applications() {
               </a>
             </div>
           </div>
+          <div className="card">
+            <div className="content">
+              <h2 className="title">Adidas Mock-Up</h2>
+              <p className="copy">
+                A fully-functional clone of an Adidas product page done in
+                Redux.
+              </p>
+              <a href="#FEC">
+                <button className="btn1">View</button>
+              </a>
+            </div>
+          </div>
         </main>
       </div>
       <div className="marquee-div">
