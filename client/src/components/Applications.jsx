@@ -327,7 +327,7 @@ export default function Applications() {
             </div>
             <div className="app-github">
               <a
-                href="https://github.com/HRLA35-SDC/Bertrand-SDC-Component"
+                href="https://github.com/bertrandcodes/Squad-Goals"
                 target="_blank"
               >
                 <button className="github-button"></button>
