@@ -92,7 +92,14 @@ export default function Applications() {
                 you're applying for.
               </p>
               <a href="#HIRE">
-                <button className="btn1">View</button>
+                <button
+                  className="btn1"
+                  onClick={() => {
+                    window.alert("App preview coming soon!");
+                  }}
+                >
+                  View
+                </button>
               </a>
             </div>
           </div>
@@ -311,6 +318,12 @@ export default function Applications() {
               </Modal>
 
               <p className="github-text">Info</p>
+            </div>
+            <div>
+              <a href="https://squadgoals.dev" class="round-button">
+                <i class="fa fa-play fa-2x"></i>
+              </a>
+              <p className="github-text">Play</p>
             </div>
             <div className="app-github">
               <a
