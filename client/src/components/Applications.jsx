@@ -272,7 +272,7 @@ export default function Applications() {
           <div className="tech-bar">
             <center>
               <p className="tech-used">
-                React | Redux | Firebase | Material-UI
+                React.js | Redux | Firebase | Material-UI
               </p>
             </center>
           </div>
