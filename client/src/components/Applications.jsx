@@ -26,6 +26,16 @@ export default function Applications() {
     setIsOpen2(false);
   };
 
+  const [isOpen3, setIsOpen3] = React.useState(false);
+
+  const showModal3 = () => {
+    setIsOpen3(true);
+  };
+
+  const hideModal3 = () => {
+    setIsOpen3(false);
+  };
+
   return (
     <Fragment>
       <Helmet>
@@ -76,7 +86,7 @@ export default function Applications() {
           </div>
           <div className="card">
             <div className="content">
-              <h2 className="title">Hire Mee</h2>
+              <h2 className="title">Hire-Mee</h2>
               <p className="copy">
                 An app that helps manage all information related to the jobs
                 you're applying for.
@@ -206,6 +216,69 @@ export default function Applications() {
                     <button>Learn More</button>
                   </NavLink>
                   <button onClick={hideModal2}>Exit</button>
+                </Modal.Footer>
+              </Modal>
+
+              <p className="github-text">Info</p>
+            </div>
+            <div className="app-github">
+              <a
+                href="https://github.com/HRLA35-SDC/Bertrand-SDC-Component"
+                target="_blank"
+              >
+                <button className="github-button"></button>
+              </a>
+              <p className="github-text">GitHub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="apps">
+        <a name="SQUAD"></a>
+        <div className="app-div">
+          <h1 className="app-text">Squad Goals</h1>
+          <div className="line"></div>
+          <video className="video" autoPlay={true} loop={true} muted={true}>
+            <source src="sdc.mp4" type="video/mp4" />
+          </video>
+          <div className="tech-bar">
+            <center>
+              <p className="tech-used">
+                React | Redux | Firebase | Material-UI
+              </p>
+            </center>
+          </div>
+          <div className="app-info">
+            <div className="app-bullets">
+              <button className="info-button" onClick={showModal3}></button>
+              <Modal
+                show={isOpen3}
+                onHide={hideModal3}
+                aria-labelledby="contained-modal-title-vcenter"
+                size="lg"
+                centered
+              >
+                <Modal.Header>
+                  <Modal.Title>Squad Goals</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <ul>
+                    <li>
+                      Developed a mobile-first social platform where users can
+                      interface and collaborate to complete daily challenges
+                    </li>
+                    <li>
+                      Leveraged Firebase to provide authorized real-time updates
+                      as part of a fresh and secure user experience
+                    </li>
+                    <li>
+                      Composed a highly structured and clean layout using
+                      Material-UI framework
+                    </li>
+                  </ul>
+                </Modal.Body>
+                <Modal.Footer>
+                  <button onClick={hideModal3}>Exit</button>
                 </Modal.Footer>
               </Modal>
 
