@@ -238,9 +238,37 @@ export default function Applications() {
         <div className="app-div">
           <h1 className="app-text">Squad Goals</h1>
           <div className="line"></div>
-          <video className="video" autoPlay={true} loop={true} muted={true}>
-            <source src="sdc.mp4" type="video/mp4" />
-          </video>
+
+          <figure class="iphone">
+            <div class="side-buttons">
+              <div></div>
+            </div>
+
+            <div class="phone">
+              <div class="top">
+                <div>
+                  <span class="camera"></span>
+                  <span class="speaker"></span>
+                </div>
+              </div>
+
+              <div class="screen">
+                <video
+                  className="iphone-video"
+                  autoPlay={true}
+                  loop={true}
+                  muted={true}
+                >
+                  <source src="squadgoalsdemo.mov" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="bottom">
+                <div></div>
+              </div>
+            </div>
+          </figure>
+
           <div className="tech-bar">
             <center>
               <p className="tech-used">
