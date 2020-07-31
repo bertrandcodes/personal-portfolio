@@ -966,7 +966,7 @@ marquee {
   flex-direction: column;
   border: 4px double silver;
   margin: 45px 45px;
-  padding: 45px 20px 45px 20px;
+  padding: 45px 45px 45px 45px;
   border-radius: 24px;
   width: 1200px;
   box-shadow: 1px 1px 4px black;
@@ -986,6 +986,10 @@ marquee {
 @media (max-width: 375px) {
   .app-text {
     text-align: center;
+  }
+
+  .app-div {
+    padding: 45px 20px 45px 20px;
   }
 }
 
@@ -1135,7 +1139,7 @@ button {
   padding-top: 14px;
   padding-left: 8px;
   line-height: 20px;
-  border: 6px outset #ff6379;
+  border: 6px outset #d8d6e6;
   border-radius: 50%;
   color: #f5f5f5 !important;
   text-align: center;
