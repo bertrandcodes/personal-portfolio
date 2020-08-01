@@ -319,7 +319,7 @@ export default function Applications() {
 
               <p className="github-text">Info</p>
             </div>
-            <div>
+            <div className="play-div">
               <a href="https://squadgoals.dev" class="round-button">
                 <i class="fa fa-play fa-2x"></i>
               </a>
