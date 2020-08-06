@@ -792,19 +792,19 @@ span {
 }
 
 .card:nth-child(1):before {
-  background-image: url(./adidasshoe.jpg);
+  background-image: url(./shoe-2.png);
 }
 
 .card:nth-child(2):before {
-  background-image: url(./gears.jpg);
+  background-image: url(./squad.png);
 }
 
 .card:nth-child(3):before {
-  background-image: url(./handstogether.jpg);
+  background-image: url(./hire.png);
 }
 
 .card:nth-child(4):before {
-  background-image: url(./hireme.png);
+  background-image: url(./gears.jpg);
 }
 
 .content {
