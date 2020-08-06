@@ -792,19 +792,19 @@ span {
 }
 
 .card:nth-child(1):before {
-  background-image: url(./shoe-2.png);
+  background-image: url(./shoe.png);
 }
 
 .card:nth-child(2):before {
-  background-image: url(./squad.png);
+  background-image: url(./squad-2.png);
 }
 
 .card:nth-child(3):before {
-  background-image: url(./hire.png);
+  background-image: url(./job.png);
 }
 
 .card:nth-child(4):before {
-  background-image: url(./gears.png);
+  background-image: url(./cog-2.png);
 }
 
 .content {
@@ -861,7 +861,7 @@ span {
   }
 
   .content {
-    transform: translateY(16.8rem);
+    transform: translateY(16.5rem);
   }
 
   .content > *:not(.title) {

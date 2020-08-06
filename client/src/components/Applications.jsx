@@ -60,6 +60,39 @@ export default function Applications() {
               </a>
             </div>
           </div>
+
+          <div className="card">
+            <div className="content">
+              <h2 className="title">Squad Goals</h2>
+              <p className="copy">
+                A mobile-first web app that holds you accountable to goals with
+                the help of teammates and friends.
+              </p>
+              <a href="#squad-goals">
+                <button className="btn1">View</button>
+              </a>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="content">
+              <h2 className="title">Hire-Mee</h2>
+              <p className="copy">
+                An app that helps manage all information related to the jobs
+                you're applying for.
+              </p>
+              <a href="#hire-mee">
+                <button
+                  className="btn1"
+                  onClick={() => {
+                    window.alert("App preview coming soon!");
+                  }}
+                >
+                  View
+                </button>
+              </a>
+            </div>
+          </div>
           <div className="card">
             <div className="content">
               <h2 className="title">System Design</h2>
@@ -69,37 +102,6 @@ export default function Applications() {
               </p>
               <a href="#SDC">
                 <button className="btn1">View</button>
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <div className="content">
-              <h2 className="title">Squad Goals</h2>
-              <p className="copy">
-                A mobile-first web app that holds you accountable to goals with
-                the help of teammates and friends.
-              </p>
-              <a href="#SQUAD">
-                <button className="btn1">View</button>
-              </a>
-            </div>
-          </div>
-          <div className="card">
-            <div className="content">
-              <h2 className="title">Hire-Mee</h2>
-              <p className="copy">
-                An app that helps manage all information related to the jobs
-                you're applying for.
-              </p>
-              <a href="#HIRE">
-                <button
-                  className="btn1"
-                  onClick={() => {
-                    window.alert("App preview coming soon!");
-                  }}
-                >
-                  View
-                </button>
               </a>
             </div>
           </div>
@@ -176,72 +178,7 @@ export default function Applications() {
         </div>
       </div>
       <div className="apps">
-        <a name="SDC"></a>
-        <div className="app-div">
-          <h1 className="app-text">System Design</h1>
-          <div className="line"></div>
-          <video className="video" autoPlay={true} loop={true} muted={true}>
-            <source src="sdc.mp4" type="video/mp4" />
-          </video>
-          <div className="tech-bar">
-            <center>
-              <p className="tech-used">PostgreSQL | AWS | NodeJS | NGINX</p>
-            </center>
-          </div>
-          <div className="app-info">
-            <div className="app-bullets">
-              <button className="info-button" onClick={showModal2}></button>
-              <Modal
-                show={isOpen2}
-                onHide={hideModal2}
-                aria-labelledby="contained-modal-title-vcenter"
-                size="lg"
-                centered
-              >
-                <Modal.Header>
-                  <Modal.Title>System Design</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <ul>
-                    <li>
-                      Increased data set from 100 to 10,000,000 unique records
-                      efficiently using ​draining​ and ​streaming​ techniques
-                    </li>
-                    <li>
-                      Horizontally scaled​ a legacy code base deployed over ​5
-                      AWS T2 micro instances​ capable of handling ​2100 requests
-                      per second(average latency 67 ms, error rate 0.0%)
-                    </li>
-                    <li>
-                      Implemented Nginx as a ​round-robin/least-conn​​load
-                      balancer ​and​ cache​ to further reduce latency by 27%
-                    </li>
-                  </ul>
-                </Modal.Body>
-                <Modal.Footer>
-                  <NavLink style={{ color: "black" }} to="/blog">
-                    <button>Learn More</button>
-                  </NavLink>
-                  <button onClick={hideModal2}>Exit</button>
-                </Modal.Footer>
-              </Modal>
-
-              <p className="github-text">Info</p>
-            </div>
-            <div className="app-github">
-              <a
-                href="https://github.com/HRLA35-SDC/Bertrand-SDC-Component"
-                target="_blank"
-              >
-                <button className="github-button"></button>
-              </a>
-              <p className="github-text">GitHub</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="apps">
-        <a name="SQUAD"></a>
+        <a name="squad-goals"></a>
         <div className="app-div">
           <h1 className="app-text">Squad Goals</h1>
           <div className="line"></div>
@@ -328,6 +265,71 @@ export default function Applications() {
             <div className="app-github">
               <a
                 href="https://github.com/bertrandcodes/Squad-Goals"
+                target="_blank"
+              >
+                <button className="github-button"></button>
+              </a>
+              <p className="github-text">GitHub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="apps">
+        <a name="SDC"></a>
+        <div className="app-div">
+          <h1 className="app-text">System Design</h1>
+          <div className="line"></div>
+          <video className="video" autoPlay={true} loop={true} muted={true}>
+            <source src="sdc.mp4" type="video/mp4" />
+          </video>
+          <div className="tech-bar">
+            <center>
+              <p className="tech-used">PostgreSQL | AWS | NodeJS | NGINX</p>
+            </center>
+          </div>
+          <div className="app-info">
+            <div className="app-bullets">
+              <button className="info-button" onClick={showModal2}></button>
+              <Modal
+                show={isOpen2}
+                onHide={hideModal2}
+                aria-labelledby="contained-modal-title-vcenter"
+                size="lg"
+                centered
+              >
+                <Modal.Header>
+                  <Modal.Title>System Design</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <ul>
+                    <li>
+                      Increased data set from 100 to 10,000,000 unique records
+                      efficiently using ​draining​ and ​streaming​ techniques
+                    </li>
+                    <li>
+                      Horizontally scaled​ a legacy code base deployed over ​5
+                      AWS T2 micro instances​ capable of handling ​2100 requests
+                      per second(average latency 67 ms, error rate 0.0%)
+                    </li>
+                    <li>
+                      Implemented Nginx as a ​round-robin/least-conn​​load
+                      balancer ​and​ cache​ to further reduce latency by 27%
+                    </li>
+                  </ul>
+                </Modal.Body>
+                <Modal.Footer>
+                  <NavLink style={{ color: "black" }} to="/blog">
+                    <button>Learn More</button>
+                  </NavLink>
+                  <button onClick={hideModal2}>Exit</button>
+                </Modal.Footer>
+              </Modal>
+
+              <p className="github-text">Info</p>
+            </div>
+            <div className="app-github">
+              <a
+                href="https://github.com/HRLA35-SDC/Bertrand-SDC-Component"
                 target="_blank"
               >
                 <button className="github-button"></button>
