@@ -78,8 +78,8 @@ export default function Applications() {
             <div className="content">
               <h2 className="title">Hire-Mee</h2>
               <p className="copy">
-                An app that helps manage all information related to the jobs
-                you're applying for.
+                An app that helps manage information related to the jobs you're
+                applying for.
               </p>
               <a href="#hire-mee">
                 <button

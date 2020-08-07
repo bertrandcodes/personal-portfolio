@@ -67,8 +67,8 @@ export default function About() {
             </div>
             <div className="about-paragraphs">I haven’t looked back since.</div>
             <div className="about-paragraphs">
-              I’ve worn many hats in life, but none quite fit me like web
-              development. All that’s left now is to follow this road while
+              I’ve worn many hats in life, but none quite fit me like software
+              engineering. All that’s left now is to follow this road while
               honing my craft and enjoying it each and every day. A lifetime’s
               worth of journeys await.
             </div>
