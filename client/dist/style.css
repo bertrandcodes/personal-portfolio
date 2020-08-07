@@ -792,7 +792,7 @@ span {
 }
 
 .card:nth-child(1):before {
-  background-image: url(./shoe.png);
+  background-image: url(./adidasshoe.jpg);
 }
 
 .card:nth-child(2):before {
