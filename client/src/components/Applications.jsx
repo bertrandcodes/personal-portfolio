@@ -52,7 +52,7 @@ export default function Applications() {
             <div className="content">
               <h2 className="title">Adidas Mock-Up</h2>
               <p className="copy">
-                A fully-functional clone of an Adidas product page done in
+                A fully-functional clone of an Adidas product page done using
                 Redux.
               </p>
               <a href="#FEC">
