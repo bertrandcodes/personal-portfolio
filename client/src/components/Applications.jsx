@@ -6,34 +6,44 @@ import { Helmet } from "react-helmet";
 import Footer from "./Footer.jsx";
 
 export default function Applications() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpenSquad, setIsOpenSquad] = React.useState(false);
 
-  const showModal = () => {
-    setIsOpen(true);
+  const showModalSquad = () => {
+    setIsOpenSquad(true);
   };
 
-  const hideModal = () => {
-    setIsOpen(false);
+  const hideModalSquad = () => {
+    setIsOpenSquad(false);
   };
 
-  const [isOpen2, setIsOpen2] = React.useState(false);
+  const [isOpenHire, setIsOpenHire] = React.useState(false);
 
-  const showModal2 = () => {
-    setIsOpen2(true);
+  const showModalHire = () => {
+    setIsOpenHire(true);
   };
 
-  const hideModal2 = () => {
-    setIsOpen2(false);
+  const hideModalHire = () => {
+    setIsOpenHire(false);
   };
 
-  const [isOpen3, setIsOpen3] = React.useState(false);
+  const [isOpenAdidas, setIsOpenAdidas] = React.useState(false);
 
-  const showModal3 = () => {
-    setIsOpen3(true);
+  const showModalAdidas = () => {
+    setIsOpenAdidas(true);
   };
 
-  const hideModal3 = () => {
-    setIsOpen3(false);
+  const hideModalAdidas = () => {
+    setIsOpenAdidas(false);
+  };
+
+  const [isOpenSystem, setIsOpenSystem] = React.useState(false);
+
+  const showModalSystem = () => {
+    setIsOpenSystem(true);
+  };
+
+  const hideModalSystem = () => {
+    setIsOpenSystem(false);
   };
 
   return (
@@ -48,19 +58,6 @@ export default function Applications() {
       <ScrollIndicator />
       <div className="page-body">
         <main className="page-content">
-          <div className="card">
-            <div className="content">
-              <h2 className="title">Adidas Mock-Up</h2>
-              <p className="copy">
-                A fully-functional clone of an Adidas product page done using
-                Redux.
-              </p>
-              <a href="#FEC">
-                <button className="btn1">View</button>
-              </a>
-            </div>
-          </div>
-
           <div className="card">
             <div className="content">
               <h2 className="title">Squad Goals</h2>
@@ -82,14 +79,19 @@ export default function Applications() {
                 applying for.
               </p>
               <a href="#hire-mee">
-                <button
-                  className="btn1"
-                  onClick={() => {
-                    window.alert("App preview coming soon!");
-                  }}
-                >
-                  View
-                </button>
+                <button className="btn1">View</button>
+              </a>
+            </div>
+          </div>
+          <div className="card">
+            <div className="content">
+              <h2 className="title">Adidas Mock-Up</h2>
+              <p className="copy">
+                A fully-functional clone of an Adidas product page done using
+                Redux.
+              </p>
+              <a href="#FEC">
+                <button className="btn1">View</button>
               </a>
             </div>
           </div>
@@ -112,70 +114,6 @@ export default function Applications() {
           &lt;React.js&gt; &lt;Redux&gt; &lt;Node.js&gt; &lt;Express&gt;
           &lt;Firebase&gt; &lt;MongoDB&gt; &lt;PostgreSQL&gt;
         </marquee>
-      </div>
-      <div className="apps">
-        <a name="FEC"></a>
-        <div className="app-div">
-          <h1 className="app-text">adidas Product Page Mock-Up</h1>
-          <div className="line"></div>
-          <video className="video" autoPlay={true} loop={true} muted={true}>
-            <source src="productadidas.mov" type="video/mp4" />
-          </video>
-          <div className="tech-bar">
-            <center>
-              <p className="tech-used">
-                React.js | Redux | Express.js | MongoDB
-              </p>
-            </center>
-          </div>
-          <div className="app-info">
-            <div className="app-bullets">
-              <button className="info-button" onClick={showModal}></button>
-              <Modal
-                show={isOpen}
-                onHide={hideModal}
-                aria-labelledby="contained-modal-title-vcenter"
-                size="lg"
-                centered
-              >
-                <Modal.Header>
-                  <Modal.Title>adidas Product Page Mock-up</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <ul>
-                    <li>
-                      Utilized React along with ​reconciliation logic​ to
-                      emulate a fully functioning Adidas product page
-                    </li>
-                    <li>
-                      Deployed proxy server on ​AWS EC2​ instance while adhering
-                      to ​service oriented architecture​ principles
-                    </li>
-                    <li>
-                      Dockerized​ web app to ensure consistent runtime
-                      environment and cross-platform execution
-                    </li>
-                    <li>Refactored codebase using Redux</li>
-                  </ul>
-                </Modal.Body>
-                <Modal.Footer>
-                  <button onClick={hideModal}>Exit</button>
-                </Modal.Footer>
-              </Modal>
-
-              <p className="github-text">Info</p>
-            </div>
-            <div className="app-github">
-              <a
-                href="https://github.com/HRLA35-CS-ADIDAS/Bertrand_Product_View"
-                target="_blank"
-              >
-                <button className="github-button"></button>
-              </a>
-              <p className="github-text">GitHub</p>
-            </div>
-          </div>
-        </div>
       </div>
       <div className="apps">
         <a name="squad-goals"></a>
@@ -222,10 +160,10 @@ export default function Applications() {
           </div>
           <div className="app-info">
             <div className="app-bullets">
-              <button className="info-button" onClick={showModal3}></button>
+              <button className="info-button" onClick={showModalSquad}></button>
               <Modal
-                show={isOpen3}
-                onHide={hideModal3}
+                show={isOpenSquad}
+                onHide={hideModalSquad}
                 aria-labelledby="contained-modal-title-vcenter"
                 size="lg"
                 centered
@@ -250,7 +188,7 @@ export default function Applications() {
                   </ul>
                 </Modal.Body>
                 <Modal.Footer>
-                  <button onClick={hideModal3}>Exit</button>
+                  <button onClick={hideModalSquad}>Exit</button>
                 </Modal.Footer>
               </Modal>
 
@@ -275,12 +213,82 @@ export default function Applications() {
         </div>
       </div>
       <div className="apps">
-        <a name="FEC"></a>
+        <a name="hire-mee"></a>
         <div className="app-div">
           <h1 className="app-text">Hire-Mee</h1>
           <div className="line"></div>
           <video className="video" autoPlay={true} loop={true} muted={true}>
             <source src="hiremeedemo.mov" type="video/mp4" />
+          </video>
+          <div className="tech-bar">
+            <center>
+              <p className="tech-used">
+                React.js | PostgreSQL | Express.js | NodeJS
+              </p>
+            </center>
+          </div>
+          <div className="app-info">
+            <div className="app-bullets">
+              <button className="info-button" onClick={showModalHire}></button>
+              <Modal
+                show={isOpenHire}
+                onHide={hideModalHire}
+                aria-labelledby="contained-modal-title-vcenter"
+                size="lg"
+                centered
+              >
+                <Modal.Header>
+                  <Modal.Title>Hire-Mee</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <ul>
+                    <li>
+                      Built PERN stack application to organize high quantities
+                      of job search information among cohort mates
+                    </li>
+                    <li>
+                      Leveraged PostgreSQL to build a one-to-many friends
+                      feature that supplies updated information between users
+                    </li>
+                    <li>
+                      Implemented an interactive map using Google Maps API that
+                      manages and displays new data points
+                    </li>
+                  </ul>
+                </Modal.Body>
+                <Modal.Footer>
+                  <button onClick={hideModalHire}>Exit</button>
+                </Modal.Footer>
+              </Modal>
+
+              <p className="github-text">Info</p>
+            </div>
+            <div className="play-div">
+              <a
+                href="http://54.151.84.70:3000/"
+                target="_blank"
+                className="round-button"
+              >
+                <i className="fa fa-play fa-2x"></i>
+              </a>
+              <p className="github-text">Play</p>
+            </div>
+            <div className="app-github">
+              <a href="https://github.com/hire-mee" target="_blank">
+                <button className="github-button"></button>
+              </a>
+              <p className="github-text">GitHub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="apps">
+        <a name="FEC"></a>
+        <div className="app-div">
+          <h1 className="app-text">adidas Product Page Mock-Up</h1>
+          <div className="line"></div>
+          <video className="video" autoPlay={true} loop={true} muted={true}>
+            <source src="productadidas.mov" type="video/mp4" />
           </video>
           <div className="tech-bar">
             <center>
@@ -291,16 +299,19 @@ export default function Applications() {
           </div>
           <div className="app-info">
             <div className="app-bullets">
-              <button className="info-button" onClick={showModal}></button>
+              <button
+                className="info-button"
+                onClick={showModalAdidas}
+              ></button>
               <Modal
-                show={isOpen}
-                onHide={hideModal}
+                show={isOpenAdidas}
+                onHide={hideModalAdidas}
                 aria-labelledby="contained-modal-title-vcenter"
                 size="lg"
                 centered
               >
                 <Modal.Header>
-                  <Modal.Title>Hire-Mee</Modal.Title>
+                  <Modal.Title>adidas Product Page Mock-up</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <ul>
@@ -320,17 +331,11 @@ export default function Applications() {
                   </ul>
                 </Modal.Body>
                 <Modal.Footer>
-                  <button onClick={hideModal}>Exit</button>
+                  <button onClick={hideModalAdidas}>Exit</button>
                 </Modal.Footer>
               </Modal>
 
               <p className="github-text">Info</p>
-            </div>
-            <div className="play-div">
-              <a href="https://squadgoals.dev" className="round-button">
-                <i className="fa fa-play fa-2x"></i>
-              </a>
-              <p className="github-text">Play</p>
             </div>
             <div className="app-github">
               <a
@@ -359,10 +364,13 @@ export default function Applications() {
           </div>
           <div className="app-info">
             <div className="app-bullets">
-              <button className="info-button" onClick={showModal2}></button>
+              <button
+                className="info-button"
+                onClick={showModalSystem}
+              ></button>
               <Modal
-                show={isOpen2}
-                onHide={hideModal2}
+                show={isOpenSystem}
+                onHide={hideModalSystem}
                 aria-labelledby="contained-modal-title-vcenter"
                 size="lg"
                 centered
@@ -391,7 +399,7 @@ export default function Applications() {
                   <NavLink style={{ color: "black" }} to="/blog">
                     <button>Learn More</button>
                   </NavLink>
-                  <button onClick={hideModal2}>Exit</button>
+                  <button onClick={hideModalSystem}>Exit</button>
                 </Modal.Footer>
               </Modal>
 
