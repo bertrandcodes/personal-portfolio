@@ -172,6 +172,14 @@ export default function Applications() {
                   <Modal.Title>Squad Goals</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                  <div className="app-description">
+                    A mobile first accountability tracker app that leverages
+                    support from others to hit daily and longterm goals.
+                    Features include: fully secure login and signup
+                    authentication, friend-adding functionality, profile picture
+                    upload, daily multiplayer challenges, and streaks/past
+                    completion history.
+                  </div>
                   <ul>
                     <li>
                       Developed a mobile-first social platform where users can
@@ -241,9 +249,20 @@ export default function Applications() {
                   <Modal.Title>Hire-Mee</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                  <div className="app-description">
+                    Inspired by the overwhelming volume of job applications
+                    among our fellow job-seeking peers, my team and I designed
+                    Hire-Mee as a platform to organize and display all job
+                    sensitive information. Features include: an interactive list
+                    that allows user to seamlessly move jobs between different
+                    status piles, user statistic page along with individual job
+                    post modals that display information, fully-functional
+                    friends list, leaderboard feature, and interactive map that
+                    allows users to track job locations relative to themselves.
+                  </div>
                   <ul>
                     <li>
-                      Built PERN stack application to organize high quantities
+                      Built a PERN stack application to organize high quantities
                       of job search information among cohort mates
                     </li>
                     <li>
@@ -382,7 +401,7 @@ export default function Applications() {
                   <ul>
                     <li>
                       Increased data set from 100 to 10,000,000 unique records
-                      efficiently using ​draining​ and ​streaming​ techniques
+                      efficiently by using ​draining​ and ​streaming​ techniques
                     </li>
                     <li>
                       Horizontally scaled​ a legacy code base deployed over ​5
