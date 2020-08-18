@@ -183,20 +183,20 @@ export default function Applications() {
           <h1 className="app-text">Squad Goals</h1>
           <div className="line"></div>
 
-          <figure class="iphone">
-            <div class="side-buttons">
+          <figure className="iphone">
+            <div className="side-buttons">
               <div></div>
             </div>
 
-            <div class="phone">
-              <div class="top">
+            <div className="phone">
+              <div className="top">
                 <div>
-                  <span class="camera"></span>
-                  <span class="speaker"></span>
+                  <span className="camera"></span>
+                  <span className="speaker"></span>
                 </div>
               </div>
 
-              <div class="screen">
+              <div className="screen">
                 <video
                   className="iphone-video"
                   autoPlay={true}
@@ -207,7 +207,7 @@ export default function Applications() {
                 </video>
               </div>
 
-              <div class="bottom">
+              <div className="bottom">
                 <div></div>
               </div>
             </div>
@@ -257,14 +257,84 @@ export default function Applications() {
               <p className="github-text">Info</p>
             </div>
             <div className="play-div">
-              <a href="https://squadgoals.dev" class="round-button">
-                <i class="fa fa-play fa-2x"></i>
+              <a href="https://squadgoals.dev" className="round-button">
+                <i className="fa fa-play fa-2x"></i>
               </a>
               <p className="github-text">Play</p>
             </div>
             <div className="app-github">
               <a
                 href="https://github.com/bertrandcodes/Squad-Goals"
+                target="_blank"
+              >
+                <button className="github-button"></button>
+              </a>
+              <p className="github-text">GitHub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="apps">
+        <a name="FEC"></a>
+        <div className="app-div">
+          <h1 className="app-text">Hire-Mee</h1>
+          <div className="line"></div>
+          <video className="video" autoPlay={true} loop={true} muted={true}>
+            <source src="hiremeedemo.mov" type="video/mp4" />
+          </video>
+          <div className="tech-bar">
+            <center>
+              <p className="tech-used">
+                React.js | Redux | Express.js | MongoDB
+              </p>
+            </center>
+          </div>
+          <div className="app-info">
+            <div className="app-bullets">
+              <button className="info-button" onClick={showModal}></button>
+              <Modal
+                show={isOpen}
+                onHide={hideModal}
+                aria-labelledby="contained-modal-title-vcenter"
+                size="lg"
+                centered
+              >
+                <Modal.Header>
+                  <Modal.Title>Hire-Mee</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <ul>
+                    <li>
+                      Utilized React along with ​reconciliation logic​ to
+                      emulate a fully functioning Adidas product page
+                    </li>
+                    <li>
+                      Deployed proxy server on ​AWS EC2​ instance while adhering
+                      to ​service oriented architecture​ principles
+                    </li>
+                    <li>
+                      Dockerized​ web app to ensure consistent runtime
+                      environment and cross-platform execution
+                    </li>
+                    <li>Refactored codebase using Redux</li>
+                  </ul>
+                </Modal.Body>
+                <Modal.Footer>
+                  <button onClick={hideModal}>Exit</button>
+                </Modal.Footer>
+              </Modal>
+
+              <p className="github-text">Info</p>
+            </div>
+            <div className="play-div">
+              <a href="https://squadgoals.dev" className="round-button">
+                <i className="fa fa-play fa-2x"></i>
+              </a>
+              <p className="github-text">Play</p>
+            </div>
+            <div className="app-github">
+              <a
+                href="https://github.com/HRLA35-CS-ADIDAS/Bertrand_Product_View"
                 target="_blank"
               >
                 <button className="github-button"></button>
