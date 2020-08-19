@@ -958,7 +958,7 @@ marquee {
 }
 .app-description {
   margin: 10px 35px 20px 35px;
-  border: 1px #dee2e6 solid;
+  border: 4px #dee2e6 double;
   padding: 20px;
 }
 
