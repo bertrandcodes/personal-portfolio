@@ -182,8 +182,8 @@ export default function Applications() {
                   </div>
                   <ul>
                     <li>
-                      Developed a mobile-first social platform where users can
-                      interface and collaborate to complete daily challenges
+                      Deployed a streak feature using scheduled cloud functions
+                      to hold users accountable and maintain consistent progress
                     </li>
                     <li>
                       Leveraged Firebase to provide authorized real-time updates
@@ -203,7 +203,11 @@ export default function Applications() {
               <p className="github-text">Info</p>
             </div>
             <div className="play-div">
-              <a href="https://squadgoals.dev" className="round-button">
+              <a
+                href="https://squadgoals.dev"
+                target="_blank"
+                className="round-button"
+              >
                 <i className="fa fa-play fa-2x"></i>
               </a>
               <p className="github-text">Play</p>
@@ -231,7 +235,7 @@ export default function Applications() {
           <div className="tech-bar">
             <center>
               <p className="tech-used">
-                React.js | PostgreSQL | Express.js | NodeJS
+                React.js | PostgreSQL | Express.js | Node.js
               </p>
             </center>
           </div>
@@ -262,16 +266,18 @@ export default function Applications() {
                   </div>
                   <ul>
                     <li>
-                      Built a PERN stack application to organize high quantities
-                      of job search information among cohort mates
-                    </li>
-                    <li>
                       Leveraged PostgreSQL to build a one-to-many friends
                       feature that supplies updated information between users
                     </li>
                     <li>
+                      Retrieved data points to create a real-time leaderboard
+                      that allows users to directly track progress against each
+                      other
+                    </li>
+                    <li>
                       Implemented an interactive map using Google Maps API that
-                      manages and displays new data points
+                      displays job locations relative to each other as well as
+                      the user
                     </li>
                   </ul>
                 </Modal.Body>
@@ -378,7 +384,7 @@ export default function Applications() {
           </video>
           <div className="tech-bar">
             <center>
-              <p className="tech-used">PostgreSQL | AWS | NodeJS | NGINX</p>
+              <p className="tech-used">PostgreSQL | AWS | Node.js | NGINX</p>
             </center>
           </div>
           <div className="app-info">
