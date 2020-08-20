@@ -111,7 +111,7 @@ export default function Applications() {
       </div>
       <div className="marquee-div">
         <marquee>
-          &lt;React.js&gt; &lt;Redux&gt; &lt;Node.js&gt; &lt;Express.js&gt;
+          &lt;React&gt; &lt;Redux&gt; &lt;Node.js&gt; &lt;Express&gt;
           &lt;Firebase&gt; &lt;MongoDB&gt; &lt;PostgreSQL&gt;
         </marquee>
       </div>
@@ -154,7 +154,7 @@ export default function Applications() {
           <div className="tech-bar">
             <center>
               <p className="tech-used">
-                React.js | Redux | Firebase | Material-UI
+                React | Redux | Firebase | Material-UI
               </p>
             </center>
           </div>
@@ -235,7 +235,7 @@ export default function Applications() {
           <div className="tech-bar">
             <center>
               <p className="tech-used">
-                React.js | PostgreSQL | Express.js | Node.js
+                React | PostgreSQL | Express | Node.js
               </p>
             </center>
           </div>
@@ -317,9 +317,7 @@ export default function Applications() {
           </video>
           <div className="tech-bar">
             <center>
-              <p className="tech-used">
-                React.js | Redux | Express.js | MongoDB
-              </p>
+              <p className="tech-used">React | Redux | Express | MongoDB</p>
             </center>
           </div>
           <div className="app-info">
