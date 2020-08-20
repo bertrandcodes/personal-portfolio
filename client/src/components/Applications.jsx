@@ -111,7 +111,7 @@ export default function Applications() {
       </div>
       <div className="marquee-div">
         <marquee>
-          &lt;React.js&gt; &lt;Redux&gt; &lt;Node.js&gt; &lt;Express&gt;
+          &lt;React.js&gt; &lt;Redux&gt; &lt;Node.js&gt; &lt;Express.js&gt;
           &lt;Firebase&gt; &lt;MongoDB&gt; &lt;PostgreSQL&gt;
         </marquee>
       </div>
