@@ -290,7 +290,7 @@ export default function Applications() {
             </div>
             <div className="play-div">
               <a
-                href="http://54.151.84.70:3000/"
+                href="http://54.183.118.152:3000/"
                 target="_blank"
                 className="round-button"
               >
