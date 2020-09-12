@@ -611,14 +611,6 @@ nav {
   flex: 1;
 }
 
-@keyframes openUp {
-  from {
-    height: 0%;
-  }
-  to {
-    height: 90%;
-  }
-}
 .about-right {
   position: relative;
   margin-top: auto;
@@ -629,6 +621,14 @@ nav {
   width: 50%;
 }
 
+@keyframes openUp {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 90%;
+  }
+}
 .beach-div {
   height: 100%;
   padding: 25px;
