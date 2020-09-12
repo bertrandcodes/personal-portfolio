@@ -615,7 +615,6 @@ nav {
   top: 0;
   height: 100vh;
   width: 100%;
-  // background-image: url(./botanical.png);
   background-size: cover;
   background-position: center;
 }
@@ -638,15 +637,6 @@ nav {
   flex: 1;
 }
 
-@keyframes openUp {
-  from {
-    height: 0%;
-  }
-  to {
-    height: 90%;
-  }
-}
-
 .about-right {
   position: relative;
   margin-top: auto;
@@ -655,6 +645,15 @@ nav {
   background-color: white;
   height: 90%;
   width: 50%;
+}
+
+@keyframes openUp {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 90%;
+  }
 }
 
 .beach-div {
@@ -1189,14 +1188,11 @@ marquee {
   width: 70px;
   border-radius: 50px;
   outline: none !important;
-  // transition: 0.5s;
   -webkit-transition: -webkit-transform .4s ease-in-out;
   transition: transform .4s ease-in-out;
 }
 
 .info-button:hover {
-  // border-radius: 10px;
-  // transition: 0.5s;
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
@@ -1231,12 +1227,9 @@ button {
   outline: none !important;
   -webkit-transition: -webkit-transform .4s ease-in-out;
   transition: transform .4s ease-in-out;
-  // transition: 0.5s;
 }
 
 .github-button:hover {
-  // border-radius: 50px;
-  // transition: 0.5s;
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
