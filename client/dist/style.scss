@@ -615,9 +615,100 @@ nav {
   top: 0;
   height: 100vh;
   width: 100%;
-  background-image: url(./botanical.png);
+  // background-image: url(./botanical.png);
   background-size: cover;
   background-position: center;
+}
+
+.about-book {
+  height: 92vh;
+  width: 100%;
+  display: flex;
+}
+
+.about-left {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5%;
+  background-color: black;
+  height: 90%;
+  width: 50%;
+  animation: openUp 1s;
+  flex: 1;
+}
+
+@keyframes openUp {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 90%;
+  }
+}
+
+.about-right {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 5%;
+  background-color: white;
+  height: 90%;
+  width: 50%;
+}
+
+.beach-div {
+  height: 100%;
+  padding: 25px;
+}
+
+.about-beach {
+  height: 100%;
+  object-fit: cover;
+}
+
+.play { 
+  background: red;
+  border-radius: 50% / 10%;
+  color: #FFFFFF;
+  font-size: 1.5em; /* change this to change size */
+  height: 3em;
+  margin: 20px auto;
+  margin-bottom: 60px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  text-indent: 0.1em;
+  transition: all 150ms ease-out;
+  width: 4em;
+}
+
+.play:hover {
+  background: darkorange;
+}
+
+.play::before { 
+  background: inherit;
+  border-radius: 5% / 50%;
+  bottom: 9%;
+  content: "";
+  left: -5%;
+  position: absolute;
+  right: -5%;
+  top: 9%;
+}
+
+.play::after {
+  border-style: solid;
+  border-width: 1em 0 1em 1.732em;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
+  content: ' ';
+  font-size: 0.75em;
+  height: 0;
+  margin: -1em 0 0 -0.75em;
+  top: 50%;
+  position: absolute;
+  width: 0;
 }
 
 .about-main {
@@ -679,25 +770,44 @@ nav {
   z-index: 10;
   overflow-y: scroll;
   overflow-x: hidden;
-  padding: 50px;
+  padding: 25px;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+@media screen and (max-width: 375px) {
+  .about-left {
+    display: none;
+  }
+
+  .about-right {
+    height: 100%;
+    width: 100%;
+    background-color: #ededed;
+    margin-right: 0px;
+  }
+  .about-text{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .about-paragraphs {
   margin-top: 30px;
   margin-bottom: 30px;
-  font-family: Bowlby One SC;
+  font-family: cursive;
   font-size: 18px;
 }
 
 .about-paragraphs-first {
-  font-family: Bowlby One SC;
+  font-family: cursive;
   margin-top: 0px;
   margin-bottom: 30px;
   font-size: 18px;
 }
 
 .about-paragraphs-last {
-  font-family: Bowlby One SC;
+  font-family: cursive;
   margin-top: 30px;
   margin-bottom: 0px;
   text-align: right;
