@@ -758,8 +758,8 @@ nav {
   }
 
   .about-text {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 .about-paragraphs {
@@ -784,6 +784,19 @@ nav {
   font-size: 18px;
 }
 
+@media screen and (max-width: 375px) {
+  .about-paragraphs {
+    font-family: "Century Gothic", "Lato", sans-serif;
+  }
+
+  .about-paragraphs-first {
+    font-family: "Century Gothic", "Lato", sans-serif;
+  }
+
+  .about-paragraphs-last {
+    font-family: "Century Gothic", "Lato", sans-serif;
+  }
+}
 span {
   font-style: italic;
 }
