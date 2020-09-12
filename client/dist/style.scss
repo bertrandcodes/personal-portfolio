@@ -682,6 +682,13 @@ nav {
   width: 4em;
 }
 
+@media screen and (max-width: 375px) {
+  .play {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
 .play:hover {
   background: darkorange;
 }
