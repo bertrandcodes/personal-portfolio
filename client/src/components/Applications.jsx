@@ -174,7 +174,7 @@ export default function Applications() {
                 <Modal.Body>
                   <div className="app-description">
                     A mobile first accountability tracker app that leverages
-                    support from others to hit daily and longterm goals.
+                    support from others to hit daily and long-term goals.
                     Features include: fully secure login and signup
                     authentication, friend-adding functionality, profile picture
                     upload, daily multiplayer challenges, and streaks/past
