@@ -614,6 +614,7 @@ nav {
   position: relative;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 50px;
   margin-right: 5%;
   background-color: white;
   height: 90%;
@@ -653,6 +654,7 @@ nav {
   text-indent: 0.1em;
   transition: all 150ms ease-out;
   width: 4em;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 375px) {
