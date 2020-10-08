@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
+  mode: 'production',
   entry: `${SRC_DIR}/index.jsx`,
   output: {
     filename: 'bundle.js',
