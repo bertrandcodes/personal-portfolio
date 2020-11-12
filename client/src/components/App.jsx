@@ -7,6 +7,7 @@ import Blog from "./Blog.jsx";
 import Resume from "./Resume.jsx";
 import Contact from "./Contact.jsx";
 import About from "./About.jsx";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
+        <ScrollToTop />
         <Navbar mobile={this.state.mobile} />
         <Switch>
           <Route path="/" exact component={Home} />
