@@ -8,19 +8,25 @@ export default function Footer() {
           <li>
             <a
               href="https://www.linkedin.com/in/bertrandshao/"
+              target="_blank"
               className="icon-linkedin"
             >
               LinkedIn
             </a>
           </li>
           <li>
-            <a href="https://github.com/bertrandcodes" className="icon-github">
+            <a
+              href="https://github.com/bertrandcodes"
+              target="_blank"
+              className="icon-github"
+            >
               GitHub
             </a>
           </li>
           <li>
             <a
               href="https://www.facebook.com/bertrand.shao"
+              target="_blank"
               className="icon-facebook"
             >
               Facebook
