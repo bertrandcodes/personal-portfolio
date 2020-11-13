@@ -428,7 +428,7 @@ nav {
   letter-spacing: 0.003em;
   height: 80px;
   padding-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 18px;
   overflow: hidden;
 }
@@ -464,7 +464,7 @@ nav {
   }
 
   100% {
-    width: 15.65em;
+    width: 15.55em;
   }
 }
 
@@ -878,7 +878,7 @@ span {
   display: grid;
   grid-gap: 1rem;
   padding: 1rem;
-  max-width: 1024px;
+  max-width: 1300px;
   margin: 30px auto;
   font-family: var(--font-sans);
 }
@@ -889,9 +889,9 @@ span {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .page-content {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -950,10 +950,14 @@ span {
 }
 
 .card:nth-child(3):before {
-  background-image: url(./adidasshoe.jpg);
+  background-image: url(./dancer.png);
 }
 
 .card:nth-child(4):before {
+  background-image: url(./adidasshoe.jpg);
+}
+
+.card:nth-child(5):before {
   background-image: url(./cog.png);
 }
 
