@@ -36,6 +36,16 @@ export default function Applications() {
     setIsOpenAdidas(false);
   };
 
+  const [isOpenDance, setIsOpenDance] = React.useState(false);
+
+  const showModalDance = () => {
+    setIsOpenDance(true);
+  };
+
+  const hideModalDance = () => {
+    setIsOpenDance(false);
+  };
+
   const [isOpenSystem, setIsOpenSystem] = React.useState(false);
 
   const showModalSystem = () => {
@@ -85,6 +95,17 @@ export default function Applications() {
           </div>
           <div className="card">
             <div className="content">
+              <h2 className="title">Dancer's Room</h2>
+              <p className="copy">
+                A delayed webcam tool for for dancers to train and grow with.
+              </p>
+              <a href="#dancers-room">
+                <button className="btn1">View</button>
+              </a>
+            </div>
+          </div>
+          <div className="card">
+            <div className="content">
               <h2 className="title">Adidas Mock-Up</h2>
               <p className="copy">
                 A fully-functional clone of an Adidas product page done using
@@ -111,8 +132,8 @@ export default function Applications() {
       </div>
       <div className="marquee-div">
         <marquee>
-          &lt;React&gt; &lt;Redux&gt; &lt;Node.js&gt; &lt;Express&gt;
-          &lt;Firebase&gt; &lt;MongoDB&gt; &lt;PostgreSQL&gt;
+          &lt;React&gt; &lt;Redux&gt; &lt;Vue.js&gt; &lt;Node.js&gt;
+          &lt;Express&gt; &lt;Firebase&gt; &lt;MongoDB&gt; &lt;PostgreSQL&gt;
         </marquee>
       </div>
       <div className="apps">
@@ -308,6 +329,78 @@ export default function Applications() {
         </div>
       </div>
       <div className="apps">
+        <a name="dancers-room"></a>
+        <div className="app-div">
+          <h1 className="app-text">Dancer's Room</h1>
+          <div className="line"></div>
+          <video className="video" autoPlay={true} loop={true} muted={true}>
+            <source src="dancersroomdemo.mov" type="video/mp4" />
+          </video>
+          <div className="tech-bar">
+            <center>
+              <p className="tech-used">React | VanillaJS | SCSS</p>
+            </center>
+          </div>
+          <div className="app-info">
+            <div className="app-bullets">
+              <button className="info-button" onClick={showModalDance}></button>
+              <Modal
+                show={isOpenDance}
+                onHide={hideModalDance}
+                aria-labelledby="contained-modal-title-vcenter"
+                size="lg"
+                centered
+              >
+                <Modal.Header>
+                  <Modal.Title>Dancer's Room</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <div className="app-description">
+                    Mirror aren't always the most reliable. Recording yourself
+                    will have you squatting until your knees scream. Well knee
+                    pain no more! Introducing dancer’s room, the one-of-the-kind
+                    app that allows you to dance and watch yourself to your
+                    heart's content. Dance, stop, and critique without ever
+                    having to press another pause/play button again. This also
+                    helps to check your form while playing sports. Golfer dads
+                    rejoice!
+                  </div>
+                  <ul>
+                    <li>Webcam API with an adjustable delay feature</li>
+                    <li>Freestyle generator for endless dancing ideas</li>
+                    <li>More dance-related features to come!</li>
+                  </ul>
+                </Modal.Body>
+                <Modal.Footer>
+                  <button onClick={hideModalHire}>Exit</button>
+                </Modal.Footer>
+              </Modal>
+
+              <p className="github-text">Info</p>
+            </div>
+            <div className="play-div">
+              <a
+                href="https://dancersroom.com/"
+                target="_blank"
+                className="round-button"
+              >
+                <i className="fa fa-play fa-2x"></i>
+              </a>
+              <p className="github-text">Play</p>
+            </div>
+            <div className="app-github">
+              <a
+                href="https://github.com/bertrandcodes/delayed-mirror"
+                target="_blank"
+              >
+                <button className="github-button"></button>
+              </a>
+              <p className="github-text">GitHub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="apps">
         <a name="FEC"></a>
         <div className="app-div">
           <h1 className="app-text">adidas Product Page Mock-Up</h1>
@@ -372,6 +465,7 @@ export default function Applications() {
           </div>
         </div>
       </div>
+
       <div className="apps">
         <a name="SDC"></a>
         <div className="app-div">
