@@ -1814,4 +1814,18 @@ textarea {
   margin-bottom: 0 !important;
 }
 
+/*
+  ========================================
+  Page Not Found
+  ========================================
+*/
+.page-not-found {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
 /*# sourceMappingURL=style.css.map */
