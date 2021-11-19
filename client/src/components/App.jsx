@@ -8,6 +8,7 @@ import Resume from "./Resume.jsx";
 import Contact from "./Contact.jsx";
 import About from "./About.jsx";
 import ScrollToTop from "./ScrollToTop.jsx";
+import NotFound from "./NotFound.jsx";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -42,6 +43,7 @@ export default class App extends React.Component {
           <Route path="/blog" component={Blog} />
           <Route path="/resume" component={Resume} />
           <Route path="/contact" component={Contact} />
+          <Route component={NotFound} />
         </Switch>
       </Router>
     );

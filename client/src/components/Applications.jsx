@@ -502,7 +502,7 @@ export default function Applications() {
                       efficiently by using ​draining​ and ​streaming​ techniques
                     </li>
                     <li>
-                      Horizontally scaled​ a legacy code base deployed over ​5
+                      Horizontally scaled​ a legacy codebase deployed over ​5
                       AWS T2 micro instances​ capable of handling ​2100 requests
                       per second(average latency 67 ms, error rate 0.0%)
                     </li>
