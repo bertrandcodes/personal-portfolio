@@ -6,8 +6,7 @@ import { toggleBurger } from "../redux/actions/index";
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
     this.navSlide = this.navSlide.bind(this);
     this.closeNav = this.closeNav.bind(this);
   }
