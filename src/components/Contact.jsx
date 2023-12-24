@@ -1,23 +1,23 @@
-import React, { Fragment } from "react";
-import { Form, Row, Button } from "react-bootstrap";
-import { Formik } from "formik";
-import * as yup from "yup";
-import axios from "axios";
-import { Helmet } from "react-helmet";
-import Footer from "./Footer.jsx";
+import React, { Fragment } from "react"
+import { Form, Row, Button } from "react-bootstrap"
+import { Formik } from "formik"
+import * as yup from "yup"
+import axios from "axios"
+import { Helmet } from "react-helmet"
+import Footer from "./Footer.jsx"
 
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
+    .join("&")
+}
 
 export default class Contact extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { name: "", email: "", message: "" };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    super(props)
+    this.state = { name: "", email: "", message: "" }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(e) {
@@ -32,56 +32,57 @@ export default class Contact extends React.Component {
       }),
     })
       .then(() => alert("Messaged recieved loud and clear!"))
-      .catch((error) => alert(error));
+      .catch((error) => alert(error))
 
-    e.preventDefault();
+    e.preventDefault()
   }
 
   handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value })
   }
 
   render() {
-    const { name, email, message } = this.state;
+    const { name, email, message } = this.state
     return (
-<Fragment>
-      <Helmet>
-        <title>Contact Me | Bertrand Shao</title>
-        <meta
-          name="description"
-          content="Contact me and learn more. I won't bite."
-        ></meta>
-      </Helmet>
-      <div className="contact-page">
-      <div className="contact-div">
-        <h1 className="contact-header">Let's get in touch.</h1>
+      <Fragment>
+        <Helmet>
+          <title>Contact Me | Bertrand Shao</title>
+          <meta name="description" content="Contact me and learn more. I won't bite."></meta>
+        </Helmet>
+        <div className="contact-page">
+          <div className="contact-div">
+            <h1 className="contact-header">Let's get in touch.</h1>
 
-        <form onSubmit={this.handleSubmit}>
-          <p>
-            <label>
-              <p className="contact-input">Your Name: {" "}</p><input type="text" value={name} name="name" onChange={this.handleChange}/>
-            </label>
-          </p>
-          <p>
-            <label>
-            <p className="contact-input">Your Email: {" "}</p><input type="email" value={email} name="email" onChange={this.handleChange}/>
-            </label>
-          </p>
-          <p>
-            <label>
-            <p className="contact-input">Message: {" "}</p><textarea value={message} name="message" onChange={this.handleChange}></textarea>
-            </label>
-          </p>
-          <p>
-            <button type="submit" class="btn btn-dark">Send</button>
-          </p>
-        </form>
-
-      </div>
-      </div>
-      <Footer />
-    </Fragment>
-    );
+            <form onSubmit={this.handleSubmit}>
+              <p>
+                <label>
+                  <p className="contact-input">Your Name: </p>
+                  <input type="text" value={name} name="name" onChange={this.handleChange} />
+                </label>
+              </p>
+              <p>
+                <label>
+                  <p className="contact-input">Your Email: </p>
+                  <input type="email" value={email} name="email" onChange={this.handleChange} />
+                </label>
+              </p>
+              <p>
+                <label>
+                  <p className="contact-input">Message: </p>
+                  <textarea value={message} name="message" onChange={this.handleChange}></textarea>
+                </label>
+              </p>
+              <p>
+                <button type="submit" class="btn btn-dark">
+                  Send
+                </button>
+              </p>
+            </form>
+          </div>
+        </div>
+        <Footer />
+      </Fragment>
+    )
   }
 }
 
@@ -97,43 +98,43 @@ export default class Contact extends React.Component {
 //   });
 
 //   return (
-    // <Fragment>
-    //   <Helmet>
-    //     <title>Contact Me | Bertrand Shao</title>
-    //     <meta
-    //       name="description"
-    //       content="Contact me and learn more. I won't bite."
-    //     ></meta>
-    //   </Helmet>
-    //   <div className="contact-page">
-    //   <div className="contact-div">
-    //     <h1 className="contact-header">Let's get in touch.</h1>
+// <Fragment>
+//   <Helmet>
+//     <title>Contact Me | Bertrand Shao</title>
+//     <meta
+//       name="description"
+//       content="Contact me and learn more. I won't bite."
+//     ></meta>
+//   </Helmet>
+//   <div className="contact-page">
+//   <div className="contact-div">
+//     <h1 className="contact-header">Let's get in touch.</h1>
 
-    //     <form onSubmit={this.handleSubmit}>
-    //       <p>
-    //         <label>
-    //           Your Name: {" "}<input type="text" value={name} name="name" onChange={this.handleChange}/>
-    //         </label>
-    //       </p>
-    //       <p>
-    //         <label>
-    //         Your Email: {" "}<input type="email" value={email} name="email" onChange={this.handleChange}/>
-    //         </label>
-    //       </p>
-    //       <p>
-    //         <label>
-    //         Message: {" "}<textarea value={message} name="message" onChange={this.handleChange}></textarea>
-    //         </label>
-    //       </p>
-    //       <p>
-    //         <button type="submit">Send</button>
-    //       </p>
-    //     </form>
+//     <form onSubmit={this.handleSubmit}>
+//       <p>
+//         <label>
+//           Your Name: {" "}<input type="text" value={name} name="name" onChange={this.handleChange}/>
+//         </label>
+//       </p>
+//       <p>
+//         <label>
+//         Your Email: {" "}<input type="email" value={email} name="email" onChange={this.handleChange}/>
+//         </label>
+//       </p>
+//       <p>
+//         <label>
+//         Message: {" "}<textarea value={message} name="message" onChange={this.handleChange}></textarea>
+//         </label>
+//       </p>
+//       <p>
+//         <button type="submit">Send</button>
+//       </p>
+//     </form>
 
-    //   </div>
-    //   </div>
-    //   <Footer />
-    // </Fragment>
+//   </div>
+//   </div>
+//   <Footer />
+// </Fragment>
 //   );
 // }
 

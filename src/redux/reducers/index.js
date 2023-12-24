@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
-import burgerMenu from './burgerMenu.js';
+import { combineReducers } from "redux"
+import burgerMenu from "./burgerMenu.js"
 
 const rootReducer = combineReducers({
-    burgerMenu
-});
+  burgerMenu,
+})
 
-export default rootReducer;
+export default rootReducer

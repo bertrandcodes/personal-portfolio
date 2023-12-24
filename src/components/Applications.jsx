@@ -1,60 +1,60 @@
-import React, { Fragment } from "react";
-import ScrollIndicator from "./ScrollIndicator.jsx";
-import Modal from "react-bootstrap/Modal";
-import { NavLink } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import Footer from "./Footer.jsx";
+import React, { Fragment } from "react"
+import ScrollIndicator from "./ScrollIndicator.jsx"
+import Modal from "react-bootstrap/Modal"
+import { NavLink } from "react-router-dom"
+import { Helmet } from "react-helmet"
+import Footer from "./Footer.jsx"
 
 export default function Applications() {
-  const [isOpenSquad, setIsOpenSquad] = React.useState(false);
+  const [isOpenSquad, setIsOpenSquad] = React.useState(false)
 
   const showModalSquad = () => {
-    setIsOpenSquad(true);
-  };
+    setIsOpenSquad(true)
+  }
 
   const hideModalSquad = () => {
-    setIsOpenSquad(false);
-  };
+    setIsOpenSquad(false)
+  }
 
-  const [isOpenHire, setIsOpenHire] = React.useState(false);
+  const [isOpenHire, setIsOpenHire] = React.useState(false)
 
   const showModalHire = () => {
-    setIsOpenHire(true);
-  };
+    setIsOpenHire(true)
+  }
 
   const hideModalHire = () => {
-    setIsOpenHire(false);
-  };
+    setIsOpenHire(false)
+  }
 
-  const [isOpenAdidas, setIsOpenAdidas] = React.useState(false);
+  const [isOpenAdidas, setIsOpenAdidas] = React.useState(false)
 
   const showModalAdidas = () => {
-    setIsOpenAdidas(true);
-  };
+    setIsOpenAdidas(true)
+  }
 
   const hideModalAdidas = () => {
-    setIsOpenAdidas(false);
-  };
+    setIsOpenAdidas(false)
+  }
 
-  const [isOpenDance, setIsOpenDance] = React.useState(false);
+  const [isOpenDance, setIsOpenDance] = React.useState(false)
 
   const showModalDance = () => {
-    setIsOpenDance(true);
-  };
+    setIsOpenDance(true)
+  }
 
   const hideModalDance = () => {
-    setIsOpenDance(false);
-  };
+    setIsOpenDance(false)
+  }
 
-  const [isOpenSystem, setIsOpenSystem] = React.useState(false);
+  const [isOpenSystem, setIsOpenSystem] = React.useState(false)
 
   const showModalSystem = () => {
-    setIsOpenSystem(true);
-  };
+    setIsOpenSystem(true)
+  }
 
   const hideModalSystem = () => {
-    setIsOpenSystem(false);
-  };
+    setIsOpenSystem(false)
+  }
 
   return (
     <Fragment>
@@ -72,8 +72,8 @@ export default function Applications() {
             <div className="content">
               <h2 className="title">Squad Goals</h2>
               <p className="copy">
-                A mobile-first web app that holds you accountable to goals with
-                the help of teammates and friends.
+                A mobile-first web app that holds you accountable to goals with the help of
+                teammates and friends.
               </p>
               <a href="#squad-goals">
                 <button className="btn1">View</button>
@@ -85,8 +85,7 @@ export default function Applications() {
             <div className="content">
               <h2 className="title">Hire-Mee</h2>
               <p className="copy">
-                An app that helps manage information related to the jobs you're
-                applying for.
+                An app that helps manage information related to the jobs you're applying for.
               </p>
               <a href="#hire-mee">
                 <button className="btn1">View</button>
@@ -96,9 +95,7 @@ export default function Applications() {
           <div className="card">
             <div className="content">
               <h2 className="title">Dancer's Room</h2>
-              <p className="copy">
-                A delayed webcam tool for for dancers to train and grow with.
-              </p>
+              <p className="copy">A delayed webcam tool for for dancers to train and grow with.</p>
               <a href="#dancers-room">
                 <button className="btn1">View</button>
               </a>
@@ -108,8 +105,7 @@ export default function Applications() {
             <div className="content">
               <h2 className="title">Adidas Mock-Up</h2>
               <p className="copy">
-                A fully-functional clone of an Adidas product page done using
-                Redux.
+                A fully-functional clone of an Adidas product page done using Redux.
               </p>
               <a href="#FEC">
                 <button className="btn1">View</button>
@@ -120,8 +116,8 @@ export default function Applications() {
             <div className="content">
               <h2 className="title">System Design</h2>
               <p className="copy">
-                Increased a database to hold 10,000,000 records and horizontally
-                scaled servers for speed.
+                Increased a database to hold 10,000,000 records and horizontally scaled servers for
+                speed.
               </p>
               <a href="#SDC">
                 <button className="btn1">View</button>
@@ -132,8 +128,8 @@ export default function Applications() {
       </div>
       <div className="marquee-div">
         <marquee>
-          &lt;React&gt; &lt;Redux&gt; &lt;Vue.js&gt; &lt;Node.js&gt;
-          &lt;Express&gt; &lt;Firebase&gt; &lt;MongoDB&gt; &lt;PostgreSQL&gt;
+          &lt;React&gt; &lt;Redux&gt; &lt;Vue.js&gt; &lt;Node.js&gt; &lt;Express&gt;
+          &lt;Firebase&gt; &lt;MongoDB&gt; &lt;PostgreSQL&gt;
         </marquee>
       </div>
       <div className="apps">
@@ -156,12 +152,7 @@ export default function Applications() {
               </div>
 
               <div className="screen">
-                <video
-                  className="iphone-video"
-                  autoPlay={true}
-                  loop={true}
-                  muted={true}
-                >
+                <video className="iphone-video" autoPlay={true} loop={true} muted={true}>
                   <source src="squadgoalsdemo.mov" type="video/mp4" />
                 </video>
               </div>
@@ -174,9 +165,7 @@ export default function Applications() {
 
           <div className="tech-bar">
             <center>
-              <p className="tech-used">
-                React | Redux | Firebase | Material-UI
-              </p>
+              <p className="tech-used">React | Redux | Firebase | Material-UI</p>
             </center>
           </div>
           <div className="app-info">
@@ -194,25 +183,22 @@ export default function Applications() {
                 </Modal.Header>
                 <Modal.Body>
                   <div className="app-description">
-                    A mobile first accountability tracker app that leverages
-                    support from others to hit daily and long-term goals.
-                    Features include: fully secure login and signup
-                    authentication, friend-adding functionality, profile picture
-                    upload, daily multiplayer challenges, and streaks/past
-                    completion history.
+                    A mobile first accountability tracker app that leverages support from others to
+                    hit daily and long-term goals. Features include: fully secure login and signup
+                    authentication, friend-adding functionality, profile picture upload, daily
+                    multiplayer challenges, and streaks/past completion history.
                   </div>
                   <ul>
                     <li>
-                      Deployed a streak feature using scheduled cloud functions
-                      to hold users accountable and maintain consistent progress
+                      Deployed a streak feature using scheduled cloud functions to hold users
+                      accountable and maintain consistent progress
                     </li>
                     <li>
-                      Leveraged Firebase to provide authorized real-time updates
-                      as part of a fresh and secure user experience
+                      Leveraged Firebase to provide authorized real-time updates as part of a fresh
+                      and secure user experience
                     </li>
                     <li>
-                      Composed a highly structured and clean layout using
-                      Material-UI framework
+                      Composed a highly structured and clean layout using Material-UI framework
                     </li>
                   </ul>
                 </Modal.Body>
@@ -224,20 +210,13 @@ export default function Applications() {
               <p className="github-text">Info</p>
             </div>
             <div className="play-div">
-              <a
-                href="https://squadgoals.dev"
-                target="_blank"
-                className="round-button"
-              >
+              <a href="https://squadgoals.dev" target="_blank" className="round-button">
                 <i className="fa fa-play fa-2x"></i>
               </a>
               <p className="github-text">Play</p>
             </div>
             <div className="app-github">
-              <a
-                href="https://github.com/bertrandcodes/Squad-Goals"
-                target="_blank"
-              >
+              <a href="https://github.com/bertrandcodes/Squad-Goals" target="_blank">
                 <button className="github-button"></button>
               </a>
               <p className="github-text">GitHub</p>
@@ -255,9 +234,7 @@ export default function Applications() {
           </video>
           <div className="tech-bar">
             <center>
-              <p className="tech-used">
-                React | PostgreSQL | Express | Node.js
-              </p>
+              <p className="tech-used">React | PostgreSQL | Express | Node.js</p>
             </center>
           </div>
           <div className="app-info">
@@ -275,30 +252,26 @@ export default function Applications() {
                 </Modal.Header>
                 <Modal.Body>
                   <div className="app-description">
-                    Inspired by the overwhelming volume of job applications
-                    among our fellow job-seeking peers, my team and I designed
-                    Hire-Mee as a platform to organize and display all job
-                    sensitive information. Features include: an interactive list
-                    that allows user to seamlessly move jobs between different
-                    status piles, user statistic page along with individual job
-                    post modals that display information, fully-functional
-                    friends list, leaderboard feature, and interactive map that
+                    Inspired by the overwhelming volume of job applications among our fellow
+                    job-seeking peers, my team and I designed Hire-Mee as a platform to organize and
+                    display all job sensitive information. Features include: an interactive list
+                    that allows user to seamlessly move jobs between different status piles, user
+                    statistic page along with individual job post modals that display information,
+                    fully-functional friends list, leaderboard feature, and interactive map that
                     allows users to track job locations relative to themselves.
                   </div>
                   <ul>
                     <li>
-                      Leveraged PostgreSQL to build a one-to-many friends
-                      feature that supplies updated information between users
+                      Leveraged PostgreSQL to build a one-to-many friends feature that supplies
+                      updated information between users
                     </li>
                     <li>
-                      Retrieved data points to create a real-time leaderboard
-                      that allows users to directly track progress against each
-                      other
+                      Retrieved data points to create a real-time leaderboard that allows users to
+                      directly track progress against each other
                     </li>
                     <li>
-                      Implemented an interactive map using Google Maps API that
-                      displays job locations relative to each other as well as
-                      the user
+                      Implemented an interactive map using Google Maps API that displays job
+                      locations relative to each other as well as the user
                     </li>
                   </ul>
                 </Modal.Body>
@@ -310,11 +283,7 @@ export default function Applications() {
               <p className="github-text">Info</p>
             </div>
             <div className="play-div">
-              <a
-                href="http://54.183.118.152:3000/"
-                target="_blank"
-                className="round-button"
-              >
+              <a href="http://54.183.118.152:3000/" target="_blank" className="round-button">
                 <i className="fa fa-play fa-2x"></i>
               </a>
               <p className="github-text">Play</p>
@@ -356,14 +325,12 @@ export default function Applications() {
                 </Modal.Header>
                 <Modal.Body>
                   <div className="app-description">
-                    Mirror aren't always the most reliable. Recording yourself
-                    will have you squatting until your knees scream. Well knee
-                    pain no more! Introducing dancer’s room, the one-of-the-kind
-                    app that allows you to dance and watch yourself to your
-                    heart's content. Dance, stop, and critique without ever
-                    having to press another pause/play button again. This also
-                    helps to check your form while playing sports. Golfer dads
-                    rejoice!
+                    Mirror aren't always the most reliable. Recording yourself will have you
+                    squatting until your knees scream. Well knee pain no more! Introducing dancer’s
+                    room, the one-of-the-kind app that allows you to dance and watch yourself to
+                    your heart's content. Dance, stop, and critique without ever having to press
+                    another pause/play button again. This also helps to check your form while
+                    playing sports. Golfer dads rejoice!
                   </div>
                   <ul>
                     <li>Webcam API with an adjustable delay feature</li>
@@ -379,20 +346,13 @@ export default function Applications() {
               <p className="github-text">Info</p>
             </div>
             <div className="play-div">
-              <a
-                href="https://dancersroom.com/"
-                target="_blank"
-                className="round-button"
-              >
+              <a href="https://dancersroom.com/" target="_blank" className="round-button">
                 <i className="fa fa-play fa-2x"></i>
               </a>
               <p className="github-text">Play</p>
             </div>
             <div className="app-github">
-              <a
-                href="https://github.com/bertrandcodes/delayed-mirror"
-                target="_blank"
-              >
+              <a href="https://github.com/bertrandcodes/delayed-mirror" target="_blank">
                 <button className="github-button"></button>
               </a>
               <p className="github-text">GitHub</p>
@@ -415,10 +375,7 @@ export default function Applications() {
           </div>
           <div className="app-info">
             <div className="app-bullets">
-              <button
-                className="info-button"
-                onClick={showModalAdidas}
-              ></button>
+              <button className="info-button" onClick={showModalAdidas}></button>
               <Modal
                 show={isOpenAdidas}
                 onHide={hideModalAdidas}
@@ -432,16 +389,16 @@ export default function Applications() {
                 <Modal.Body>
                   <ul>
                     <li>
-                      Utilized React along with ​reconciliation logic​ to
-                      emulate a fully functioning Adidas product page
+                      Utilized React along with ​reconciliation logic​ to emulate a fully
+                      functioning Adidas product page
                     </li>
                     <li>
-                      Deployed proxy server on ​AWS EC2​ instance while adhering
-                      to ​service oriented architecture​ principles
+                      Deployed proxy server on ​AWS EC2​ instance while adhering to ​service
+                      oriented architecture​ principles
                     </li>
                     <li>
-                      Dockerized​ web app to ensure consistent runtime
-                      environment and cross-platform execution
+                      Dockerized​ web app to ensure consistent runtime environment and
+                      cross-platform execution
                     </li>
                     <li>Refactored codebase using Redux</li>
                   </ul>
@@ -454,10 +411,7 @@ export default function Applications() {
               <p className="github-text">Info</p>
             </div>
             <div className="app-github">
-              <a
-                href="https://github.com/HRLA35-CS-ADIDAS/Bertrand_Product_View"
-                target="_blank"
-              >
+              <a href="https://github.com/HRLA35-CS-ADIDAS/Bertrand_Product_View" target="_blank">
                 <button className="github-button"></button>
               </a>
               <p className="github-text">GitHub</p>
@@ -481,10 +435,7 @@ export default function Applications() {
           </div>
           <div className="app-info">
             <div className="app-bullets">
-              <button
-                className="info-button"
-                onClick={showModalSystem}
-              ></button>
+              <button className="info-button" onClick={showModalSystem}></button>
               <Modal
                 show={isOpenSystem}
                 onHide={hideModalSystem}
@@ -498,17 +449,17 @@ export default function Applications() {
                 <Modal.Body>
                   <ul>
                     <li>
-                      Increased data set from 100 to 10,000,000 unique records
-                      efficiently by using ​draining​ and ​streaming​ techniques
+                      Increased data set from 100 to 10,000,000 unique records efficiently by using
+                      ​draining​ and ​streaming​ techniques
                     </li>
                     <li>
-                      Horizontally scaled​ a legacy codebase deployed over ​5
-                      AWS T2 micro instances​ capable of handling ​2100 requests
-                      per second(average latency 67 ms, error rate 0.0%)
+                      Horizontally scaled​ a legacy codebase deployed over ​5 AWS T2 micro
+                      instances​ capable of handling ​2100 requests per second(average latency 67
+                      ms, error rate 0.0%)
                     </li>
                     <li>
-                      Implemented Nginx as a ​round-robin/least-conn​​load
-                      balancer ​and​ cache​ to further reduce latency by 27%
+                      Implemented Nginx as a ​round-robin/least-conn​​load balancer ​and​ cache​ to
+                      further reduce latency by 27%
                     </li>
                   </ul>
                 </Modal.Body>
@@ -523,10 +474,7 @@ export default function Applications() {
               <p className="github-text">Info</p>
             </div>
             <div className="app-github">
-              <a
-                href="https://github.com/HRLA35-SDC/Bertrand-SDC-Component"
-                target="_blank"
-              >
+              <a href="https://github.com/HRLA35-SDC/Bertrand-SDC-Component" target="_blank">
                 <button className="github-button"></button>
               </a>
               <p className="github-text">GitHub</p>
@@ -536,5 +484,5 @@ export default function Applications() {
       </div>
       <Footer />
     </Fragment>
-  );
+  )
 }

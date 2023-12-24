@@ -1,33 +1,33 @@
-import React from "react";
-import Navbar from "./Navbar.jsx";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./Home.jsx";
-import Applications from "./Applications.jsx";
-import Blog from "./Blog.jsx";
-import Resume from "./Resume.jsx";
-import Contact from "./Contact.jsx";
-import About from "./About.jsx";
-import ScrollToTop from "./ScrollToTop.jsx";
-import NotFound from "./NotFound.jsx";
+import React from "react"
+import Navbar from "./Navbar.jsx"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Home from "./Home.jsx"
+import Applications from "./Applications.jsx"
+import Blog from "./Blog.jsx"
+import Resume from "./Resume.jsx"
+import Contact from "./Contact.jsx"
+import About from "./About.jsx"
+import ScrollToTop from "./ScrollToTop.jsx"
+import NotFound from "./NotFound.jsx"
 
 export default class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       mobile: false,
-    };
+    }
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
+    window.addEventListener("resize", this.resize.bind(this))
+    this.resize()
   }
 
   resize() {
     if (window.screen.width <= 768) {
-      this.setState({ mobile: true });
+      this.setState({ mobile: true })
     } else {
-      this.setState({ mobile: false });
+      this.setState({ mobile: false })
     }
   }
 
@@ -46,6 +46,6 @@ export default class App extends React.Component {
           <Route component={NotFound} />
         </Switch>
       </Router>
-    );
+    )
   }
 }

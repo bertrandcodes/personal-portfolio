@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node ./database/seed.js",
     "build": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open --hot",
-    "bundle-report": "webpack-bundle-analyzer --port 4200 compilation-stats.json"
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -33,6 +31,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
     "mini-css-extract-plugin": "^0.12.0",
+    "prettier": "3.1.1",
     "react-refresh": "^0.14.0",
     "style-loader": "^0.23.0",
     "terser-webpack-plugin": "^4.2.3",
