@@ -1,48 +1,47 @@
-var path = require('path');
-var SRC_DIR = path.join(__dirname, '/client/src');
-var DIST_DIR = path.join(__dirname, '/client/dist');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const TerserPlugin = require('terser-webpack-plugin');
+const path = require("path");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const isDevelopment = process.env.NODE_ENV !== "production";
 
-module.exports = env => {
-  return {
-    mode: 'production',
-    entry: `${SRC_DIR}/index.jsx`,
-    output: {
-      filename: 'bundle.js',
-      path: DIST_DIR,
-      publicPath: '/'
-    },
-    plugins: [new MiniCssExtractPlugin(), new BundleAnalyzerPlugin()],
-    optimization: {
-      minimizer: [new UglifyJsPlugin(), new TerserPlugin()],
-    },
-    module: {
-      rules: [
-        {
-          test: /\.jsx?/,
-          include: SRC_DIR,
-          use: {
-            loader: 'babel-loader',
+module.exports = {
+  entry: "./src/index.jsx",
+  mode: isDevelopment ? "development" : "production",
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: "babel-loader",
+        options: { presets: ["@babel/env"] }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.[jt]sx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
             options: {
-              presets: ['@babel/react', '@babel/env']
-            }
-          }
-        },
-        {
-          test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
-        },
-        {
-          test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        }
-      ]
-    },
-    devServer: {
-      historyApiFallback: true
-    }
-  }
+              plugins: [isDevelopment && "react-refresh/babel"].filter(Boolean),
+            },
+          },
+        ],
+      },
+    ]
+  },
+  resolve: { extensions: ["*", ".js", ".jsx"] },
+  output: {
+    path: path.resolve(__dirname, "dist/"),
+    publicPath: "/dist/",
+    filename: "bundle.js"
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "public/"),
+    port: 3000,
+    publicPath: "http://localhost:3000/dist/",
+    hot: true
+  },
+  plugins: [isDevelopment && new ReactRefreshWebpackPlugin()].filter(Boolean),
 };
