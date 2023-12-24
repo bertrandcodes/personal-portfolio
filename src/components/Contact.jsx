@@ -1,8 +1,7 @@
 import React, { Fragment } from "react"
 import { Form, Row, Button } from "react-bootstrap"
-import { Formik } from "formik"
-import * as yup from "yup"
-import axios from "axios"
+// import { Formik } from "formik"
+// import * as yup from "yup"
 import { Helmet } from "react-helmet"
 import Footer from "./Footer.jsx"
 
