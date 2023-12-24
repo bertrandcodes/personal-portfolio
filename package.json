@@ -1,22 +1,15 @@
 {
-  "name": "bertrandporfolio",
+  "name": "bertrand-porfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
-    "build": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode development",
     "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bertrandcodes/Personal-Porfolio.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bertrandcodes/Personal-Porfolio/issues"
   },
   "homepage": "https://github.com/bertrandcodes/Personal-Porfolio#readme",
   "devDependencies": {
