@@ -5,7 +5,7 @@
 */
 
 export const toggleBurger = () => {
-    return {
-        type: 'TOGGLE_BURGER'
-    }
+  return {
+    type: "TOGGLE_BURGER",
+  }
 }

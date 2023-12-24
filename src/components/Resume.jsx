@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
-import { Helmet } from "react-helmet";
-import Footer from "./Footer.jsx";
+import React, { Fragment } from "react"
+import { Helmet } from "react-helmet"
+import Footer from "./Footer.jsx"
 
 export default function Resume() {
   return (
@@ -8,10 +8,7 @@ export default function Resume() {
       <div className="pdfContainer">
         <Helmet>
           <title>Resume | Bertrand Shao</title>
-          <meta
-            name="description"
-            content="Check out my resume. Hosted by docdroid."
-          ></meta>
+          <meta name="description" content="Check out my resume. Hosted by docdroid."></meta>
         </Helmet>
         <iframe
           width="100%"
@@ -24,5 +21,5 @@ export default function Resume() {
       </div>
       <Footer />
     </Fragment>
-  );
+  )
 }

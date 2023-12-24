@@ -1,26 +1,26 @@
-import React, { Fragment } from "react";
-import { NavLink } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import Footer from "./Footer.jsx";
+import React, { Fragment } from "react"
+import { NavLink } from "react-router-dom"
+import { Helmet } from "react-helmet"
+import Footer from "./Footer.jsx"
 
 export default class Home extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       mobile: false,
-    };
+    }
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
+    window.addEventListener("resize", this.resize.bind(this))
+    this.resize()
   }
 
   resize() {
     if (window.screen.width <= 800) {
-      this.setState({ mobile: true });
+      this.setState({ mobile: true })
     } else {
-      this.setState({ mobile: false });
+      this.setState({ mobile: false })
     }
   }
 
@@ -45,12 +45,7 @@ export default class Home extends React.Component {
                 alt="mountains and lake"
               ></img>
             ) : (
-              <video
-                className="home-video"
-                autoPlay={true}
-                loop={true}
-                muted={true}
-              >
+              <video className="home-video" autoPlay={true} loop={true} muted={true}>
                 <source src="code.mp4" type="video/mp4" />
                 <img
                   className="background-image"
@@ -63,12 +58,8 @@ export default class Home extends React.Component {
             <div className="home-body">
               <NavLink className="my-face" to="/about" />
               <div className="about-me">
-                <p className="line-1 anim-typewriter">
-                  Welcome! My name is Bertrand Shao
-                </p>
-                <div className="experiences">
-                  and I develop web experiences.
-                </div>
+                <p className="line-1 anim-typewriter">Welcome! My name is Bertrand Shao</p>
+                <div className="experiences">and I develop web experiences.</div>
               </div>
               <div className="button_body">
                 <NavLink className="button" to="/about">
@@ -88,6 +79,6 @@ export default class Home extends React.Component {
         </div>
         <Footer />
       </Fragment>
-    );
+    )
   }
 }

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from "react"
 
 export default function Footer() {
   return (
@@ -15,11 +15,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a
-              href="https://github.com/bertrandcodes"
-              target="_blank"
-              className="icon-github"
-            >
+            <a href="https://github.com/bertrandcodes" target="_blank" className="icon-github">
               GitHub
             </a>
           </li>
@@ -33,10 +29,8 @@ export default function Footer() {
             </a>
           </li>
         </ul>
-        <p className="copyright">
-          Copyright © 2020, Bertrand Shao. All Rights Reserved
-        </p>
+        <p className="copyright">Copyright © 2020, Bertrand Shao. All Rights Reserved</p>
       </div>
     </Fragment>
-  );
+  )
 }
