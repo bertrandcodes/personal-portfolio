@@ -9,25 +9,13 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules/,
         loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
+        options: { presets: ["@babel/env"], plugins: [isDevelopment && "react-refresh/babel"].filter(Boolean) }
       },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
-      },
-      {
-        test: /\.[jt]sx?$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              plugins: [isDevelopment && "react-refresh/babel"].filter(Boolean),
-            },
-          },
-        ],
       },
     ]
   },
