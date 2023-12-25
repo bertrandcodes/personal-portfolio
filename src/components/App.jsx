@@ -9,6 +9,7 @@ import Contact from "./Contact.jsx"
 import About from "./About.jsx"
 import ScrollToTop from "./ScrollToTop.jsx"
 import NotFound from "./NotFound.jsx"
+import "../style.scss"
 
 export default class App extends React.Component {
   constructor(props) {
