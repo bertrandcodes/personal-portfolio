@@ -45,9 +45,13 @@ module.exports = {
     filename: "bundle.js",
   },
   devServer: {
-    contentBase: path.join(__dirname, "public/"),
+    static: {
+      directory: path.join(__dirname, "public/")
+    },
     port: 3000,
-    publicPath: "http://localhost:3000/dist/",
+    devMiddleware: {
+      publicPath: '/dist/'
+    },
     hot: true,
   },
   plugins: [isDevelopment && new ReactRefreshWebpackPlugin()].filter(Boolean),
