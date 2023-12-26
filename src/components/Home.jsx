@@ -1,26 +1,26 @@
-import React, { Fragment } from "react"
-import { NavLink } from "react-router-dom"
-import { Helmet } from "react-helmet"
-import Footer from "./Footer.jsx"
+import React, { Fragment } from "react";
+import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import Footer from "./Footer.jsx";
 
 export default class Home extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       mobile: false,
-    }
+    };
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this))
-    this.resize()
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
   }
 
   resize() {
     if (window.screen.width <= 800) {
-      this.setState({ mobile: true })
+      this.setState({ mobile: true });
     } else {
-      this.setState({ mobile: false })
+      this.setState({ mobile: false });
     }
   }
 
@@ -79,6 +79,6 @@ export default class Home extends React.Component {
         </div>
         <Footer />
       </Fragment>
-    )
+    );
   }
 }
