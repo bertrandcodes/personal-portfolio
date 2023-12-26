@@ -10,6 +10,7 @@ import About from "./About.jsx"
 import ScrollToTop from "./ScrollToTop.jsx"
 import NotFound from "./NotFound.jsx"
 import "../style.scss"
+import Footer from "./Footer.jsx"
 
 export default class App extends React.Component {
   constructor(props) {
@@ -46,6 +47,7 @@ export default class App extends React.Component {
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
       </Router>
     )
   }
