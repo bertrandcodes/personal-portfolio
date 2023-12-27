@@ -2,7 +2,7 @@ import React from "react";
 import is from "is_js";
 import { NavLink } from "react-router-dom";
 import { SeoData } from "@components";
-import HomeButton from "./components/Button";
+import { HomeButton } from "./components";
 import styles from "./styles.module.scss";
 
 const MountainBackground = () => (
@@ -30,7 +30,7 @@ const Home = () => (
         <NavLink className={styles.face} to="/about" />
         <div className={styles.about}>
           <p className={styles.line1}>Welcome! My name is Bertrand Shao</p>
-          <div className={styles.line2}>and I develop web experiences.</div>
+          <p className={styles.line2}>and I develop web experiences.</p>
         </div>
         <HomeButton />
       </div>
