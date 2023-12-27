@@ -15,29 +15,13 @@ import Footer from "./components/Footer.jsx";
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      mobile: false,
-    };
-  }
-
-  componentDidMount() {
-    window.addEventListener("resize", this.resize.bind(this));
-    this.resize();
-  }
-
-  resize() {
-    if (window.screen.width <= 768) {
-      this.setState({ mobile: true });
-    } else {
-      this.setState({ mobile: false });
-    }
+    this.state = {};
   }
 
   render() {
     return (
       <Router>
         <ScrollToTop />
-        {/* <Navbar mobile={this.state.mobile} /> */}
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
