@@ -7,4 +7,16 @@ module.exports = {
       "newlines-between": "always",
     }],
   },
+  settings: {
+    "import/resolver": {
+      alias: {
+        map: [
+          ["@src", "./src"],
+          ["@pages", "./src/pages"],
+          ["@components", "./src/components"],
+        ],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
+  },
 };

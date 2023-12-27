@@ -9,20 +9,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx|ts|tsx)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/env"],
-              plugins: [isDevelopment && "react-refresh/babel"].filter(Boolean),
-            },
-          },
-          {
-            loader: "ts-loader",
-          },
-        ],
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/env"],
+          plugins: [isDevelopment && "react-refresh/babel"].filter(Boolean),
+        },
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: "ts-loader",
       },
       {
         test: /\.scss$/,
@@ -46,7 +44,14 @@ module.exports = {
       },
     ],
   },
-  resolve: { extensions: [".js", ".jsx", ".tsx", ".ts"] },
+  resolve: {
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    alias: {
+      "@src": path.resolve(__dirname, "src"),
+      "@components": path.resolve(__dirname, "src/components"),
+      "@pages": path.resolve(__dirname, "src/pages"),
+    },
+  },
   output: {
     path: path.resolve(__dirname, "public/dist/"),
     publicPath: "/dist/",
