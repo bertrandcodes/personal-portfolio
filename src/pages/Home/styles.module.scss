@@ -1,0 +1,170 @@
+.root {
+  display: flex;
+  height: 92vh;
+  width: 100%;
+}
+
+.background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  overflow: hidden;
+  animation: open 1s;
+}
+
+.overlay {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 50% 0%;
+}
+
+.text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 500px;
+  width: 500px;
+}
+
+.face {
+  position: relative;
+  order: 1;
+  background-image: url(../../../public/face.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+  height: 100px;
+  width: 100px;
+  z-index: 9;
+  border-radius: 50%;
+  animation: faceFade 2.2s;
+  border-style: ridge;
+  border-width: 5px;
+  border-color: grey;
+}
+
+@keyframes faceFade {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about {
+  position: relative;
+  order: 2;
+  color: white;
+  letter-spacing: 0.003em;
+  height: 80px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.line1 {
+  top: 50%;
+  width: 24em;
+  margin: 0 auto;
+  margin-bottom: -5px;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  animation:
+    typewriter 2.5s steps(44) 1s 1 normal both,
+    blinkTextCursor 1s steps(44) 4 normal;
+  border-right: 0.15em solid transparent;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  15% {
+    width: 4.45em;
+  }
+  30% {
+    width: 4.45em;
+  }
+  100% {
+    width: 15.55em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.line2 {
+  color: white;
+  text-align: center;
+  width: 100%;
+  animation: slide 3.5s ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes slide {
+  0% {
+    margin-top: 120px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .background {
+    background-image: url(../../../public/mountainlake.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .video {
+    display: none;
+  }
+
+  .about {
+    width: 100%;
+  }
+}
