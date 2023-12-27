@@ -1,23 +1,52 @@
-import React, { useEffect, useState } from "react";
-import { WideNav, MobileNav } from "./components";
+import React, { useState } from "react";
+import classNames from "classnames";
 import styles from "./styles.module.scss";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth >= 768);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleResize = () => {
-    setIsWideScreen(window.innerWidth >= 768);
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
+  const burgerClasses = classNames(styles.burger, {
+    [styles.open]: isOpen,
+  });
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const containerClasses = classNames(styles.linkContainer, {
+    [styles.open]: isOpen,
+  });
 
-  return isWideScreen ? <WideNav /> : <MobileNav />;
+  return (
+    <nav>
+      <div className={containerClasses} onClick={handleToggle}>
+        <NavLink exact activeClassName={styles.linkActive} className={styles.link} to="/">
+          Home
+        </NavLink>
+        <NavLink activeClassName={styles.linkActive} className={styles.link} to="/about">
+          About
+        </NavLink>
+        <NavLink activeClassName={styles.linkActive} className={styles.link} to="/applications">
+          Applications
+        </NavLink>
+        <NavLink activeClassName={styles.linkActive} className={styles.link} to="/blog">
+          Blog
+        </NavLink>
+        <NavLink activeClassName={styles.linkActive} className={styles.link} to="/resume">
+          Resume
+        </NavLink>
+        <NavLink activeClassName={styles.linkActive} className={styles.link} to="/contact">
+          Contact
+        </NavLink>
+      </div>
+      <div className={burgerClasses} onClick={handleToggle}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
