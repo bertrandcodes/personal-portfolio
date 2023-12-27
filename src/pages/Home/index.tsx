@@ -1,29 +1,25 @@
 import React from "react";
 import is from "is_js";
-import { Helmet } from "react-helmet";
 import { NavLink } from "react-router-dom";
+import { SeoData } from "@components";
 
 const Home = () => (
   <div className="main">
-    <Helmet>
-      <title>Home | Bertrand Shao</title>
-      <meta
-        name="description"
-        content="Begin your journey here. Find out about the latest creative web projects I've been working on. Try out some cool applications."
-      />
-    </Helmet>
+    <SeoData
+      title="Home | Bertrand Shao"
+      name="description"
+      content="Begin your journey here. Find out about the latest creative web projects I've been working on. Try out some cool applications."
+    />
     <div className="background-div">
       <div className="overlay" />
-
       {is.mobile() ? (
+        <img className="background-image" src="mountainlake.jpg" alt="mountains and lake" />
+      ) : (
         <video className="home-video" autoPlay loop muted>
           <source src="code.mp4" type="video/mp4" />
           <img className="background-image" src="mountainlake.jpg" alt="mountains and lake" />
         </video>
-      ) : (
-        <img className="background-image" src="mountainlake.jpg" alt="mountains and lake" />
       )}
-
       <div className="home-body">
         <NavLink className="my-face" to="/about" />
         <div className="about-me">
@@ -33,7 +29,6 @@ const Home = () => (
         <div className="button_body">
           <NavLink className="button" to="/about">
             <div className="button__text">Enter.</div>
-
             <div className="button__wrapper">
               <div className="button__arrow" />
               <div className="button__border-circle" />

@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "./components/Navbar.jsx";
+import { Home } from "@pages";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import Home from "./Home.jsx";
 import Applications from "./components/Applications.jsx";
 import Blog from "./components/Blog.jsx";
 import Resume from "./components/Resume.jsx";
@@ -11,7 +12,6 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import NotFound from "./components/NotFound.jsx";
 import "./style.scss";
 import Footer from "./components/Footer.jsx";
-import { Home } from "../pages/index.ts";
 
 export default class App extends React.Component {
   constructor(props) {
