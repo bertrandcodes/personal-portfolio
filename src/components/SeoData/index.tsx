@@ -7,13 +7,11 @@ interface SeoDataProps {
   content: string;
 }
 
-const SeoData: React.FC<SeoDataProps> = ({ title, name, content }) => {
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name={name} content={content} />
-    </Helmet>
-  );
-};
+const SeoData: React.FC<SeoDataProps> = ({ title, name, content }) => (
+  <Helmet>
+    <title>{title}</title>
+    <meta name={name} content={content} />
+  </Helmet>
+);
 
 export default SeoData;

@@ -1,6 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar.jsx";
-import { Home } from "@pages";
+import { Home, Navbar } from "@pages";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Applications from "./components/Applications.jsx";
@@ -38,7 +37,8 @@ export default class App extends React.Component {
     return (
       <Router>
         <ScrollToTop />
-        <Navbar mobile={this.state.mobile} />
+        {/* <Navbar mobile={this.state.mobile} /> */}
+        <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
