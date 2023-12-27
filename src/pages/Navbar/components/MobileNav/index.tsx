@@ -5,6 +5,7 @@ import styles from "../../styles.module.scss";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const handleClick = () => {};
 
   return (
