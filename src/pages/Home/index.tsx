@@ -2,6 +2,7 @@ import React from "react";
 import is from "is_js";
 import { NavLink } from "react-router-dom";
 import { SeoData } from "@components";
+import styles from "./styles.module.scss";
 
 const Home = () => (
   <div className="main">
