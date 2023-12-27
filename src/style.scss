@@ -296,23 +296,12 @@ nav {
   Home
   ========================================
 */
-.main {
-  height: 92vh;
-  width: 100%;
-  display: flex;
-}
+// .main {
+//   height: 92vh;
+//   width: 100%;
+//   display: flex;
+// }
 
-.background-div {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  overflow: hidden;
-  animation: open 1s;
-}
 
 @keyframes open {
   0% {
@@ -324,259 +313,100 @@ nav {
     margin-bottom: 5%;
   }
 }
-.background-image {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  object-position: 50% 0%;
-  z-index: -1;
-}
 
-.overlay {
-  content: " ";
-  display: block;
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-}
 
-.home-video {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  z-index: -10;
-}
 
 @media screen and (max-width: 375px) {
-  .home-video {
-    display: none;
-  }
+ 
 
-  .background-div {
-    background-image: url(../public/mountainlake.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .about-me {
-    width: 100%;
-  }
-}
-.home-body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  height: 500px;
-  width: 500px;
+  // .about-me {
+  //   width: 100%;
+  // }
 }
 
-.my-face {
-  position: relative;
-  order: 1;
-  background-image: url(../public/face.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 30px;
-  height: 100px;
-  width: 100px;
-  z-index: 9;
-  border-radius: 50%;
-  animation: faceFade 2.2s;
-  border-style: ridge;
-  border-width: 5px;
-  border-color: grey;
-}
+// .home-body {
+//   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   position: absolute;
+//   height: 500px;
+//   width: 500px;
+// }
 
-@keyframes faceFade {
-  0% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.about-me {
-  position: relative;
-  order: 2;
-  color: white;
-  letter-spacing: 0.003em;
-  height: 80px;
-  padding-top: 15px;
-  margin-bottom: 10px;
-  font-size: 18px;
-  overflow: hidden;
-}
+// .my-face {
+//   position: relative;
+//   order: 1;
+//   background-image: url(../public/face.png);
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   margin-bottom: 30px;
+//   height: 100px;
+//   width: 100px;
+//   z-index: 9;
+//   border-radius: 50%;
+//   animation: faceFade 2.2s;
+//   border-style: ridge;
+//   border-width: 5px;
+//   border-color: grey;
+// }
 
-.line-1 {
-  top: 50%;
-  width: 24em;
-  margin: 0 auto;
-  margin-bottom: -5px;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
-}
+// @keyframes faceFade {
+//   0% {
+//     opacity: 0;
+//   }
+//   70% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-.anim-typewriter {
-  animation:
-    typewriter 2.5s steps(44) 1s 1 normal both,
-    blinkTextCursor 1s steps(44) 4 normal;
-  border-right: 0.15em solid transparent;
-}
 
-@keyframes typewriter {
-  0% {
-    width: 0;
-  }
-  15% {
-    width: 4.45em;
-  }
-  30% {
-    width: 4.45em;
-  }
-  100% {
-    width: 15.55em;
-  }
-}
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
-  }
-}
-.experiences {
-  color: white;
-  text-align: center;
-  width: 100%;
-  animation: slide 3.5s ease-in;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-}
+// .line-1 {
+//   top: 50%;
+//   width: 24em;
+//   margin: 0 auto;
+//   margin-bottom: -5px;
+//   border-right: 2px solid rgba(255, 255, 255, 0.75);
+//   text-align: center;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   transform: translateY(-50%);
+// }
 
-@keyframes slide {
-  0% {
-    margin-top: 120px;
-    opacity: 0;
-  }
-  100% {
-    margin-top: 0px;
-    opacity: 1;
-  }
-}
-.button_body {
-  position: relative;
-  order: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-}
+// .anim-typewriter {
+//   animation:
+//     typewriter 2.5s steps(44) 1s 1 normal both,
+//     blinkTextCursor 1s steps(44) 4 normal;
+//   border-right: 0.15em solid transparent;
+// }
 
-.button {
-  display: flex;
-  text-decoration: none !important;
-  cursor: pointer;
-  align-items: center;
-  padding-right: 40px;
-  animation: buttonFade 5s ease-in;
-  outline: none !important;
-}
-
-@keyframes buttonFade {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.button:hover .button__border-circle {
-  transform: translateX(60px);
-}
-
-.button:hover .button__mask-circle {
-  clip-path: circle(25px at 85px);
-}
-
-.button__text {
-  z-index: 1;
-  margin-right: -18px;
-  color: #fafafa;
-  letter-spacing: 0.05em;
-}
-
-.button__wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.button__arrow {
-  left: 35px;
-  height: 3px;
-  width: 50px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  background-color: #b3d23f;
-}
-
-.button__arrow:after {
-  content: "";
-  width: 0;
-  height: 0;
-  top: -5px;
-  right: -7px;
-  position: absolute;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 7px solid #b3d23f;
-}
-
-.button__border-circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid #bfbfbf;
-  transition: transform 987ms;
-}
-
-.button__mask-circle {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  clip-path: circle(25px);
-  transition: clip-path 987ms;
-}
-
-.button__small-circle {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  transform: translateX(60px);
-  background-color: #b3d23f;
-}
+// @keyframes typewriter {
+//   0% {
+//     width: 0;
+//   }
+//   15% {
+//     width: 4.45em;
+//   }
+//   30% {
+//     width: 4.45em;
+//   }
+//   100% {
+//     width: 15.55em;
+//   }
+// }
+// @keyframes blinkTextCursor {
+//   from {
+//     border-right-color: rgba(255, 255, 255, 0.75);
+//   }
+//   to {
+//     border-right-color: transparent;
+//   }
+// }
 
 /*
   ========================================
