@@ -3,9 +3,14 @@
     "target": "es5",
     "lib": ["dom", "es2015"],
     "jsx": "react",
-    "baseUrl": "../",
+    "baseUrl": "./",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "@src/*": ["src/*"],
+      "@components": ["src/components"],
+      "@pages": ["src/pages"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules"]
