@@ -3,14 +3,13 @@ import { Helmet } from "react-helmet";
 
 interface SeoDataProps {
   title: string;
-  name: string;
   content: string;
 }
 
-const SeoData: React.FC<SeoDataProps> = ({ title, name, content }) => (
+const SeoData: React.FC<SeoDataProps> = ({ title, content }) => (
   <Helmet>
     <title>{title}</title>
-    <meta name={name} content={content} />
+    <meta name="description" content={content} />
   </Helmet>
 );
 

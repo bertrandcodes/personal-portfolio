@@ -13,7 +13,6 @@ const Home = () => (
   <div className={styles.root}>
     <SeoData
       title="Home | Bertrand Shao"
-      name="description"
       content="Begin your journey here. Find out about the latest creative web projects I've been working on. Try out some cool applications."
     />
     <div className={styles.background}>

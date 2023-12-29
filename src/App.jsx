@@ -1,10 +1,9 @@
 import React from "react";
 
-import { Home } from "@pages";
+import { Home, Applications } from "@pages";
 import { Navbar, Footer } from "@components";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Applications from "./components/Applications.jsx";
 import Blog from "./components/Blog.jsx";
 import Resume from "./components/Resume.jsx";
 import Contact from "./components/Contact.jsx";

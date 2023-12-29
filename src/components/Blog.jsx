@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import ScrollIndicator from "./ScrollIndicator.jsx";
+import { ScrollIndicator } from "@components";
 import { Helmet } from "react-helmet";
 
 export default function Blog() {
