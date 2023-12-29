@@ -1,0 +1,12 @@
+.root {
+  display: grid;
+  place-items: center;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1300px;
+  min-width: 500px;
+  overflow-x: scroll;
+  padding: 1rem;
+  margin: 30px auto;
+  font-family: var(--font-sans);
+}

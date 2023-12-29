@@ -1,2 +1,2 @@
 export { default as SocialMediaButton } from "./Button";
-export { default as SocialMediaButtonContainer } from "./ButtonContainer";
+export { default as SocialMediaButtonContainer } from "./ButtonsContainer";

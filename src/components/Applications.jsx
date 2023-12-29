@@ -67,7 +67,7 @@ export default function Applications() {
         ></meta>
       </Helmet>
       <ScrollIndicator />
-      <div className="page-body">
+      {/* <div className="page-body">
         <main className="page-content">
           <div className="card">
             <div className="content">
@@ -126,7 +126,7 @@ export default function Applications() {
             </div>
           </div>
         </main>
-      </div>
+      </div> */}
       <div className="marquee-div">
         <marquee>
           &lt;React&gt; &lt;Redux&gt; &lt;Vue.js&gt; &lt;Node.js&gt; &lt;Express&gt;

@@ -6,14 +6,12 @@ interface SocialMediaButtonProps {
   content: string;
 }
 
-const SocialMediaButton: React.FC<SocialMediaButtonProps> = ({ link, className, content }) => {
-  return (
-    <li>
-      <a href={link} target="_blank" className={className}>
-        {content}
-      </a>
-    </li>
-  );
-};
+const SocialMediaButton: React.FC<SocialMediaButtonProps> = ({ link, className, content }) => (
+  <li>
+    <a href={link} target="_blank" className={className}>
+      {content}
+    </a>
+  </li>
+);
 
 export default SocialMediaButton;
