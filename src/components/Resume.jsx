@@ -1,6 +1,5 @@
-import React, { Fragment } from "react"
-import { Helmet } from "react-helmet"
-import Footer from "./Footer.jsx"
+import React, { Fragment } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Resume() {
   return (
@@ -19,7 +18,6 @@ export default function Resume() {
           allowFullScreen
         ></iframe>
       </div>
-      <Footer />
     </Fragment>
-  )
+  );
 }

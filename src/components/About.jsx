@@ -1,6 +1,5 @@
-import React, { Fragment } from "react"
-import { Helmet } from "react-helmet"
-import Footer from "./Footer.jsx"
+import React, { Fragment } from "react";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   return (
@@ -69,9 +68,8 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Footer />
     </Fragment>
-  )
+  );
 }
 
 // <div id="about-body">

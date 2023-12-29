@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  position: relative;
+  height: 195px;
+  font-family: "Century Gothic", "Lato", sans-serif;
+  font-size: 14px;
+  align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+    height: 180px;
+  }
+}
