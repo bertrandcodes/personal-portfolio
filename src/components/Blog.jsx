@@ -1,7 +1,6 @@
-import React, { Fragment } from "react"
-import ScrollIndicator from "./ScrollIndicator.jsx"
-import { Helmet } from "react-helmet"
-import Footer from "./Footer.jsx"
+import React, { Fragment } from "react";
+import ScrollIndicator from "./ScrollIndicator.jsx";
+import { Helmet } from "react-helmet";
 
 export default function Blog() {
   return (
@@ -407,7 +406,6 @@ export default function Blog() {
           </p>
         </div>
       </div>
-      <Footer />
     </Fragment>
-  )
+  );
 }

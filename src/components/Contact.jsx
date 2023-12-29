@@ -1,22 +1,21 @@
-import React, { Fragment } from "react"
-import { Form, Row, Button } from "react-bootstrap"
+import React, { Fragment } from "react";
+import { Form, Row, Button } from "react-bootstrap";
 // import { Formik } from "formik"
 // import * as yup from "yup"
-import { Helmet } from "react-helmet"
-import Footer from "./Footer.jsx"
+import { Helmet } from "react-helmet";
 
 const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
+    .join("&");
+};
 
 export default class Contact extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { name: "", email: "", message: "" }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    super(props);
+    this.state = { name: "", email: "", message: "" };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
@@ -31,17 +30,17 @@ export default class Contact extends React.Component {
       }),
     })
       .then(() => alert("Messaged recieved loud and clear!"))
-      .catch((error) => alert(error))
+      .catch((error) => alert(error));
 
-    e.preventDefault()
+    e.preventDefault();
   }
 
   handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
-    const { name, email, message } = this.state
+    const { name, email, message } = this.state;
     return (
       <Fragment>
         <Helmet>
@@ -79,9 +78,8 @@ export default class Contact extends React.Component {
             </form>
           </div>
         </div>
-        <Footer />
       </Fragment>
-    )
+    );
   }
 }
 

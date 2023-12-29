@@ -1,60 +1,61 @@
-import React, { Fragment } from "react"
-import ScrollIndicator from "./ScrollIndicator.jsx"
-import Modal from "react-bootstrap/Modal"
-import { NavLink } from "react-router-dom"
-import { Helmet } from "react-helmet"
-import Footer from "./Footer.jsx"
+import React, { Fragment } from "react";
+import ScrollIndicator from "./ScrollIndicator.jsx";
+import Modal from "react-bootstrap/Modal";
+import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
+// put date under the name of the item!!!!
 
 export default function Applications() {
-  const [isOpenSquad, setIsOpenSquad] = React.useState(false)
+  const [isOpenSquad, setIsOpenSquad] = React.useState(false);
 
   const showModalSquad = () => {
-    setIsOpenSquad(true)
-  }
+    setIsOpenSquad(true);
+  };
 
   const hideModalSquad = () => {
-    setIsOpenSquad(false)
-  }
+    setIsOpenSquad(false);
+  };
 
-  const [isOpenHire, setIsOpenHire] = React.useState(false)
+  const [isOpenHire, setIsOpenHire] = React.useState(false);
 
   const showModalHire = () => {
-    setIsOpenHire(true)
-  }
+    setIsOpenHire(true);
+  };
 
   const hideModalHire = () => {
-    setIsOpenHire(false)
-  }
+    setIsOpenHire(false);
+  };
 
-  const [isOpenAdidas, setIsOpenAdidas] = React.useState(false)
+  const [isOpenAdidas, setIsOpenAdidas] = React.useState(false);
 
   const showModalAdidas = () => {
-    setIsOpenAdidas(true)
-  }
+    setIsOpenAdidas(true);
+  };
 
   const hideModalAdidas = () => {
-    setIsOpenAdidas(false)
-  }
+    setIsOpenAdidas(false);
+  };
 
-  const [isOpenDance, setIsOpenDance] = React.useState(false)
+  const [isOpenDance, setIsOpenDance] = React.useState(false);
 
   const showModalDance = () => {
-    setIsOpenDance(true)
-  }
+    setIsOpenDance(true);
+  };
 
   const hideModalDance = () => {
-    setIsOpenDance(false)
-  }
+    setIsOpenDance(false);
+  };
 
-  const [isOpenSystem, setIsOpenSystem] = React.useState(false)
+  const [isOpenSystem, setIsOpenSystem] = React.useState(false);
 
   const showModalSystem = () => {
-    setIsOpenSystem(true)
-  }
+    setIsOpenSystem(true);
+  };
 
   const hideModalSystem = () => {
-    setIsOpenSystem(false)
-  }
+    setIsOpenSystem(false);
+  };
 
   return (
     <Fragment>
@@ -482,7 +483,6 @@ export default function Applications() {
           </div>
         </div>
       </div>
-      <Footer />
     </Fragment>
-  )
+  );
 }

@@ -1,0 +1,91 @@
+.social-networks {
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.social-networks li {
+  display: inline-block;
+}
+
+.social-networks a {
+  display: block;
+  position: relative;
+  margin: 0 7px;
+  width: 68px;
+  height: 68px;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.social-networks a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  margin-top: -50%;
+  margin-left: -50%;
+  border-radius: 100px;
+  background-color: #1f2027;
+  transition: all 400ms;
+}
+
+.social-networks a:after {
+  position: relative;
+  display: block;
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #fff;
+  font-size: 26px;
+  line-height: 66px;
+}
+
+.social-networks a:hover,
+.social-networks a:focus {
+  text-decoration: none;
+}
+
+.social-networks .icon-linkedin:after {
+  content: "";
+}
+
+.social-networks .icon-linkedin:hover:before,
+.social-networks .icon-linkedin:focus:before {
+  background: #0077b5;
+}
+
+.social-networks .icon-facebook:after {
+  content: "";
+}
+
+.social-networks .icon-facebook:hover:before,
+.social-networks .icon-facebook:focus:before {
+  background: #3b5998;
+}
+
+.social-networks .icon-github:after {
+  content: "";
+}
+
+.social-networks .icon-github:hover:before,
+.social-networks .icon-github:focus:before {
+  background: #4183c4;
+}
+
+.social-networks .icon-instagram:after {
+  content: "";
+}
+
+.social-networks .icon-instagram:hover:before,
+.social-networks .icon-instagram:focus:before {
+  background: #3f729b;
+}
