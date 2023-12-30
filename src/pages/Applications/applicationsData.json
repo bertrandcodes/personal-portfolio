@@ -7,7 +7,15 @@
     "isMobileApp": true,
     "technologies": ["React", "Redux", "Firebase", "Material-UI"],
     "playLink": "https://accountability-tracker-friends.web.app/",
-    "gitHubLink": "https://github.com/bertrandcodes/Squad-Goals"
+    "gitHubLink": "https://github.com/bertrandcodes/Squad-Goals",
+    "modalContent": {
+      "description": "A mobile first accountability tracker app that leverages support from others to hit daily and long-term goals. Features include: fully secure login and signup authentication, friend-adding functionality, profile picture upload, daily multiplayer challenges, and streaks/past completion history.",
+      "bulletPoints": [
+        "Deployed a streak feature using scheduled cloud functions to hold users accountable and maintain consistent progress",
+        "Leveraged Firebase to provide authorized real-time updates as part of a fresh and secure user experience",
+        "Composed a highly structured and clean layout using Material-UI framework"
+      ]
+    }
   },
   {
     "name": "Hire-Mee",
@@ -17,7 +25,15 @@
     "isMobileApp": false,
     "technologies": ["React", "PostgreSQL", "Express", "Node.js"],
     "playLink": "http://54.183.118.152:3000/",
-    "gitHubLink": "https://github.com/hire-mee"
+    "gitHubLink": "https://github.com/hire-mee",
+    "modalContent": {
+      "description": "Inspired by the overwhelming volume of job applications among our fellow job-seeking peers, my team and I designed Hire-Mee as a platform to organize and display all job sensitive information. Features include: an interactive list that allows user to seamlessly move jobs between different status piles, user statistic page along with individual job post modals that display information, fully-functional friends list, leaderboard feature, and interactive map that allows users to track job locations relative to themselves.",
+      "bulletPoints": [
+        "Leveraged PostgreSQL to build a one-to-many friends feature that supplies updated information between users",
+        "Retrieved data points to create a real-time leaderboard that allows users to directly track progress against each other",
+        "Implemented an interactive map using Google Maps API that displays job locations relative to each other as well as the user"
+      ]
+    }
   },
   {
     "name": "Dancer's Room",
@@ -27,7 +43,15 @@
     "isMobileApp": false,
     "technologies": ["React", "VanillaJS", "SCSS"],
     "playLink": "https://dancersroom.com/",
-    "gitHubLink": "https://github.com/bertrandcodes/delayed-mirror"
+    "gitHubLink": "https://github.com/bertrandcodes/delayed-mirror",
+    "modalContent": {
+      "description": "Mirror aren't always the most reliable. Recording yourself will have you squatting until your knees scream. Well knee pain no more! Introducing dancer’s room, the one-of-the-kind app that allows you to dance and watch yourself to your heart's content. Dance, stop, and critique without ever having to press another pause/play button again. This also helps to check your form while playing sports. Golfer dads rejoice!",
+      "bulletPoints": [
+        "Webcam API with an adjustable delay feature",
+        "Freestyle generator for endless dancing ideas",
+        "More dance-related features to come!"
+      ]
+    }
   },
   {
     "name": "Adidas Mock-Up",
@@ -37,7 +61,16 @@
     "isMobileApp": false,
     "technologies": ["React", "Redux", "Express", "MongoDB"],
     "playLink": null,
-    "gitHubLink": "https://github.com/HRLA35-CS-ADIDAS/Bertrand_Product_View"
+    "gitHubLink": "https://github.com/HRLA35-CS-ADIDAS/Bertrand_Product_View",
+    "modalContent": {
+      "description": null,
+      "bulletPoints": [
+        "Utilized React along with ​reconciliation logic​ to emulate a fully functioning Adidas product page",
+        "Deployed proxy server on ​AWS EC2​ instance while adhering to ​service oriented architecture​ principles",
+        "Dockerized​ web app to ensure consistent runtime environment and cross-platform execution",
+        "Refactored codebase using Redux"
+      ]
+    }
   },
   {
     "name": "System Design",
@@ -47,6 +80,14 @@
     "isMobileApp": false,
     "technologies": ["PostgreSQL", "AWS", "Node.js", "NGINX"],
     "playLink": null,
-    "gitHubLink": "https://github.com/HRLA35-SDC/Bertrand-SDC-Component"
+    "gitHubLink": "https://github.com/HRLA35-SDC/Bertrand-SDC-Component",
+    "modalContent": {
+      "description": null,
+      "bulletPoints": [
+        "Increased data set from 100 to 10,000,000 unique records efficiently by using ​draining​ and ​streaming​ techniques",
+        "Horizontally scaled​ a legacy code base deployed over ​5 AWS T2 micro instances​ capable of handling ​2100 requests per second(average latency 67 ms, error rate 0.0%)",
+        "Implemented Nginx as a ​round-robin/least-conn​​load balancer ​and​ cache​ to further reduce latency by 27%"
+      ]
+    }
   }
 ]
