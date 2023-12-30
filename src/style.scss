@@ -1034,30 +1034,30 @@ button {
   outline: none !important;
 }
 
-.github-button {
-  // background-image: url(../public/githubicon.png);
-  background-position: center;
-  background-size: 60px 60px;
-  background-repeat: no-repeat;
-  background-color: white;
-  height: 70px;
-  width: 70px;
-  border-radius: 50px;
-  outline: none !important;
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
-}
+// .github-button {
+//   // background-image: url(../public/githubicon.png);
+//   background-position: center;
+//   background-size: 60px 60px;
+//   background-repeat: no-repeat;
+//   background-color: white;
+//   height: 70px;
+//   width: 70px;
+//   border-radius: 50px;
+//   outline: none !important;
+//   -webkit-transition: -webkit-transform 0.4s ease-in-out;
+//   transition: transform 0.4s ease-in-out;
+// }
 
-.github-button:hover {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-}
+// .github-button:hover {
+//   -webkit-transform: rotate(360deg);
+//   transform: rotate(360deg);
+// }
 
-.github-text {
-  margin: 10px;
-  text-align: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
+// .github-text {
+//   margin: 10px;
+//   text-align: center;
+//   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+// }
 
 // .play-div {
 //   margin: auto;

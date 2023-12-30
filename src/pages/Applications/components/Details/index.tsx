@@ -52,21 +52,21 @@ const ApplicationDetails: React.FC<ApplicationDetailsProps> = React.memo(
               <button className={styles.button} onClick={handleInfoClick}>
                 <i className="fa-solid fa-info fa-2xl" style={{ color: "white" }}></i>
               </button>
-              <p className="github-text">Info</p>
+              <label className={styles.buttonLabel}>Info</label>
             </div>
             {playLink && (
               <div className={styles.buttonContainer}>
                 <a href={playLink} target="_blank" className={styles.button}>
                   <i className="fa fa-play fa-2xl"></i>
                 </a>
-                <p className="github-text">Play</p>
+                <label className={styles.buttonLabel}>Play</label>
               </div>
             )}
             <div className={styles.buttonContainer}>
               <a href={gitHubLink} target="_blank" className={styles.button}>
                 <i className="fa-brands fa-github fa-2xl"></i>
               </a>
-              <p className="github-text">GitHub</p>
+              <label className={styles.buttonLabel}>GitHub</label>
             </div>
           </div>
         </div>
