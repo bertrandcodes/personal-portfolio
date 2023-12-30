@@ -7,4 +7,10 @@ export interface ApplicationProps {
   technologies: string[];
   playLink: string | null;
   gitHubLink: string;
+  modalContent: ModalContentProps;
+}
+
+export interface ModalContentProps {
+  description: string | null;
+  bulletPoints: string[];
 }
