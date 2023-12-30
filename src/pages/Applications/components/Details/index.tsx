@@ -13,6 +13,7 @@ const ApplicationDetails: React.FC<ApplicationDetailsProps> = React.memo(
   ({
     data: {
       name,
+      timePeriod,
       anchorLink,
       videoSrc,
       isMobileApp,
@@ -39,7 +40,8 @@ const ApplicationDetails: React.FC<ApplicationDetailsProps> = React.memo(
     return (
       <section id={anchorLink} className={styles.root}>
         <div className={styles.container}>
-          <h1 className={styles.text}>{name}</h1>
+          <h2 className={styles.header}>{name}</h2>
+          <time className={styles.time}>{timePeriod}</time>
           <div className={styles.line}></div>
           <VideoComponent />
           <div className={styles.techContainer}>

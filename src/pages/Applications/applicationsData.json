@@ -1,6 +1,7 @@
 [
   {
     "name": "Squad Goals",
+    "timePeriod": "May 2020 - July 2020",
     "description": "A mobile-first web app that holds you accountable to goals with the help of teammates and friends.",
     "anchorLink": "#squad-goals",
     "videoSrc": "squadgoalsdemo.mov",
@@ -19,6 +20,7 @@
   },
   {
     "name": "Hire-Mee",
+    "timePeriod": "March 2020 - August 2020",
     "description": "An app that helps manage information related to the jobs you're applying for.",
     "anchorLink": "#hire-mee",
     "videoSrc": "hiremeedemo.mov",
@@ -37,6 +39,7 @@
   },
   {
     "name": "Dancer's Room",
+    "timePeriod": "November 2020",
     "description": "A delayed webcam tool for for dancers to train and grow with.",
     "anchorLink": "#dancers-room",
     "videoSrc": "dancersroomdemo.mov",
@@ -55,6 +58,7 @@
   },
   {
     "name": "Adidas Mock-Up",
+    "timePeriod": "March 2020 - April 2020",
     "description": "A fully-functional clone of an Adidas product page done using Redux.",
     "anchorLink": "#FEC",
     "videoSrc": "productadidas.mov",
@@ -74,6 +78,7 @@
   },
   {
     "name": "System Design",
+    "timePeriod": "April 2020 - June 2020",
     "description": "Increased a database to hold 10,000,000 records and horizontally scaled servers for speed.",
     "anchorLink": "#SDC",
     "videoSrc": "sdc.mp4",
