@@ -1,5 +1,6 @@
 export interface ApplicationProps {
   name: string;
+  timePeriod: string;
   description: string;
   anchorLink: string;
   videoSrc: string;
