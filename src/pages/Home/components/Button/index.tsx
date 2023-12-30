@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./style.scss";
+import "./index.scss";
 
 const HomeButton = () => (
   <div className="button_body">

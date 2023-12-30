@@ -2,26 +2,51 @@
   {
     "name": "Squad Goals",
     "description": "A mobile-first web app that holds you accountable to goals with the help of teammates and friends.",
-    "href": "#squad-goals"
+    "anchorLink": "#squad-goals",
+    "videoSrc": "squadgoalsdemo.mov",
+    "isMobileApp": true,
+    "technologies": ["React", "Redux", "Firebase", "Material-UI"],
+    "playLink": "https://accountability-tracker-friends.web.app/",
+    "gitHubLink": "https://github.com/bertrandcodes/Squad-Goals"
   },
   {
     "name": "Hire-Mee",
     "description": "An app that helps manage information related to the jobs you're applying for.",
-    "href": "#hire-mee"
+    "anchorLink": "#hire-mee",
+    "videoSrc": "hiremeedemo.mov",
+    "isMobileApp": false,
+    "technologies": ["React", "PostgreSQL", "Express", "Node.js"],
+    "playLink": "http://54.183.118.152:3000/",
+    "gitHubLink": "https://github.com/hire-mee"
   },
   {
     "name": "Dancer's Room",
     "description": "A delayed webcam tool for for dancers to train and grow with.",
-    "href": "#dancers-room"
+    "anchorLink": "#dancers-room",
+    "videoSrc": "dancersroomdemo.mov",
+    "isMobileApp": false,
+    "technologies": ["React", "VanillaJS", "SCSS"],
+    "playLink": "https://dancersroom.com/",
+    "gitHubLink": "https://github.com/bertrandcodes/delayed-mirror"
   },
   {
     "name": "Adidas Mock-Up",
     "description": "A fully-functional clone of an Adidas product page done using Redux.",
-    "href": "#FEC"
+    "anchorLink": "#FEC",
+    "videoSrc": "productadidas.mov",
+    "isMobileApp": false,
+    "technologies": ["React", "Redux", "Express", "MongoDB"],
+    "playLink": null,
+    "gitHubLink": "https://github.com/HRLA35-CS-ADIDAS/Bertrand_Product_View"
   },
   {
     "name": "System Design",
     "description": "Increased a database to hold 10,000,000 records and horizontally scaled servers for speed.",
-    "href": "#SDC"
+    "anchorLink": "#SDC",
+    "videoSrc": "sdc.mp4",
+    "isMobileApp": false,
+    "technologies": ["PostgreSQL", "AWS", "Node.js", "NGINX"],
+    "playLink": null,
+    "gitHubLink": "https://github.com/HRLA35-SDC/Bertrand-SDC-Component"
   }
 ]
