@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useWindowScroll } from "react-use";
 
-// revamp
+import styles from "./styles.module.scss";
 
 const ScrollIndicator = () => {
-  const { x, y } = useWindowScroll();
+  const { y } = useWindowScroll();
   const [scrolled, setScrolled] = useState(0);
 
   useEffect(() => {
@@ -13,8 +13,8 @@ const ScrollIndicator = () => {
   }, [y]);
 
   return (
-    <div className="scroll-container">
-      <div className="indicator" style={{ width: `${scrolled}%` }}></div>
+    <div className={styles.root}>
+      <div className={styles.indicator} style={{ width: `${scrolled}%` }} />
     </div>
   );
 };
