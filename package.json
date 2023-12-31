@@ -47,6 +47,7 @@
     "@types/is": "^0.0.25",
     "bootstrap": "^4.6.2",
     "classnames": "^2.4.0",
+    "emailjs-com": "^3.2.0",
     "is_js": "^0.9.0",
     "path": "0.12.7",
     "react": "^16.13.1",

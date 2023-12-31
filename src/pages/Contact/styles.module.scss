@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+  width: 600px;
+  margin: 6.5% auto 6.5% auto;
+  padding: 40px 45px 45px 45px;
+  background-color: white;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  margin: 0 auto 45px auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+}
+
+.label {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.input {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 5px;
+}
+
+.textarea {
+  margin-bottom: 50px;
+  width: 100%;
+  padding: 5px;
+  height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
