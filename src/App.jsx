@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Home, Applications, Contact, Resume } from "@pages";
+import { Home, Applications, Contact, Resume, About } from "@pages";
 import { Navbar, Footer } from "@components";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Blog from "./components/Blog.jsx";
-import About from "./components/About.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import NotFound from "./components/NotFound.jsx";
 import "./style.scss";
