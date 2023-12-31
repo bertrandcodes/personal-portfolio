@@ -29,7 +29,7 @@ const Contact = () => {
         title="Contact Me | Bertrand Shao"
         content="Contact me and learn more. I won't bite."
       />
-      <div className={styles.container}>
+      <div className={styles.root}>
         <h1 className={styles.header}>Let's collaborate!</h1>
         <form ref={form} onSubmit={handleSubmit} className={styles.form}>
           <label htmlFor="name" className={styles.label}>
