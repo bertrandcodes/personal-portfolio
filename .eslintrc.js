@@ -9,6 +9,7 @@ module.exports = {
     "@typescript-eslint/consistent-type-imports": "error",
     "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
     "react/function-component-definition": ["error", { namedComponents: "arrow-function" }],
+    "import/extensions": ["error", "ignorePackages", { ts: "never", tsx: "never" }],
   },
   settings: {
     "import/resolver": {

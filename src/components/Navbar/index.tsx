@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import styles from "./styles.module.scss";
 import { NavLink } from "react-router-dom";
+
+import styles from "./styles.module.scss";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,9 +42,9 @@ const Navbar = () => {
         </NavLink>
       </div>
       <div className={burgerClasses} onClick={handleToggle}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div />
+        <div />
+        <div />
       </div>
     </nav>
   );
