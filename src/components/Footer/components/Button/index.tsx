@@ -8,7 +8,7 @@ interface SocialMediaButtonProps {
 
 const SocialMediaButton: React.FC<SocialMediaButtonProps> = ({ link, className, content }) => (
   <li>
-    <a href={link} target="_blank" className={className}>
+    <a href={link} target="_blank" rel="noreferrer" className={className}>
       {content}
     </a>
   </li>
