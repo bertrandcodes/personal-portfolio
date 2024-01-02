@@ -1,6 +1,7 @@
 import React from "react";
-import is from "is_js";
 import { NavLink } from "react-router-dom";
+import is from "is_js";
+
 import { SeoData } from "@components";
 import { HomeButton } from "./components";
 import styles from "./styles.module.scss";
