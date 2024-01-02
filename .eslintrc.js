@@ -7,9 +7,13 @@ module.exports = {
       "newlines-between": "always",
     }],
     "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-var-requires": "off",
     "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
     "react/function-component-definition": ["error", { namedComponents: "arrow-function" }],
     "import/extensions": ["error", "ignorePackages", { ts: "never", tsx: "never" }],
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "object-curly-newline": "off",
   },
   settings: {
     "import/resolver": {
@@ -22,5 +26,8 @@ module.exports = {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
       },
     },
+  },
+  globals: {
+    window: true,
   },
 };
