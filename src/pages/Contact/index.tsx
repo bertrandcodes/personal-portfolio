@@ -30,7 +30,7 @@ const Contact = () => {
         content="Contact me and learn more. I won't bite."
       />
       <div className={styles.root}>
-        <h1 className={styles.header}>Let's collaborate!</h1>
+        <h1 className={styles.header}>Let&apos;s collaborate!</h1>
         <form ref={form} onSubmit={handleSubmit} className={styles.form}>
           <label htmlFor="name" className={styles.label}>
             Name:

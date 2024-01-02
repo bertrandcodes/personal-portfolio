@@ -1,3 +1,8 @@
+export interface ModalContentProps {
+  description: string | null;
+  bulletPoints: string[];
+}
+
 export interface ApplicationProps {
   name: string;
   timePeriod: string;
@@ -9,9 +14,4 @@ export interface ApplicationProps {
   playLink: string | null;
   gitHubLink: string;
   modalContent: ModalContentProps;
-}
-
-export interface ModalContentProps {
-  description: string | null;
-  bulletPoints: string[];
 }
