@@ -8,6 +8,7 @@ module.exports = {
     }],
     "import/prefer-default-export": "off",
     "object-curly-newline": "off",
+    "react/prop-types": "off",
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-var-requires": "off",
     "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
@@ -16,6 +17,7 @@ module.exports = {
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/control-has-associated-label": "off",
   },
   settings: {
     "import/resolver": {
