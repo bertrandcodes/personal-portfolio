@@ -141,12 +141,12 @@ html {
   min-height: 100vh;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   #app {
     overflow: hidden;
-    min-height: 100vh;
   }
 }
+
 /*
   ========================================
   Navigation Bar

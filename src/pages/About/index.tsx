@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 const About = () => (
   <div className={styles.root}>
-    <img className={styles.image} src="/me.jpg" />
+    <img className={styles.image} src="/me.jpg" alt="bertrand in mexico city" />
     <div className="about-paragraphs-first">I’ve always been taught to try new things.</div>
     <div className="about-paragraphs">
       Growing up in NYC, I practiced fine arts and played computer games. As a teen, I played a

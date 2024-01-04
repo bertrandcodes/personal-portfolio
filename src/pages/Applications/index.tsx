@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+
 import { SeoData, ScrollIndicator } from "@components";
-import { ApplicationCardsContainer, ApplicationDetails, Modal } from "./components";
+import { ApplicationCardsContainer, ApplicationDetailsContainer, Modal } from "./components";
 import applicationsData from "./applicationsData.json";
 import type { ApplicationProps, ModalContentProps } from "./types";
 
@@ -28,9 +29,7 @@ const Applications = () => {
       />
       <ScrollIndicator />
       <ApplicationCardsContainer data={data} />
-      {data.map((app) => (
-        <ApplicationDetails key={app.name} data={app} setModalState={setModalState} />
-      ))}
+      <ApplicationDetailsContainer data={data} setModalState={setModalState} />
     </>
   );
 };
