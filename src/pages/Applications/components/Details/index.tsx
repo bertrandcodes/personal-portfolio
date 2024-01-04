@@ -1,4 +1,5 @@
 import React from "react";
+
 import type { ApplicationProps } from "../../types";
 import { Phone } from "@components";
 import styles from "./styles.module.scss";

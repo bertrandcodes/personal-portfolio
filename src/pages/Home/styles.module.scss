@@ -10,8 +10,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 50px 0;
   overflow: hidden;
   animation: open 1s;
 }
@@ -22,8 +21,8 @@
     margin-bottom: 45vh;
   }
   100% {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -51,7 +50,6 @@
 }
 
 .text {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,13 +122,13 @@
     width: 0;
   }
   15% {
-    width: 4.45em;
+    width: 4.6em;
   }
   30% {
-    width: 4.45em;
+    width: 4.6em;
   }
   100% {
-    width: 15.55em;
+    width: 16.8em;
   }
 }
 
