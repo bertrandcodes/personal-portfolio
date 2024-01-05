@@ -1,12 +1,16 @@
 import React from "react";
 
+import { BlogContainer } from "./components";
+import blogData from "./blogs.json";
+import type { BlogProps } from "./types";
 import styles from "./styles.module.scss";
-import { BlogContainer } from "./SDC/components";
+
+const data: BlogProps[] = blogData;
 
 const Blog = () => (
   <div className={styles.root}>
-    {[1, 2, 3, 4].map((blog) => (
-      <BlogContainer />
+    {data.map((blog) => (
+      <BlogContainer key={blog.title} data={blog} />
     ))}
   </div>
 );

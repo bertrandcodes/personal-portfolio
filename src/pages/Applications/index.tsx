@@ -25,7 +25,7 @@ const Applications = () => {
       <Modal modalState={modalState} setModalState={setModalState} />
       <SeoData
         title="Applications | Bertrand Shao"
-        content="Check out stuff I made. Many more exciting apps to come."
+        description="Check out stuff I made. Many more exciting apps to come."
       />
       <ScrollIndicator />
       <ApplicationCardsContainer data={data} />

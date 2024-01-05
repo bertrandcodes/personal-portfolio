@@ -1,0 +1,57 @@
+.root {
+  max-width: 680px;
+  margin: 60px auto 60px auto;
+  font-weight: 200;
+}
+
+.subheader {
+  font-weight: normal;
+  color: gray;
+  font-size: 24px;
+}
+
+.image {
+  max-width: 100%;
+  display: block;
+  margin: 40px auto;
+}
+
+.container {
+  margin: 25px auto;
+}
+
+.text {
+  text-align: left;
+  line-height: 32px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 20px;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.subtext {
+  text-align: left;
+  color: gray;
+  line-height: 32px;
+  margin-top: 2em;
+  font-size: 21px;
+  letter-spacing: -0.003em;
+  margin-bottom: -0.46em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.highlight {
+  text-align: left;
+  font-style: italic;
+  color: red;
+  line-height: 32px;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
