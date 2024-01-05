@@ -1,0 +1,10 @@
+.root {
+  padding: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

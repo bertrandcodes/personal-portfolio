@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  margin: 0 auto 25px auto;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-width: 800px;
+  width: 800px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translate(2px, -2px);
+  }
+}
+
+.preview {
+  margin-right: 30px;
+  height: 120px;
+  width: 200px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text {
+  width: 100%;
+}
+
+.title {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.date {
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.description {
+}
