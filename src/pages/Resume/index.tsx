@@ -5,7 +5,10 @@ import styles from "./styles.module.scss";
 
 const Resume = () => (
   <>
-    <SeoData title="Resume | Bertrand Shao" content="Check out my resume. Hosted by docdroid." />
+    <SeoData
+      title="Resume | Bertrand Shao"
+      description="Check out my resume. Hosted by docdroid."
+    />
     <div className={styles.root}>
       <iframe
         title="Embedded PDF Viewer"

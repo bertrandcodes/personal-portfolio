@@ -1,0 +1,11 @@
+[
+  {
+    "title": "System Design Capstone",
+    "imgSrc": "/servers.jpg",
+    "alt": "graphic depicting computer servers on the cloud",
+    "link": "sdc",
+    "timePeriod": "April 2020 - June 2020",
+    "description": "What does it take to generate and insert ten million data points into a database efficiently? What strategies can we implement to handle thousands of user requests per second on our service?",
+    "readTime": 8
+  }
+]

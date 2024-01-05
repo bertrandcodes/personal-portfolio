@@ -27,7 +27,7 @@ const Contact = () => {
     <>
       <SeoData
         title="Contact Me | Bertrand Shao"
-        content="Contact me and learn more. I won't bite."
+        description="Contact me and learn more. I won't bite."
       />
       <div className={styles.root}>
         <h1 className={styles.header}>Let&apos;s collaborate!</h1>
