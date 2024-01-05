@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { SeoData, ScrollIndicator } from "@components";
 import { ApplicationCardsContainer, ApplicationDetailsContainer, Modal } from "./components";
-import applicationsData from "./applicationsData.json";
+import applicationsData from "./applications.json";
 import type { ApplicationProps, ModalContentProps } from "./types";
 
 const data: ApplicationProps[] = applicationsData;
