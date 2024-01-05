@@ -1,7 +1,11 @@
 .root {
-  max-width: 680px;
-  margin: 60px auto 60px auto;
+  max-width: 800px;
+  margin: 50px auto;
   font-weight: 200;
+}
+
+.center {
+  text-align: center;
 }
 
 .subheader {
@@ -10,22 +14,51 @@
   font-size: 24px;
 }
 
+.description {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0 25px 0;
+}
+
+.descriptor1,
+.descriptor2 {
+  display: block;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 50px;
+}
+
+.descriptor2 {
+  font-weight: 500;
+}
+
 .image {
   max-width: 100%;
   display: block;
   margin: 40px auto;
 }
 
+.mainImage {
+  max-width: 100%;
+  display: block;
+  margin: 40px auto 0 auto;
+}
+
 .container {
-  margin: 25px auto;
+  margin: 20px auto;
+}
+
+.sectionHeader {
+  font-weight: 600;
 }
 
 .text {
   text-align: left;
-  line-height: 32px;
   margin-top: 2em;
   margin-bottom: 2em;
   font-size: 20px;
+  line-height: 35px;
   font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
@@ -33,10 +66,7 @@
   text-align: left;
   color: gray;
   line-height: 32px;
-  margin-top: 2em;
-  font-size: 21px;
-  letter-spacing: -0.003em;
-  margin-bottom: -0.46em;
+  font-size: 20px;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -46,7 +76,6 @@
   color: red;
   line-height: 32px;
   font-size: 18px;
-  font-family: "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 768px) {

@@ -6,23 +6,31 @@ import styles from "../styles.module.scss";
 const SDC = () => (
   <div className={styles.root}>
     <SeoData
-      title="Blog | Bertrand Shao"
+      title="A First Dive Into System Design | Bertrand Shao"
       description="Blog by Bertrand Shao. Learn about a system design capstone (SDC)."
       keywords="system design capstone, SDC, Hack Reactor, bootcamp, ten million records, mongodb, postgresql"
     />
     <ScrollIndicator />
-    <div className={styles.container}>
-      <center>
-        <h1>A Dive Into System Design</h1>
-        <h2 className={styles.subheader}>Operationalize and Scale a Web App</h2>
-      </center>
-      <img
-        className={styles.image}
-        src="/servers.jpg"
-        alt="graphic depicting computer servers on the cloud"
-      />
+    <div className={styles.center}>
+      <h1>A First Dive Into System Design</h1>
+      <h2 className={styles.subheader}>How to Operationalize and Scale a Web App</h2>
     </div>
+    <img
+      className={styles.mainImage}
+      src="/servers.jpg"
+      alt="graphic depicting computer servers on the cloud"
+    />
     <div className={styles.container}>
+      <div className={styles.description}>
+        <div>
+          <span className={styles.descriptor1}>Timeline</span>
+          <span className={styles.descriptor2}>3 Month (April 2020 - June 2020)</span>
+        </div>
+        <div>
+          <span className={styles.descriptor1}>Role</span>
+          <span className={styles.descriptor2}>Hack Reactor Student</span>
+        </div>
+      </div>
       <p className={styles.subtext}>
         <i>
           What does it take to generate and insert ten million data points into a database
@@ -43,7 +51,7 @@ const SDC = () => (
         world of system design.
       </p>
     </div>
-    <h3>Creating the 10,000,000</h3>
+    <h3 className={styles.sectionHeader}>Creating the 10,000,000</h3>
     <div className={styles.container}>
       <p className={styles.text}>
         For background, our team was given a functional legacy codebase to perform queries off of.
@@ -104,7 +112,7 @@ const SDC = () => (
         repo!
       </p>
     </div>
-    <h3>Choosing a Database</h3>
+    <h3 className={styles.sectionHeader}>Choosing a Database</h3>
     <div className={styles.container}>
       <p className={styles.text}>
         Next, my job was to copy these 10 million records over into a database of choice. The legacy
@@ -172,7 +180,7 @@ const SDC = () => (
         Sure enough, PostgreSQL saw an all around faster querying speed.
       </p>
     </div>
-    <h3>Stress Testing on Local Machine</h3>
+    <h3 className={styles.sectionHeader}>Stress Testing on Local Machine</h3>
     <div className={styles.container}>
       <p className={styles.text}>
         Now it was time to simulate virtual users making multiple queries on our local machine. I
@@ -213,7 +221,7 @@ const SDC = () => (
         scale.
       </p>
     </div>
-    <h3>Deploying on an EC2 Instance</h3>
+    <h3 className={styles.sectionHeader}>Deploying on an EC2 Instance</h3>
     <div className={styles.container}>
       <p className={styles.text}>
         Two commonly known techniques to handle more traffic are vertical scaling and horizontal
@@ -251,7 +259,7 @@ const SDC = () => (
         numbers.
       </p>
     </div>
-    <h3>Load Balancing and Horizontal Scaling</h3>
+    <h3 className={styles.sectionHeader}>Load Balancing and Horizontal Scaling</h3>
     <div className={styles.container}>
       <p className={styles.text}>
         We briefly discussed the concept of horizontal scaling earlier, but how is it done? Turns
@@ -299,13 +307,7 @@ const SDC = () => (
       </p>
     </div>
     <div className={styles.container}>
-      <p className={styles.text}>
-        Let’s see how far we can take this… (
-        <a href="https://www.dropbox.com/home/SDC%20Metrics" target="_blank" rel="noreferrer">
-          Click here
-        </a>{" "}
-        to see all results collected, I’ll only be showing significant ones here)
-      </p>
+      <p className={styles.text}>Let’s see how far we can take this…</p>
     </div>
     <img className={styles.image} src="/424ms.jpg" alt="424ms at 2400rps" />
     <div className={styles.container}>
@@ -318,12 +320,7 @@ const SDC = () => (
     </div>
     <div className={styles.container}>
       <p className={styles.text}>
-        I scaled up to five separate instances and recorded the results each step of the way. Once
-        again, all relevant metrics are captured in a dropbox{" "}
-        <a href="https://www.dropbox.com/home/SDC%20Metrics" target="_blank" rel="noreferrer">
-          here
-        </a>
-        .
+        I scaled up to five separate instances and recorded the results each step of the way.
       </p>
     </div>
     <img className={styles.image} src="/aws.jpg" alt="aws setup" />
@@ -357,7 +354,7 @@ const SDC = () => (
         least-conn. Not bad!
       </p>
     </div>
-    <h3>Caching</h3>
+    <h3 className={styles.sectionHeader}>Caching</h3>
     <div className={styles.container}>
       <p className={styles.text}>
         Another optimization tweak NGINX offered was{" "}
@@ -392,7 +389,7 @@ const SDC = () => (
         experimenting has led to a success.
       </p>
     </div>
-    <h3>Conclusion</h3>
+    <h3 className={styles.sectionHeader}>Conclusion</h3>
     <div className={styles.container}>
       <p className={styles.text}>
         At the end of the day, my team and I learned a lot about what it takes for a production

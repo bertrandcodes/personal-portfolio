@@ -7,5 +7,32 @@
     "timePeriod": "April 2020 - June 2020",
     "description": "What does it take to generate and insert ten million data points into a database efficiently? What strategies can we implement to handle thousands of user requests per second on our service?",
     "readTime": 8
+  },
+  {
+    "title": "Restocking at Duffl",
+    "imgSrc": "/servers.jpg",
+    "alt": "warehouse at Duffl",
+    "link": "restocking",
+    "timePeriod": "March 2021 - June 2021",
+    "description": "What does it take to generate and insert ten million data points into a database efficiently? What strategies can we implement to handle thousands of user requests per second on our service?",
+    "readTime": 15
+  },
+  {
+    "title": "Credit Card and Payment Management",
+    "imgSrc": "/servers.jpg",
+    "alt": "credit card",
+    "link": "payment",
+    "timePeriod": "January 2022 - April 2022",
+    "description": "What does it take to generate and insert ten million data points into a database efficiently? What strategies can we implement to handle thousands of user requests per second on our service?",
+    "readTime": 15
+  },
+  {
+    "title": "Building a Custom Logger",
+    "imgSrc": "/servers.jpg",
+    "alt": "",
+    "link": "logger",
+    "timePeriod": "August 2023 - September 2023",
+    "description": "What does it take to generate and insert ten million data points into a database efficiently? What strategies can we implement to handle thousands of user requests per second on our service?",
+    "readTime": 15
   }
 ]
