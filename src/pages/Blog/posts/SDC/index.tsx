@@ -7,7 +7,7 @@ const SDC = () => (
   <div className={styles.root}>
     <SeoData
       title="A First Dive Into System Design | Bertrand Shao"
-      description="Blog by Bertrand Shao. Learn about a system design capstone (SDC)."
+      description="Learn about my experience doing Hack Reactor's system design capstone (SDC)."
       keywords="system design capstone, SDC, Hack Reactor, bootcamp, ten million records, mongodb, postgresql"
     />
     <ScrollIndicator />
@@ -21,23 +21,25 @@ const SDC = () => (
       alt="graphic depicting computer servers on the cloud"
     />
     <div className={styles.container}>
-      <div className={styles.description}>
-        <div>
-          <span className={styles.descriptor1}>Timeline</span>
-          <span className={styles.descriptor2}>3 Month (April 2020 - June 2020)</span>
+      <div className={styles.descriptionContainer}>
+        <div className={styles.descriptions}>
+          <div>
+            <span className={styles.descriptor1}>Timeline</span>
+            <span className={styles.descriptor2}>3 Month (April 2020 - June 2020)</span>
+          </div>
+          <div>
+            <span className={styles.descriptor1}>Role</span>
+            <span className={styles.descriptor2}>Hack Reactor Student</span>
+          </div>
         </div>
-        <div>
-          <span className={styles.descriptor1}>Role</span>
-          <span className={styles.descriptor2}>Hack Reactor Student</span>
-        </div>
+        <p className={styles.subtext}>
+          <i>
+            What does it take to generate and insert ten million data points into a database
+            efficiently? What strategies can we implement to handle thousands of user requests per
+            second on our service?
+          </i>
+        </p>
       </div>
-      <p className={styles.subtext}>
-        <i>
-          What does it take to generate and insert ten million data points into a database
-          efficiently? What strategies can we implement to handle thousands of user requests per
-          second on our service?
-        </i>
-      </p>
     </div>
     <div className={styles.container}>
       <p className={styles.text}>
