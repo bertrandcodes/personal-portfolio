@@ -1,7 +1,24 @@
 .root {
-  max-width: 800px;
+  max-width: 900px;
+  padding: 3rem;
   margin: 50px auto;
   font-weight: 200;
+
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    list-style: disc;
+    margin: 2rem 0 2rem 1rem;
+  }
+
+  ol {
+    list-style-type: decimal;
+    margin: 2rem 0 2rem 1rem;
+  }
 }
 
 .center {
@@ -14,10 +31,16 @@
   font-size: 24px;
 }
 
-.description {
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.descriptions {
   display: flex;
   flex-direction: row;
-  margin: 40px 0 25px 0;
+  margin-bottom: 2rem;
 }
 
 .descriptor1,
@@ -33,20 +56,30 @@
   font-weight: 500;
 }
 
-.image {
-  max-width: 100%;
-  display: block;
-  margin: 40px auto;
-}
-
 .mainImage {
   max-width: 100%;
   display: block;
   margin: 40px auto 0 auto;
 }
 
+.image {
+  max-width: 100%;
+  display: block;
+  margin: 3rem auto;
+}
+
+.video {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.iphone {
+  float: right;
+  margin: 0 0 3rem 3rem;
+}
+
 .container {
-  margin: 20px auto;
+  margin: 2rem auto;
 }
 
 .sectionHeader {
@@ -55,8 +88,8 @@
 
 .text {
   text-align: left;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 20px;
   line-height: 35px;
   font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;

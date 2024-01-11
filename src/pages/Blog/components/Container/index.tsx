@@ -11,8 +11,11 @@ interface BlogContainerProps {
 const BlogContainer: React.FC<BlogContainerProps> = ({
   data: { title, imgSrc, alt, link, timePeriod, description, readTime },
 }) => (
-  <Link to={`/blog/${link}`} style={{ color: "inherit", textDecoration: "none" }}>
-    <div className={styles.root}>
+  <div className={styles.root}>
+    <Link
+      to={`/blog/${link}`}
+      style={{ color: "inherit", textDecoration: "none", display: "flex" }}
+    >
       <div className={styles.preview}>
         <img className={styles.image} src={imgSrc} alt={alt} />
       </div>
@@ -23,8 +26,8 @@ const BlogContainer: React.FC<BlogContainerProps> = ({
         </div>
         <div className={styles.description}>{description}</div>
       </div>
-    </div>
-  </Link>
+    </Link>
+  </div>
 );
 
 export default BlogContainer;
