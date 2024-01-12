@@ -116,8 +116,8 @@
   text-transform: uppercase;
   color: white;
   background-color: black;
-  border: none !important;
-  outline: 0 !important;
+  border: none;
+  outline: 0;
 }
 
 .card-button:hover {
@@ -126,7 +126,7 @@
 
 .card-button:focus {
   outline: 0;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 @media (hover: hover) and (min-width: 600px) {
