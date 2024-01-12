@@ -1,6 +1,7 @@
 .root {
-  max-width: 900px;
-  margin: 50px auto;
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem;
   font-weight: 200;
   animation: fade 1s;
 }
@@ -29,14 +30,9 @@
 
 .text {
   margin-bottom: 2rem;
-  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 768px) {
-  .root {
-    padding: 0 3rem;
-  }
-
   .image {
     display: none;
   }
