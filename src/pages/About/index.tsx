@@ -19,7 +19,7 @@ const About = () => (
       as the third full-stack engineer and dove headfirst into ideating, developing, and maintaining
       features across all facets of the product. Given the fast paced nature I took on various ad
       hoc roles as well, ranging from designer to DevOps to warehouse worker. Over my tenure, the
-      company expanded from a single location to seven across three different schools and has grown
+      company expanded from a single location to seven across three different schools and had grown
       to an estimated $30 million valuation. In 2022, I transitioned to a much larger software
       enterprise environment at{" "}
       <a href="https://www.myuhc.com/" target="_blank" rel="noreferrer">
@@ -60,7 +60,7 @@ const About = () => (
       Public speaking has been a significant journey for me, and I find great fulfillment in helping
       others reach their own goals. My dream is to combine my technical abilities in software with
       my passion for public speaking and develop platforms that will enable people to build their
-      social skills from the comfort of their own homes.
+      social skills from the comfort of their own home.
     </p>
     <p className={styles.text}>
       In my free time, you can find me playing basketball, hip-hop dancing, or doodling in my
