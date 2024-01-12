@@ -56,11 +56,18 @@ const About = () => (
       entering college one-on-one, preparing them for academia and future career endeavors.
     </p>
     <p className={styles.text}>
-      Outside of work, I am an active member and the current president of a Toastmasters club.
-      Public speaking has been a significant journey for me, and I find great fulfillment in helping
-      others reach their own goals. My dream is to combine my technical abilities in software with
-      my passion for public speaking and develop platforms that will enable people to build their
-      social skills from the comfort of their own home.
+      Outside of work, I am an active member and the current president of a{" "}
+      <a
+        href="https://www.toastmasters.org/Find-a-Club/01028926-tinseltown-toastmasters"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Toastmasters club
+      </a>
+      . Public speaking has been a significant journey for me, and I find great fulfillment in
+      helping others reach their own goals. My dream is to combine my technical abilities in
+      software with my passion for public speaking and develop platforms that will enable people to
+      build their social skills from the comfort of their own home.
     </p>
     <p className={styles.text}>
       In my free time, you can find me playing basketball, hip-hop dancing, or doodling in my
