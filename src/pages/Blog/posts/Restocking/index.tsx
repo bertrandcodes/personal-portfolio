@@ -15,7 +15,7 @@ const Restocking = () => (
       <h1>Automating Duffl&apos;s Restock Process</h1>
       <h2 className={styles.subheader}>Creating the Supply UI</h2>
     </div>
-    <img className={styles.mainImage} src="/warehouse.png" alt="Duffl logo" />
+    <img className={styles.mainImage} src="/warehouse.png" alt="Duffl logo" />={" "}
     <div className={styles.descriptionContainer}>
       <div className={styles.descriptions}>
         <div>
@@ -231,7 +231,6 @@ const Restocking = () => (
         # units to purchase = # units needed - # already purchased - current inventory
       </p>
     </b>
-
     <p className={styles.text}>
       Divide by pack size and round up and we get the number of packs to order.
     </p>
