@@ -15,7 +15,7 @@ const Restocking = () => (
       <h1>Automating Duffl&apos;s Restock Process</h1>
       <h2 className={styles.subheader}>Creating the Supply UI</h2>
     </div>
-    <img className={styles.mainImage} src="/warehouse.png" alt="Duffl logo" />={" "}
+    <img className={styles.mainImage} src="/warehouse.png" alt="Duffl logo" />{" "}
     <div className={styles.descriptionContainer}>
       <div className={styles.descriptions}>
         <div>
@@ -58,7 +58,7 @@ const Restocking = () => (
       <p>The earliest stages involved Costco runs and only a few storage rooms with shelves.</p>
     </div>
     <h4 className={styles.sectionHeader}>The Problem</h4>
-    <p className={styles.text}>
+    <div className={styles.text}>
       As our business grew and demands increased we began facing several challenges…
       <ul>
         <li>Frequent overstock and understock across products</li>
@@ -73,7 +73,7 @@ const Restocking = () => (
           Lack of a means to discern the time of purchase results in the wastage of perishable goods
         </li>
       </ul>
-    </p>
+    </div>
     <h3 className={styles.sectionHeader}>The Solution</h3>
     <p className={styles.text}>
       We needed an easy-to-use user interface to present warehouse managers (known as captains) with
@@ -81,7 +81,7 @@ const Restocking = () => (
       to reduce points of friction from the existing buying/restocking process and empower users to
       make informed decisions by offering algorithmically based recommendations along the way.
     </p>
-    <p className={styles.text}>
+    <div className={styles.text}>
       A two-part solution was proposed:
       <ul>
         <li>
@@ -95,7 +95,7 @@ const Restocking = () => (
           article detailing this journey.
         </li>
       </ul>
-    </p>
+    </div>
     <div className={styles.imageWithDescription}>
       <img src="/inventory.png" alt="a look at the inventory UI" />
       <p>
@@ -105,7 +105,7 @@ const Restocking = () => (
     </div>
     <h3 className={styles.sectionHeader}>Supply UI Frontend</h3>
     <h4 className={styles.sectionHeader}>Overview</h4>
-    <p className={styles.text}>
+    <div className={styles.text}>
       The user interface is located within our internal admin subdomain which is built on top of
       React. Opening Supply on the menu reveals three subtabs: Buying, Restocking, and Completed.
       Each page supports a:
@@ -128,7 +128,7 @@ const Restocking = () => (
           and receives a filtered set of orders to display.
         </li>
       </ul>
-    </p>
+    </div>
     <h4 className={styles.sectionHeader}>Buying Tab</h4>
     <p className={styles.text}>
       The Buying tab supports an option to generate a new order based on the supplier, expected
@@ -148,7 +148,7 @@ const Restocking = () => (
       facilitating the restock process down in the warehouse. The flow is as follows:
     </p>
     <Phone src="/restocking.mov" className={styles.iphone} />
-    <p className={styles.text}>
+    <div className={styles.text}>
       <ol>
         <li>
           The “Expected Arrival” time displayed on the UI aligns with the unloading of multiple
@@ -180,7 +180,7 @@ const Restocking = () => (
           an order may be marked as completed at which point the order moves to the Completed tab.
         </li>
       </ol>
-    </p>
+    </div>
     <h4 className={styles.sectionHeader}>Challenges</h4>
     <h5 className={styles.sectionHeader}>React rerendering causing flickers</h5>
     <p className={styles.text}>
@@ -290,8 +290,8 @@ const Restocking = () => (
       time2="8 min"
       description2="What does it take to generate and insert ten million data points into a database
       efficiently?"
-      link1=""
-      link2=""
+      link1="sdc"
+      link2="sdc"
     />
   </div>
 );

@@ -27,7 +27,7 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ modalState, setModa
           {modalState.description && (
             <div className={styles.description}>{modalState.description}</div>
           )}
-          <ul>
+          <ul className={styles.list}>
             {modalState.bulletPoints.map((node) => (
               <li key={node.substring(0, 5)}>{node}</li>
             ))}
