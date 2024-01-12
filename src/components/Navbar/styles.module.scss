@@ -93,17 +93,14 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
-    height: 70px;
+    padding: 2rem;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
   }
 
   .burger {
     display: block;
-  }
-
-  nav {
-    background-color: white;
-    justify-content: center;
-    align-items: center;
   }
 
   .linkContainer {
@@ -113,7 +110,7 @@ nav {
     position: absolute;
     right: 0px;
     height: 92vh;
-    top: 70px;
+    top: 60px;
     background-color: white;
     width: 40%;
     transform: translateX(100%);

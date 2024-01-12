@@ -6,13 +6,8 @@
   background: white;
   color: black;
   position: relative;
-  height: 200px;
+  padding: 3rem 0;
   font-size: 14px;
   align-items: center;
-}
-
-@media screen and (max-width: 375px) {
-  .footer {
-    height: 180px;
-  }
+  margin-top: auto;
 }
