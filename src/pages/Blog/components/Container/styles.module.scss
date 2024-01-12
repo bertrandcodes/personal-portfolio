@@ -10,6 +10,7 @@
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
   height: 185px;
+  animation: fade 1s;
 
   &:hover {
     transform: translate(3px, -3px);
@@ -17,6 +18,15 @@
 
   &:active {
     transform: translate(0, 0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

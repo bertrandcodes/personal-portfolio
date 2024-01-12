@@ -6,7 +6,16 @@
   padding: 40px 45px 45px 45px;
   background-color: white;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header {
