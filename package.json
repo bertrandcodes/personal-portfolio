@@ -4,7 +4,7 @@
   "main": "index.tsx",
   "scripts": {
     "start": "webpack serve --mode development --open --hot",
-    "build": "webpack --mode development",
+    "build": "NODE_ENV=production webpack --mode production",
     "format": "prettier --write ."
   },
   "repository": {
