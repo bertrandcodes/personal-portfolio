@@ -33,6 +33,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .root {
+    padding: 3rem 2rem;
+  }
+
   .image {
     display: none;
   }

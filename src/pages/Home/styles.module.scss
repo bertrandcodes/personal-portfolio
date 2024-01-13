@@ -162,7 +162,7 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .background {
     background-image: url(../../../public/mountainlake.jpg);
     background-size: cover;
@@ -176,5 +176,12 @@
 
   .about {
     width: 100%;
+  }
+
+  .background,
+  .face,
+  .line1,
+  .line2 {
+    animation: none;
   }
 }

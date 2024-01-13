@@ -1,9 +1,17 @@
 .root {
   margin: 50px 5%;
+
+  iframe {
+    height: 1150px;
+  }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .root {
     margin: 0;
+
+    iframe {
+      height: 500px;
+    }
   }
 }
