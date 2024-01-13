@@ -138,7 +138,7 @@ const Restocking = () => (
       error by taking the legwork out of thinking and creates an order representation for us to
       track in our system.
     </p>
-    <video className={styles.video} loop muted>
+    <video className={styles.video} autoPlay playsInline loop muted>
       <source src="/buying.mov" type="video/mp4" />
     </video>
     <h4 className={styles.sectionHeader}>Restock Order Tab</h4>
