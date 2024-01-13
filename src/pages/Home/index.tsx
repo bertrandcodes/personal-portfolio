@@ -21,7 +21,7 @@ const Home = () => (
       {is.mobile() ? (
         <MountainBackground />
       ) : (
-        <video className={styles.video} loop muted>
+        <video className={styles.video} autoPlay playsInline loop muted>
           <source src="code.mp4" type="video/mp4" />
           <MountainBackground />
         </video>
