@@ -99,3 +99,9 @@
   transform: translateX(60px);
   background-color: #b3d23f;
 }
+
+@media screen and (max-width: 768px) {
+  .button {
+    animation: none;
+  }
+}

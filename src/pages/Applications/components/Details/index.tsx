@@ -20,7 +20,7 @@ const VideoComponent: React.FC<VideoComponentProps> = ({ src, isMobileApp }) => 
     return <Phone src={src} />;
   }
   return (
-    <video className={styles.video} autoPlay loop muted>
+    <video className={styles.video} loop muted>
       <source src={src} type="video/mp4" />
     </video>
   );

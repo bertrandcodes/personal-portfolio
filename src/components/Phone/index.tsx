@@ -18,7 +18,7 @@ const Phone: React.FC<PhoneProps> = ({ src, className }) => (
         </div>
       </div>
       <div className="screen">
-        <video className="iphone-video" autoPlay loop muted>
+        <video className="iphone-video" loop muted>
           <source src={src} type="video/mp4" />
         </video>
       </div>
