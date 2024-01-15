@@ -15,6 +15,10 @@
   ol {
     margin: 2rem 0 2rem 2rem;
   }
+
+  li {
+    line-height: 2rem;
+  }
 }
 
 .center {
@@ -98,14 +102,14 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 20px;
-  line-height: 35px;
+  line-height: 2rem;
   font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .subtext {
   text-align: left;
   color: gray;
-  line-height: 32px;
+  line-height: 2rem;
   font-size: 20px;
   font-family: "Times New Roman", Times, serif;
 }
