@@ -4,12 +4,12 @@ import styles from "./styles.module.scss";
 
 const About = () => (
   <div className={styles.root}>
-    <div className={styles.image} />
+    <img className={styles.image} src="/me.jpg" alt="me in Mexico City" />
     <h1 className={styles.header}>A little bit about me...</h1>
     <p className={styles.text}>
-      In 2018, while waiting for a developer to patch a bug from my non-technical role, I tried to
-      fix the issue myself. The result was my first line of code and a passion for programming that
-      has been growing ever since.
+      In 2018, while waiting for a developer to patch a bug in my non-technical role, I tried fixing
+      the issue myself. The result was my first line of code and a passion for programming that has
+      been growing ever since.
     </p>
     <p className={styles.text}>
       In 2020, I joined an early-stage{" "}
@@ -17,7 +17,7 @@ const About = () => (
         delivery startup
       </a>{" "}
       as the third full-stack engineer and dove headfirst into ideating, developing, and maintaining
-      features across all facets of the product. Given the fast paced nature I took on various ad
+      features across all angles of the business. Given the fast paced nature I took on various ad
       hoc roles as well, ranging from designer to DevOps to warehouse worker. Over my tenure, the
       company expanded from a single location to seven across three different schools and had grown
       to an estimated $30 million valuation. In 2022, I transitioned to a much larger software
