@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./index.scss";
 import SocialMediaButton from "../Button";
+import "./index.scss";
 
 const SocialMediaButtonsContainer = () => (
   <ul className="social-networks square spin-icon">

@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Phone, ScrollIndicator, SeoData } from "@components";
-import styles from "../styles.module.scss";
 import { FurtherReading } from "../../components";
+import styles from "../styles.module.scss";
 
 const Restocking = () => (
   <div className={styles.root}>
@@ -57,7 +57,7 @@ const Restocking = () => (
       <img src="/restocking.jpg" alt="early restocking process at Duffl" />
       <p>The earliest stages involved Costco runs and only a few storage rooms with shelves.</p>
     </div>
-    <h4 className={styles.sectionHeader}>The Problem</h4>
+    <h3 className={styles.sectionHeader}>The Problem</h3>
     <div className={styles.text}>
       As our business grew and demands increased we began facing several challenges…
       <ul>
@@ -92,7 +92,7 @@ const Restocking = () => (
           Supply Software: A user interface to assist with the buying and restocking process and the
           corresponding backend functionalities to support recommendations and interactions with the
           inventory system. I led the charge on this project and will be spending the rest of this
-          article detailing this journey.
+          article detailing my implementation.
         </li>
       </ul>
     </div>

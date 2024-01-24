@@ -2,8 +2,8 @@ import React from "react";
 
 import type { ApplicationProps } from "../../types";
 import type { ModalStateType } from "../..";
-import styles from "./styles.module.scss";
 import ApplicationDetails from "../Details";
+import styles from "./styles.module.scss";
 
 interface ApplicationDetailsContainerProps {
   data: ApplicationProps[];
