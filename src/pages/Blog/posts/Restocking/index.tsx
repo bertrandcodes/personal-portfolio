@@ -28,7 +28,7 @@ const Restocking = () => (
         </div>
         <div>
           <span className={styles.descriptor1}>Core Responsibilities</span>
-          <span className={styles.descriptor2}>Visual Design, Frontend, Backend</span>
+          <span className={styles.descriptor2}>UX Design, Frontend, Backend</span>
         </div>
       </div>
       <p className={styles.subtext}>
@@ -59,7 +59,10 @@ const Restocking = () => (
     </div>
     <h3 className={styles.sectionHeader}>The Problem</h3>
     <div className={styles.text}>
-      As our business grew and demands increased we began facing several challenges…
+      As the business grew and demands increased, we were able to expand into a much larger
+      warehouse space and greatly increase stock across products. However, we soon discovered that
+      higher volume meant a compounding increase in existing efficiency issues. Looking into the
+      data, we identified several challenges and bottlenecks:
       <ul>
         <li>Frequent overstock and understock across products</li>
         <li>Lack of accurate inventory insight led to popular items running out of stock</li>
@@ -73,13 +76,49 @@ const Restocking = () => (
           Lack of a means to discern the time of purchase results in the wastage of perishable goods
         </li>
       </ul>
+      As an engineering team, we agreed that a scalable solution lies in technology. To ensure a
+      robust product that addresses these issues, we needed to put our design hats on.
+    </div>
+    <h3 className={styles.sectionHeader}>User Research</h3>
+    <div className={styles.text}>
+      I interviewed 10 restockers and 3 warehouse managers (known as captains) to get a deeper
+      understanding of their current workflow as well as the challenges and frustrations they faced.
+      I arrived at a few key findings:
+      <ul>
+        <li>
+          Almost all restockers found it difficult to keep track of where products belonged in the
+          larger store
+        </li>
+        <li>
+          Many restockers would spend time during shift advising new hires and cited the learning
+          curve to be steep
+        </li>
+        <li>
+          According to captains and restockers, the frequency of suppliers misdelivering orders and
+          difficulty tracking these changes accounted for the majority of stock inaccuracies
+        </li>
+        <li>
+          Captains wanted an up-to-date visual representation of where products belong in the store
+          to be displayed where everyone could easily see
+        </li>
+        <li>
+          The buying process involves making an Excel list per supplier and manually inputting each
+          item into the database, captains complained this took the majority of their time
+        </li>
+        <li>Restockers wanted to be told explicitly where a particular item belongs</li>
+      </ul>
+    </div>
+    <div className={styles.imageWithDescription}>
+      <img src="/supplywireframe.png" alt="wireframe for buying and restocking flows" />
+      <p>Wireframes for Buying and Restocking flows that I presented to the team.</p>
     </div>
     <h3 className={styles.sectionHeader}>The Solution</h3>
     <p className={styles.text}>
-      We needed an easy-to-use user interface to present warehouse managers (known as captains) with
-      visibility and management options for each product. Within this implementation, we also wanted
-      to reduce points of friction from the existing buying/restocking process and empower users to
-      make informed decisions by offering algorithmically based recommendations along the way.
+      Based of interviews, we came up with an easy-to-use user interface to present warehouse
+      managers with visibility and management options for each product. Within this implementation,
+      we also wanted to reduce points of friction from the existing buying/restocking process and
+      empower users to make informed decisions by offering algorithmically based recommendations
+      along the way.
     </p>
     <div className={styles.text}>
       A two-part solution was proposed:
@@ -144,8 +183,9 @@ const Restocking = () => (
     <h4 className={styles.sectionHeader}>Restock Order Tab</h4>
     <p className={styles.text}>
       Clicking into a restock order on any of the tabs will take you to a table view of the order
-      itself complete with all the items and details. This view is especially useful for
-      facilitating the restock process down in the warehouse. The flow is as follows:
+      itself complete with all the items and details. Because this view is used for facilitating the
+      active restocking process, I built it with a responsive design in mind. The flow is as
+      follows:
     </p>
     <Phone src="/restocking.mov" className={styles.iphone} />
     <div className={styles.text}>
@@ -155,7 +195,7 @@ const Restocking = () => (
           boxes from a supplier truck.
         </li>
         <li>
-          Captains on shift cut open boxes and input items they will be restocking into the search
+          Restockers on shift cut open boxes and input items they will be restocking into the search
           bar on the restock order tab of the UI
         </li>
 
@@ -164,8 +204,8 @@ const Restocking = () => (
           label deduced by the backend.
         </li>
         <li>
-          The UI tells the captain the number of items/packs to expect and allows the captain to
-          make updates if the actual quantity differs from expected.
+          The UI tells the restocker the number of items/packs to expect and allows the restocker to
+          make changes if the actual quantity differs from expected.
         </li>
         <li>
           If product details need to be updated dynamically, they may access the product detail page
@@ -258,7 +298,7 @@ const Restocking = () => (
       Celery and a cron job.
     </p>
     <img className={styles.image} src="/celery.jpg" alt="improve performance flow" />
-    <h3 className={styles.sectionHeader}>Conclusion</h3>
+    <h3 className={styles.sectionHeader}>Results</h3>
     <p className={styles.text}>
       As a result of better tracking and inventory management, we achieved a lower overall
       out-of-stock rate across all products. The improved organization allowed us to maintain low
