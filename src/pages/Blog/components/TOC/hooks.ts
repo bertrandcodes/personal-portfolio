@@ -23,10 +23,11 @@ export const useHeadsObserver = (): UseHeadsObserverReturnType => {
     };
 
     observer.current = new IntersectionObserver(handleObserver, {
-      rootMargin: "-20% 0% -35% 0px",
+      rootMargin: "0px",
+      threshold: 1.0,
     });
 
-    const elements = document.querySelectorAll("h3, h4, h5");
+    const elements = document.querySelectorAll("h3");
     elements.forEach((elem) => observer.current?.observe(elem as Element));
     return () => observer.current?.disconnect();
   }, []);

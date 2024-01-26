@@ -8,10 +8,16 @@
 }
 
 .blogContainer {
+  width: 100%;
+
   h2,
   h3,
   h4 {
     margin-bottom: 2rem;
+  }
+
+  h3 {
+    scroll-margin: 110px;
   }
 
   ul,

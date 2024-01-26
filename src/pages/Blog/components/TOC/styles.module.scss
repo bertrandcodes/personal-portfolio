@@ -1,16 +1,20 @@
 .root {
   display: flex;
-  padding-right: 50px;
+  padding-right: 80px;
   align-self: flex-start;
   position: -webkit-sticky;
   position: sticky;
   float: left;
   overflow: auto;
-  top: 130px;
-  min-width: 300px;
+  top: 140px;
+  font-size: 20px;
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  ul {
+    width: 250px;
   }
 
   ul li {
@@ -23,11 +27,8 @@
   }
 }
 
-.head3 {
-  margin-left: 20px;
-  list-style-type: circle;
-}
-.head4 {
-  margin-left: 30px;
-  list-style-type: square;
+@media (max-width: 1000px) {
+  .root {
+    display: none;
+  }
 }
