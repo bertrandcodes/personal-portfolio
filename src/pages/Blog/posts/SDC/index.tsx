@@ -4,7 +4,7 @@ import { ScrollIndicator, SeoData } from "@components";
 import styles from "../styles.module.scss";
 
 const SDC = () => (
-  <div className={styles.root}>
+  <div className={styles.blogContainer}>
     <SeoData
       title="A First Dive Into System Design | Bertrand Shao"
       description="Learn about my experience doing Hack Reactor's system design capstone (SDC)."
