@@ -4,6 +4,7 @@ export interface BlogProps {
   alt: string;
   link: string;
   timePeriod: string;
+  tags: string[];
   description: string;
   readTime: number;
 }

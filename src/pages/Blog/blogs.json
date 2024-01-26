@@ -5,6 +5,7 @@
     "alt": "warehouse at Duffl",
     "link": "restocking",
     "timePeriod": "March 2021 - June 2021",
+    "tags": ["Design", "Frontend", "Backend"],
     "description": "How might we harness technology to optimize the efficiency of our supply chain processes? Read about my experience designing and developing custom full-stack software to alleviate the growing pains of a $30M delivery startup.",
     "readTime": 15
   },
@@ -14,6 +15,7 @@
     "alt": "graphic depicting computer servers on the cloud",
     "link": "sdc",
     "timePeriod": "April 2020 - June 2020",
+    "tags": ["Backend"],
     "description": "What does it take to generate and insert ten million data points into a database efficiently? What strategies can we implement to handle thousands of user requests per second on our service?",
     "readTime": 8
   }
