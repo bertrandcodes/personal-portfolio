@@ -9,7 +9,6 @@
   width: 800px;
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
-  height: 185px;
   animation: fade 1s;
 
   &:hover {
@@ -55,6 +54,35 @@
 .subheader {
   color: gray;
   margin-bottom: 5px;
+}
+
+.tagContainer {
+  display: flex;
+  margin: 10px 0;
+}
+
+.tag {
+  font-size: 11px;
+  background-color: black;
+  margin-right: 15px;
+  padding: 5px 15px 3px 15px;
+  color: white;
+  border-radius: 15px;
+  width: 80px;
+  text-align: center;
+  align-items: center;
+}
+
+.design {
+  background-color: #7678ed;
+}
+
+.frontend {
+  background-color: #43aa8b;
+}
+
+.backend {
+  background-color: #06aed5;
 }
 
 .description {

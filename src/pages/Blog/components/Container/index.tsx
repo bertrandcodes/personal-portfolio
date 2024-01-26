@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import classNames from "classnames";
 
 import type { BlogProps } from "@src/pages/Blog/types";
 import styles from "./styles.module.scss";
@@ -9,7 +10,7 @@ interface BlogContainerProps {
 }
 
 const BlogContainer: React.FC<BlogContainerProps> = ({
-  data: { title, imgSrc, alt, link, timePeriod, description, readTime },
+  data: { title, imgSrc, alt, link, timePeriod, tags, description, readTime },
 }) => (
   <div className={styles.root}>
     <Link
@@ -23,6 +24,19 @@ const BlogContainer: React.FC<BlogContainerProps> = ({
         <h2 className={styles.title}>{title}</h2>
         <div className={styles.subheader}>
           {timePeriod} | {readTime} min read
+        </div>
+        <div className={styles.tagContainer}>
+          {tags.map((tag) => (
+            <div
+              className={classNames(styles.tag, {
+                [styles.design]: tag === "Design",
+                [styles.frontend]: tag === "Frontend",
+                [styles.backend]: tag === "Backend",
+              })}
+            >
+              {tag}
+            </div>
+          ))}
         </div>
         <div className={styles.description}>{description}</div>
       </div>
