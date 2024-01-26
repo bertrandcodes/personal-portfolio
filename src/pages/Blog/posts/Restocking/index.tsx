@@ -50,9 +50,7 @@ const Restocking = () => (
         locations across 3 states. But long before the establishment of large warehouses and
         streamlined systems came humble beginnings.
       </p>
-      <h4 className={styles.sectionHeader} id="earlydays">
-        The Early Days
-      </h4>
+      <h4 className={styles.sectionHeader}>The Early Days</h4>
       <p className={styles.text}>
         Upon the arrival of shipments, each product underwent manual assignment of inventory count
         and location. Locations included shelves, fridges, and freezers of varying sizes which posed
@@ -64,7 +62,7 @@ const Restocking = () => (
         <p>The earliest stages involved Costco runs and only a few storage rooms with shelves.</p>
       </div>
       <h3 className={styles.sectionHeader} id="problem">
-        The Problem
+        Problem
       </h3>
       <div className={styles.text}>
         As the business grew and demands increased, we were able to expand into a much larger
@@ -124,7 +122,7 @@ const Restocking = () => (
         <p>Wireframes for Buying and Restocking flows that I presented to the team.</p>
       </div>
       <h3 className={styles.sectionHeader} id="solution">
-        The Solution
+        Solution
       </h3>
       <p className={styles.text}>
         Based of interviews, we came up with an easy-to-use user interface to present warehouse
@@ -156,11 +154,9 @@ const Restocking = () => (
         </p>
       </div>
       <h3 className={styles.sectionHeader} id="frontend">
-        Supply UI Frontend
+        Frontend
       </h3>
-      <h4 className={styles.sectionHeader} id="frontendoverview">
-        Overview
-      </h4>
+      <h4 className={styles.sectionHeader}>Overview</h4>
       <div className={styles.text}>
         The user interface is located within our internal admin subdomain which is built on top of
         React. Opening Supply on the menu reveals three subtabs: Buying, Restocking, and Completed.
@@ -185,9 +181,7 @@ const Restocking = () => (
           </li>
         </ul>
       </div>
-      <h4 className={styles.sectionHeader} id="buyingtab">
-        Buying Tab
-      </h4>
+      <h4 className={styles.sectionHeader}>Buying Tab</h4>
       <p className={styles.text}>
         The Buying tab supports an option to generate a new order based on the supplier, expected
         delivery date, and new restock date. A backend algorithm, detailed later in this post, puts
@@ -204,9 +198,7 @@ const Restocking = () => (
           The process of generating an order which a warehouse manager can later edit and place.
         </p>
       </div>
-      <h4 className={styles.sectionHeader} id="restocktab">
-        Restock Order Tab
-      </h4>
+      <h4 className={styles.sectionHeader}>Restock Order Tab</h4>
       <p className={styles.text}>
         Clicking into a restock order on any of the tabs will take you to a table view of the order
         itself complete with all the items and details. Because this view is used for facilitating
@@ -248,9 +240,7 @@ const Restocking = () => (
           </li>
         </ol>
       </div>
-      <h4 className={styles.sectionHeader} id="restockchallenges">
-        Challenges
-      </h4>
+      <h4 className={styles.sectionHeader}>Challenges</h4>
       <h5 className={styles.sectionHeader}>React rerendering causing flickers</h5>
       <p className={styles.text}>
         In the original hierarchy, some tables were placed lower down in the component tree than the
@@ -277,9 +267,7 @@ const Restocking = () => (
         out-of-stock items, lower rates of human error, and overall contribute to a more efficient
         and streamlined ordering process.
       </p>
-      <h4 className={styles.sectionHeader} id="ros">
-        Rate of Sale
-      </h4>
+      <h4 className={styles.sectionHeader}>Rate of Sale</h4>
       <p className={styles.text}>
         The first step requires calculating an item’s rate of sale (ROS). This is determined by # of
         units sold per hour it is available for purchase. To figure out the amount of time an item
@@ -293,9 +281,7 @@ const Restocking = () => (
           purchase.
         </p>
       </div>
-      <h4 className={styles.sectionHeader} id="recommendedpurchaseamount">
-        Recommended purchase amount
-      </h4>
+      <h4 className={styles.sectionHeader}>Recommended purchase amount</h4>
       <p className={styles.text}>
         Combining ROS with time between restocks gives us the total number of units needed in our
         store. Factoring in current inventory and the amount already purchased gives us the number
@@ -309,9 +295,7 @@ const Restocking = () => (
       <p className={styles.text}>
         Divide by pack size and round up and we get the number of packs to order.
       </p>
-      <h4 className={styles.sectionHeader} id="generatingorder">
-        Generating a restock order
-      </h4>
+      <h4 className={styles.sectionHeader}>Generating a restock order</h4>
       <p className={styles.text}>
         When a user generates a new order from the Buying tab, a post request is sent to the backend
         with the supplier name, expected date, and next restock date. In the backend RestockView, we
@@ -326,9 +310,7 @@ const Restocking = () => (
         src="/creatingrestockorder.jpg"
         alt="creating restock order flow"
       />
-      <h4 className={styles.sectionHeader} id="backendchallenges">
-        Challenges
-      </h4>
+      <h4 className={styles.sectionHeader}>Challenges</h4>
       <p className={styles.text}>
         Calculating the rate of sale for all items proved to be a time-intensive process. Originally
         we performed these calculations as an asynchronous task in Django Q. However, Django Q was
@@ -337,8 +319,8 @@ const Restocking = () => (
         RabbitMQ + Celery and a cron job.
       </p>
       <img className={styles.image} src="/celery.jpg" alt="improve performance flow" />
-      <h3 className={styles.sectionHeader} id="results">
-        Results
+      <h3 className={styles.sectionHeader} id="reflection">
+        Reflection
       </h3>
       <p className={styles.text}>
         As a result of better tracking and inventory management, we achieved a lower overall

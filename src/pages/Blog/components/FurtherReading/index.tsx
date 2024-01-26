@@ -29,7 +29,7 @@ const FurtherReading: React.FC<FurtherReadingProps> = ({
   link2,
 }) => (
   <div className={styles.root}>
-    <h3>Further Readings</h3>
+    <h4>Further Readings</h4>
     <div className={styles.readingContainer}>
       <Link
         to={`/blog/${link1}`}
