@@ -7,8 +7,7 @@ import styles from "../styles.module.scss";
 const SDC = () => (
   <div className={styles.root}>
     <TOC />
-    <div className={styles.blogContainer}>
-      {" "}
+    <div className={styles.container}>
       <SeoData
         title="A First Dive Into System Design | Bertrand Shao"
         description="Learn about my experience doing Hack Reactor's system design capstone (SDC)."
@@ -72,7 +71,7 @@ const SDC = () => (
         the existing codebase UI copied a Nike product page, this meant generating shoe artifacts
         with fresh new information every time. With help from several helper functions, I created a
         random shoe generator that encapsulated data points such as shoe name, price, size- the kind
-        of details that come to mind when you think about a Nike shoe.{" "}
+        of details that come to mind when you think about a Nike shoe.
       </p>
       <p className={styles.text}>
         With a generator function up and running, I ran into a new challenge. Turns out writing data

@@ -32,7 +32,7 @@ const FurtherReading: React.FC<FurtherReadingProps> = ({
     <h4>Further Readings</h4>
     <div className={styles.readingContainer}>
       <Link
-        to={`/blog/${link1}`}
+        to={`/projects/${link1}`}
         style={{ color: "inherit", textDecoration: "none", display: "flex" }}
       >
         <div className={styles.reading}>
@@ -44,7 +44,7 @@ const FurtherReading: React.FC<FurtherReadingProps> = ({
         </div>
       </Link>
       <Link
-        to={`/blog/${link2}`}
+        to={`/projects/${link2}`}
         style={{ color: "inherit", textDecoration: "none", display: "flex" }}
       >
         <div className={styles.reading}>

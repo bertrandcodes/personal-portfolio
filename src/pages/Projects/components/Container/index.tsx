@@ -2,19 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 
-import type { BlogProps } from "@src/pages/Blog/types";
+import type { ProjectProps } from "@src/pages/Projects/types";
 import styles from "./styles.module.scss";
 
-interface BlogContainerProps {
-  data: BlogProps;
+interface ProjectContainerProps {
+  data: ProjectProps;
 }
 
-const BlogContainer: React.FC<BlogContainerProps> = ({
+const ProjectContainer: React.FC<ProjectContainerProps> = ({
   data: { title, imgSrc, alt, link, timePeriod, tags, description, readTime },
 }) => (
   <div className={styles.root}>
     <Link
-      to={`/blog/${link}`}
+      to={`/projects/${link}`}
       style={{ color: "inherit", textDecoration: "none", display: "flex" }}
     >
       <div className={styles.preview}>
@@ -44,4 +44,4 @@ const BlogContainer: React.FC<BlogContainerProps> = ({
   </div>
 );
 
-export default BlogContainer;
+export default ProjectContainer;

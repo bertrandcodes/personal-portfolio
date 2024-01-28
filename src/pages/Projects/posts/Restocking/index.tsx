@@ -7,7 +7,7 @@ import styles from "../styles.module.scss";
 const Restocking = () => (
   <div className={styles.root}>
     <TOC />
-    <div className={styles.blogContainer}>
+    <div className={styles.container}>
       <SeoData
         title="Restocking at Duffl | Bertrand Shao"
         description="Dive into my experience working on Duffl's Supply UI."
@@ -17,7 +17,7 @@ const Restocking = () => (
         <h1>Augmenting Duffl&apos;s Restock Process</h1>
         <h2 className={styles.subheader}>Creating the Supply UI</h2>
       </div>
-      <img className={styles.mainImage} src="/insideduffl.png" alt="Duffl logo" />{" "}
+      <img className={styles.mainImage} src="/insideduffl.png" alt="Duffl logo" />
       <div className={styles.descriptionContainer}>
         <div className={styles.descriptions}>
           <div>
