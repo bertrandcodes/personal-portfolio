@@ -14,7 +14,7 @@ const Restocking = () => (
       />
       <ScrollIndicator />
       <div className={styles.center}>
-        <h1>Automating Duffl&apos;s Restock Process</h1>
+        <h1>Augmenting Duffl&apos;s Restock Process</h1>
         <h2 className={styles.subheader}>Creating the Supply UI</h2>
       </div>
       <img className={styles.mainImage} src="/insideduffl.png" alt="Duffl logo" />{" "}
@@ -257,33 +257,33 @@ const Restocking = () => (
         <ol>
           <li>
             The “Expected Arrival” time displayed on the UI aligns with the unloading of multiple
-            boxes from a supplier truck.
+            boxes from a supplier truck
           </li>
           <li>
             Restockers on shift cut open boxes and input items they will be restocking into the
-            search bar on the restock order tab of the UI.
+            search bar on the restock order tab of the UI
           </li>
 
           <li>
             The UI tells them exactly where in the store the item belongs based on the bin label
-            deduced by the backend.
+            deduced by the backend
           </li>
           <li>
             The UI tells the restocker the number of items/packs to expect and allows the restocker
-            to make changes if the actual quantity differs from the expected.
+            to make changes if the actual quantity differs from the expected
           </li>
           <li>
             If product details need to be updated dynamically, they may access the product detail
-            page directly from the restock modal and edit as necessary.
+            page directly from the restock modal and edit as necessary
           </li>
           <li>
             To account for expiring goods and reduce waste, the UI collects expiration dates for
-            products tagged as perishable.
+            products tagged as perishable
           </li>
           <li>
             Product rows grey out with opacity when completed and once all items have been
             restocked, an order may be marked as completed at which point the order moves to the
-            Completed tab.
+            Completed tab
           </li>
         </ol>
       </div>
@@ -322,7 +322,7 @@ const Restocking = () => (
         markers as depicted below.
       </p>
       <div className={styles.mediaWithDescription}>
-        <img src="/ROS.png" alt="equation for rate of sale" />
+        <img src="/ros.png" alt="equation for rate of sale" />
         <p>
           The highlighted areas on the top line represent the time frame in which an item is
           considered available for purchase.
@@ -389,10 +389,6 @@ const Restocking = () => (
         well-designed system and the use of technology can lead to a tangible improvement of
         real-world processes.
       </p>
-      <div className={styles.mediaWithDescription}>
-        <img src="/duffloperation.png" alt="inside of Duffl" />
-        <p>A smooth streamlined operation supported by technology.</p>
-      </div>
       <FurtherReading
         src1="/servers.jpg"
         src2="/servers.jpg"
