@@ -32,8 +32,8 @@ const Navbar = () => {
           <NavLink activeClassName={styles.linkActive} className={styles.link} to="/applications">
             Applications
           </NavLink>
-          <NavLink activeClassName={styles.linkActive} className={styles.link} to="/blog">
-            Blog
+          <NavLink activeClassName={styles.linkActive} className={styles.link} to="/projects">
+            Projects
           </NavLink>
           <NavLink activeClassName={styles.linkActive} className={styles.link} to="/resume">
             Resume

@@ -1,4 +1,4 @@
-export interface BlogProps {
+export interface ProjectProps {
   title: string;
   imgSrc: string;
   alt: string;

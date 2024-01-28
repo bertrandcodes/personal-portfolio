@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { Home, About, Applications, Blog, Resume, Contact, NotFound } from "@pages";
+import { Home, About, Applications, Projects, Resume, Contact, NotFound } from "@pages";
 import { Navbar, Footer, ScrollToTop } from "@components";
-import { Restocking, SDC } from "./pages/Blog/posts";
+import { Restocking, SDC } from "./pages/Projects/posts";
 import "./style.scss";
 
 const App = () => (
@@ -14,11 +14,11 @@ const App = () => (
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
       <Route path="/applications" component={Applications} />
-      <Route path="/blog" exact component={Blog} />
-      <Route path="/blog/sdc" component={SDC} />
-      <Route path="/blog/restocking" component={Restocking} />
-      <Route path="/blog/payment" component={SDC} />
-      <Route path="/blog/logger" component={SDC} />
+      <Route path="/projects" exact component={Projects} />
+      <Route path="/projects/sdc" component={SDC} />
+      <Route path="/projects/restocking" component={Restocking} />
+      <Route path="/projects/payment" component={SDC} />
+      <Route path="/projects/logger" component={SDC} />
       <Route path="/resume" component={Resume} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
