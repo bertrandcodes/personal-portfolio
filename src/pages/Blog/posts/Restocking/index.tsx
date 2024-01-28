@@ -17,7 +17,7 @@ const Restocking = () => (
         <h1>Automating Duffl&apos;s Restock Process</h1>
         <h2 className={styles.subheader}>Creating the Supply UI</h2>
       </div>
-      <img className={styles.mainImage} src="/warehouse.png" alt="Duffl logo" />{" "}
+      <img className={styles.mainImage} src="/insideduffl.png" alt="Duffl logo" />{" "}
       <div className={styles.descriptionContainer}>
         <div className={styles.descriptions}>
           <div>
@@ -55,7 +55,10 @@ const Restocking = () => (
         Upon the arrival of shipments, each product underwent manual assignment of inventory count
         and location. Locations included shelves, fridges, and freezers of varying sizes which posed
         space constraints issues. We determined future shipments based on the number sold in the
-        previous week and naively updated inventory after restocking and sales.
+        previous week and naively updated inventory after restocking and sales. As far as the
+        restocking process, a restocker would consult a central inventory page, where inputting a
+        product name would yield a product photo, inventory amount, and locations to which it
+        belonged.
       </p>
       <div className={styles.mediaWithDescription}>
         <img src="/restocking.jpg" alt="early restocking process at Duffl" />
@@ -83,50 +86,94 @@ const Restocking = () => (
             goods
           </li>
         </ul>
-        As an engineering team, we agreed that a scalable solution lies in technology. To ensure a
-        robust product that addresses these issues, we needed to put our design hats on.
       </div>
-      <h3 className={styles.sectionHeader} id="research">
-        User Research
+      <div className={styles.mediaWithDescription}>
+        <img src="/warehouse.png" alt="inside of Duffl" />
+        <p>The inside of our second location, where more space meant more problems...</p>
+      </div>
+      <h3 className={styles.sectionHeader} id="design">
+        Design Process
       </h3>
+      <p className={styles.text}>
+        As an engineering team, we agreed that a scalable solution lies in technology. To ensure a
+        robust product that addresses the correct issues, I employed various research techniques to
+        ensure user-centric design.
+      </p>
+      <h4 className={styles.sectionHeader}>User Survey</h4>
+      <p className={styles.text}>
+        Surveys were conducted among 35 warehouse managers and restockers, out of which 27
+        responded. The objective was to identify pain points in the restocking and buying process.
+        Participants were incentivized by being awarded a $10 order discount on completion. The
+        survey was administered through Google Forms and data was organized and analyzed on Miro.
+        Warehouse managers handled the buying process and restockers handled restocking, however,
+        since most employees have experience on both sides the questions were not specific to a
+        particular role. Questions were designed based on the challenges listed above and meant to
+        collect both quantitative and qualitative data.
+      </p>
+      <h5 className={styles.sectionHeader}>Quantitative Questions</h5>
       <div className={styles.text}>
-        I interviewed 10 restockers and 3 warehouse managers (known as captains) to get a deeper
-        understanding of their current workflow as well as the challenges and frustrations they
-        faced. I arrived at a few key findings:
         <ul>
+          <li>On a scale of 1 to 5, how satisfied with you with the current restocking process?</li>
           <li>
-            Almost all restockers found it difficult to keep track of where products belonged in the
-            larger store
+            On a scale of 1 to 5, how satisfied with you with the current order-buying process?
           </li>
           <li>
-            Many restockers would spend time during shift advising new hires and cited the learning
-            curve to be steep
+            How often do you encounter errors or inaccuracies in shipment quantity while restocking?
+            (Multiple times a day, Daily, Weekly, Monthly, Rarely)
           </li>
-          <li>
-            According to captains and restockers, the frequency of suppliers misdelivering orders
-            and difficulty tracking these changes accounted for the majority of stock inaccuracies
-          </li>
-          <li>
-            Captains wanted an up-to-date visual representation of where products belong in the
-            store to be displayed where everyone could easily see
-          </li>
-          <li>
-            The buying process involves making an Excel list per supplier and manually inputting
-            each item into the database, captains complained this took the majority of their time
-          </li>
-          <li>Restockers wanted to be told explicitly where a particular item belongs</li>
+        </ul>
+      </div>
+      <h5 className={styles.sectionHeader}>Qualitative Questions</h5>
+      <div className={styles.text}>
+        <ul>
+          <li>What are the biggest challenges you face while restocking?</li>
+          <li>What are the biggest challenges you face while buying an order?</li>
+          <li>What is the biggest issue you see that leads to problems in the store?</li>
         </ul>
       </div>
       <div className={styles.mediaWithDescription}>
-        <img src="/supplywireframe.png" alt="wireframe for buying and restocking flows" />
-        <p>Wireframes for Buying and Restocking flows that I presented to the team.</p>
+        <img src="/usersurvey.jpg" alt="user survey results" />
+        <p>
+          Qualitative responses were grouped by the needs they represented and color-coded by the
+          question they came from
+        </p>
       </div>
+      <h5 className={styles.sectionHeader}>Key findings</h5>
+      <div className={styles.text}>
+        I conducted a thematic analysis by grouping qualitative responses by the needs they
+        represented and presented these as key findings:
+        <ul>
+          <li>
+            There is a need to keep track of every product from the moment it is purchased from the
+            supplier to the moment it is restocked
+          </li>
+          <li>
+            There is a need to provide employees with specific instructions and calculations to
+            minimize error rates
+          </li>
+          <li>There is a need to offer a better visual representation of the store</li>
+        </ul>
+      </div>
+      <h5 className={styles.sectionHeader}>Wireframes</h5>
+      <p className={styles.text}>
+        I created a wireframe on Figma that addressed each of the newly discovered needs.
+      </p>
+      <div className={styles.mediaWithDescription}>
+        <img src="/supplywireframe.png" alt="wireframe for buying and restocking flows" />
+        <p>Wireframes for the buying and restocking flows that I presented to the team.</p>
+      </div>
+      <h5 className={styles.sectionHeader}>Usability Testing</h5>
+      <p className={styles.text}>
+        To evaluate the usability and effectiveness of the design, I conducted a moderated user
+        testing session where participants consisting of warehouse managers and restockers were
+        instructed to “click” through the flow by physically interacting with the printed prototype.
+      </p>
       <h3 className={styles.sectionHeader} id="solution">
         Solution
       </h3>
       <p className={styles.text}>
-        Based of interviews, we came up with an easy-to-use user interface to present warehouse
-        managers with visibility and management options for each product. Within this
+        Based off the data that was collected, we needed an easy-to-use user interface to present
+        warehouse managers with visibility and management options for each product. Within this
         implementation, we also wanted to reduce points of friction from the existing
         buying/restocking process and empower users to make informed decisions by offering
         algorithmically based recommendations along the way.
@@ -135,14 +182,14 @@ const Restocking = () => (
         A two-part solution was proposed:
         <ul>
           <li>
-            Inventory Software: A user interface and system that works together to track and manage
+            Inventory UI: A user interface and system that works together to track and manage
             inventory details of various product abstractions in our store.
           </li>
           <li>
-            Supply Software: A user interface to assist with the buying and restocking process and
-            the corresponding backend functionalities to support recommendations and interactions
-            with the inventory system. I led the charge on this project and will be spending the
-            rest of this article detailing my implementation.
+            Supply UI: A user interface to assist with the buying and restocking process and the
+            corresponding backend functionalities to support recommendations and interactions with
+            the inventory system. I led the charge on this project and will be spending the rest of
+            this article detailing my implementation.
           </li>
         </ul>
       </div>
@@ -168,8 +215,8 @@ const Restocking = () => (
           </li>
           <li>
             Filter/Unfilter by date function that defaults to the current day. This feature is
-            particularly crucial for reviewing past restocked orders for potential issues and
-            planning for upcoming buying orders.
+            particularly useful for reviewing past restocked orders for potential issues and
+            planning for upcoming orders to place.
           </li>
           <li>
             Debounced search input that sends query params to the backend and receives a filtered
@@ -185,10 +232,10 @@ const Restocking = () => (
       <p className={styles.text}>
         The Buying tab supports an option to generate a new order based on the supplier, expected
         delivery date, and new restock date. A backend algorithm, detailed later in this post, puts
-        together a recommended order for the captain to place with the supplier. The captain can
-        make changes they see fit or opt to start a blank order from scratch. This feature reduces
-        user error by taking the legwork out of thinking and creates an order representation for us
-        to track in our system.
+        together a recommended order for the warehouse manager to place with the supplier. The
+        warehouse manager can make changes they see fit or opt to start a blank order from scratch.
+        This feature reduces user error by taking the legwork out of thinking and creates an order
+        representation for us to track in our system.
       </p>
       <div className={styles.mediaWithDescription}>
         <video className={styles.video} autoPlay playsInline loop muted>
@@ -201,9 +248,9 @@ const Restocking = () => (
       <h4 className={styles.sectionHeader}>Restock Order Tab</h4>
       <p className={styles.text}>
         Clicking into a restock order on any of the tabs will take you to a table view of the order
-        itself complete with all the items and details. Because this view is used for facilitating
-        the active restocking process, I built it with a responsive design in mind. The flow is as
-        follows:
+        itself complete with all the items and details. Because this view is primarily used for
+        facilitating the active restocking process, I built it with a responsive design in mind. The
+        flow is as follows:
       </p>
       <Phone src="/restocking.mov" className={styles.iphone} />
       <div className={styles.text}>
@@ -214,16 +261,16 @@ const Restocking = () => (
           </li>
           <li>
             Restockers on shift cut open boxes and input items they will be restocking into the
-            search bar on the restock order tab of the UI
+            search bar on the restock order tab of the UI.
           </li>
 
           <li>
-            The UI tells them exactly where in the store the item belongs based on based on the bin
-            label deduced by the backend.
+            The UI tells them exactly where in the store the item belongs based on the bin label
+            deduced by the backend.
           </li>
           <li>
             The UI tells the restocker the number of items/packs to expect and allows the restocker
-            to make changes if the actual quantity differs from expected.
+            to make changes if the actual quantity differs from the expected.
           </li>
           <li>
             If product details need to be updated dynamically, they may access the product detail
@@ -231,7 +278,7 @@ const Restocking = () => (
           </li>
           <li>
             To account for expiring goods and reduce waste, the UI collects expiration dates for
-            certain products as well.
+            products tagged as perishable.
           </li>
           <li>
             Product rows grey out with opacity when completed and once all items have been
@@ -253,7 +300,7 @@ const Restocking = () => (
         A few months after release, a ticketing system was introduced that would make a polling API
         call in the background of the admin application every few seconds. This call would trigger a
         rerender of the restock table and cause a flicker. By wrapping the table render function
-        with a React.memo(), we successfully prevented rerendering when no props were changed. While
+        with a React.memo(), I successfully prevented rerendering when no props were changed. While
         certainly not everything should be memoized, this was a suitable use case that resulted in a
         bug fix.
       </p>
@@ -262,8 +309,8 @@ const Restocking = () => (
       </h3>
       <p className={styles.text}>
         Our backend is built on top of the Django framework and interfaces with a MySQL database. We
-        aimed to implement an intelligent system to guide captains in determining the optimal
-        quantity of products for each order. Achieving this would reduce waste, cut down on
+        aimed to implement an intelligent system to guide warehouse managers in determining the
+        optimal quantity of products for each order. Achieving this would reduce waste, cut down on
         out-of-stock items, lower rates of human error, and overall contribute to a more efficient
         and streamlined ordering process.
       </p>
@@ -271,14 +318,14 @@ const Restocking = () => (
       <p className={styles.text}>
         The first step requires calculating an item’s rate of sale (ROS). This is determined by # of
         units sold per hour it is available for purchase. To figure out the amount of time an item
-        is live over 24 hours, we looked at “In Stock”/“Out of Stock” and “Store Open”/“Store Close”
+        is live over 24 hours, I looked at “In Stock”/“Out of Stock” and “Store Open”/“Store Close”
         markers as depicted below.
       </p>
       <div className={styles.mediaWithDescription}>
         <img src="/ROS.png" alt="equation for rate of sale" />
         <p>
-          We measured the highlighted area as the time frame in which an item is available to
-          purchase.
+          The highlighted areas on the top line represent the time frame in which an item is
+          considered available for purchase.
         </p>
       </div>
       <h4 className={styles.sectionHeader}>Recommended purchase amount</h4>
@@ -315,7 +362,7 @@ const Restocking = () => (
         Calculating the rate of sale for all items proved to be a time-intensive process. Originally
         we performed these calculations as an asynchronous task in Django Q. However, Django Q was
         coupled to our web server and would end up competing for CPU and memory with other
-        application functions. To optimize for performance, we offloaded the ROS calculation task to
+        application functions. To optimize for performance, I offloaded the ROS calculation task to
         RabbitMQ + Celery and a cron job.
       </p>
       <img className={styles.image} src="/celery.jpg" alt="improve performance flow" />
@@ -342,6 +389,10 @@ const Restocking = () => (
         well-designed system and the use of technology can lead to a tangible improvement of
         real-world processes.
       </p>
+      <div className={styles.mediaWithDescription}>
+        <img src="/duffloperation.png" alt="inside of Duffl" />
+        <p>A smooth streamlined operation supported by technology.</p>
+      </div>
       <FurtherReading
         src1="/servers.jpg"
         src2="/servers.jpg"

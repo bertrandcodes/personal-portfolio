@@ -1,9 +1,14 @@
 import React from "react";
 
+import { SeoData } from "@src/components";
 import styles from "./styles.module.scss";
 
 const About = () => (
   <div className={styles.root}>
+    <SeoData
+      title="About Me | Bertrand Shao"
+      description="Learn about my career background and some fun facts!"
+    />
     <img className={styles.image} src="/me.jpg" alt="me in Mexico City" />
     <h1 className={styles.header}>A little bit about me...</h1>
     <p className={styles.text}>
