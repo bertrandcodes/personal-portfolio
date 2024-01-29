@@ -19,7 +19,7 @@ const SDC = () => (
         <h2 className={styles.subheader}>How to Operationalize and Scale a Web App</h2>
       </div>
       <img
-        className={styles.mainImage}
+        className={styles.hero}
         src="/servers.jpg"
         alt="graphic depicting computer servers on the cloud"
       />
@@ -44,7 +44,7 @@ const SDC = () => (
       </div>
       <p className={styles.text}>
         These were the burning questions my team and I faced in the final phase of our 13-week
-        bootcamp. Up until then, our primary focus has been on the front-end. Question about a bug?
+        bootcamp. Up until then, our primary focus has been on the front end. Question about a bug?
         Drop a “console.log”. State not rendering? Consult the dev tool GUI. Checking underneath the
         hood and optimizing server capabilities? Now that’s a different story. Our focus had shifted
         towards areas with less visibility and we had to adjust our strategies accordingly. But fret

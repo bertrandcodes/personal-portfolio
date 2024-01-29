@@ -10,6 +10,16 @@
     "readTime": 10
   },
   {
+    "title": "Credit Card and Payment Management",
+    "imgSrc": "/paymentprocessor.jpg",
+    "alt": "credit card",
+    "link": "payments",
+    "timePeriod": "January 2021 - April 2021",
+    "tags": ["Frontend", "Backend"],
+    "description": "An overview of my journey implementing multiple payment processing methods, including the rationale behind these decisions and the challenges encountered along the way.",
+    "readTime": 8
+  },
+  {
     "title": "System Design Capstone",
     "imgSrc": "/servers.jpg",
     "alt": "graphic depicting computer servers on the cloud",
