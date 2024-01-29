@@ -69,7 +69,7 @@
   font-weight: 500;
 }
 
-.mainImage {
+.hero {
   max-width: 100%;
   display: block;
   margin: 40px auto 0 auto;
@@ -134,4 +134,39 @@
   line-height: 32px;
   font-size: 18px;
   margin: 2rem 0;
+}
+
+.code {
+  background-color: rgba(135, 131, 120, 0.15);
+  padding: 0.2em 0.3em;
+  margin: 0 0.15em;
+  border-radius: 4px;
+  color: #eb5757;
+}
+
+.mediaGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+
+  > div:first-child {
+    margin-right: 3rem;
+  }
+
+  img,
+  video {
+    height: 500px;
+  }
+
+  video {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0.5rem 0 0 0.1rem;
+    font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+    color: gray;
+    font-style: italic;
+  }
 }

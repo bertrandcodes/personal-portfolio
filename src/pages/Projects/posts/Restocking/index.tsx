@@ -17,7 +17,7 @@ const Restocking = () => (
         <h1>Augmenting Duffl&apos;s Restock Process</h1>
         <h2 className={styles.subheader}>Creating the Supply UI</h2>
       </div>
-      <img className={styles.mainImage} src="/insideduffl.png" alt="Duffl logo" />
+      <img className={styles.hero} src="/insideduffl.png" alt="Duffl logo" />
       <div className={styles.descriptionContainer}>
         <div className={styles.descriptions}>
           <div>
@@ -156,7 +156,7 @@ const Restocking = () => (
       </div>
       <h5 className={styles.sectionHeader}>Wireframes</h5>
       <p className={styles.text}>
-        I created a wireframe on Figma that addressed each of the newly discovered needs.
+        I created a wireframe on Figma that addressed each of these newly discovered needs.
       </p>
       <div className={styles.mediaWithDescription}>
         <img src="/supplywireframe.png" alt="wireframe for buying and restocking flows" />
@@ -390,17 +390,18 @@ const Restocking = () => (
         real-world processes.
       </p>
       <FurtherReading
-        src1="/servers.jpg"
+        src1="/paymentprocessor.jpg"
         src2="/servers.jpg"
-        title1="A First Dive Into System Design"
+        title1="Credit Card and Payment Management"
         title2="A First Dive Into System Design"
         time1="8 min"
-        description1="What does it take to generate and insert ten million data points into a database
-      efficiently?"
         time2="8 min"
+        description1="An overview of my journey implementing multiple payment processing methods for Duffl,
+        including the rationale behind these decisions and the challenges encountered along the
+        way."
         description2="What does it take to generate and insert ten million data points into a database
       efficiently?"
-        link1="sdc"
+        link1="payments"
         link2="sdc"
       />
     </div>
