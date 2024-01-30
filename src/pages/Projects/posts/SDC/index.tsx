@@ -45,12 +45,12 @@ const SDC = () => (
       <p className={styles.text}>
         These were the burning questions my team and I faced in the final phase of our 13-week
         bootcamp. Up until then, our primary focus has been on the front end. Question about a bug?
-        Drop a “console.log”. State not rendering? Consult the dev tool GUI. Checking underneath the
-        hood and optimizing server capabilities? Now that’s a different story. Our focus had shifted
-        towards areas with less visibility and we had to adjust our strategies accordingly. But fret
-        not! After all, decrypting the magic of the servers and databases is essential to becoming a
-        well rounded developer. With that in mind, we dove headfirst into the mysteriously exciting
-        world of system design.
+        Drop a <span className={styles.code}>console.log()</span>. State not rendering? Consult the
+        dev tool GUI. Checking underneath the hood and optimizing server capabilities? Now that’s a
+        different story. Our focus had shifted towards areas with less visibility and we had to
+        adjust our strategies accordingly. But fret not! After all, decrypting the magic of the
+        servers and databases is essential to becoming a well rounded developer. With that in mind,
+        we dove headfirst into the mysteriously exciting world of system design.
       </p>
       <h3 className={styles.sectionHeader} id="10million">
         Creating the 10,000,000
