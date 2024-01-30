@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ScrollIndicator, SeoData } from "@components";
-import { TOC } from "../../components";
+import { FurtherReading, TOC } from "../../components";
 import styles from "../styles.module.scss";
 
 const SDC = () => (
@@ -346,6 +346,18 @@ const SDC = () => (
         further optimize results. I hope you enjoyed following me on this journey and gained some
         knowledge or even inspiration from it. Remember, stay focused and always stay learning!
       </p>
+      <FurtherReading
+        src1="/bug.png"
+        src2="/paymentprocessor.jpg"
+        title1="Designing a Custom Logger Tool"
+        title2="Credit Card and Payment Management"
+        time1="4 min"
+        time2="8 min"
+        description1="Considerations and functionalities of an internal logging tool I designed and implemented for HealthSafe ID."
+        description2="An overview of my journey implementing multiple payment processing methods for Duffl."
+        link1="logger"
+        link2="payments"
+      />
     </div>
   </div>
 );

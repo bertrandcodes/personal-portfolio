@@ -170,3 +170,21 @@
     font-style: italic;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .mediaGroup {
+    display: block;
+
+    > div:first-child {
+      margin: 0 0 2rem 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    video {
+      margin: 0;
+    }
+  }
+}

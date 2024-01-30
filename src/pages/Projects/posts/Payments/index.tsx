@@ -84,7 +84,10 @@ const Payments = () => (
         communities, we hypothesized that customers who order with credit cards would convert at a
         higher rate than customers who we redirect to another app.
       </p>
-      <div className={styles.mediaWithDescription} style={{ width: "500px", margin: "3rem auto" }}>
+      <div
+        className={styles.mediaWithDescription}
+        style={{ width: "500px", maxWidth: "100%", margin: "3rem auto" }}
+      >
         <video className={styles.video} autoPlay playsInline loop muted>
           <source src="/firstorder.mov" type="video/mp4" />
         </video>
@@ -236,7 +239,10 @@ const Payments = () => (
         <span className={styles.code}>authorizenet_payment_profile_id</span> column on their
         CustomerCard object.
       </p>
-      <div className={styles.mediaWithDescription} style={{ width: "500px", margin: "3rem auto" }}>
+      <div
+        className={styles.mediaWithDescription}
+        style={{ width: "500px", maxWidth: "100%", margin: "3rem auto" }}
+      >
         <img src="/revieworder.png" alt="review order page" />
         <p>Cards will display even if a user has not saved a card with an HRT processor yet.</p>
       </div>
@@ -261,7 +267,10 @@ const Payments = () => (
         Eventually, we were able to enable recurring billing, introduce a subscription model, and
         phase out “Hacky Venmo” completely.
       </div>
-      <div className={styles.mediaWithDescription} style={{ width: "500px", margin: "3rem auto" }}>
+      <div
+        className={styles.mediaWithDescription}
+        style={{ width: "500px", maxWidth: "100%", margin: "3rem auto" }}
+      >
         <img src="/revenue.png" alt="total revenue" />
         <p>Not too shabby for a company that once operated solely on Venmo.</p>
       </div>

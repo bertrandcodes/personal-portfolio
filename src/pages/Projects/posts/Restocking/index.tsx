@@ -391,18 +391,15 @@ const Restocking = () => (
       </p>
       <FurtherReading
         src1="/paymentprocessor.jpg"
-        src2="/servers.jpg"
+        src2="/bug.png"
         title1="Credit Card and Payment Management"
-        title2="A First Dive Into System Design"
+        title2="Designing a Custom Logger Tool"
         time1="8 min"
-        time2="8 min"
-        description1="An overview of my journey implementing multiple payment processing methods for Duffl,
-        including the rationale behind these decisions and the challenges encountered along the
-        way."
-        description2="What does it take to generate and insert ten million data points into a database
-      efficiently?"
+        time2="4 min"
+        description1="An overview of my journey implementing multiple payment processing methods for Duffl."
+        description2="Considerations and functionalities of an internal logging tool I designed and implemented for HealthSafe ID."
         link1="payments"
-        link2="sdc"
+        link2="logger"
       />
     </div>
   </div>
