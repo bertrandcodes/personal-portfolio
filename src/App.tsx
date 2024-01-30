@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Home, About, Applications, Projects, Resume, Contact, NotFound } from "@pages";
 import { Navbar, Footer, ScrollToTop } from "@components";
-import { Payments, Restocking, SDC } from "./pages/Projects/posts";
+import { Logger, Payments, Restocking, SDC } from "./pages/Projects/posts";
 import "./style.scss";
 
 const App = () => (
@@ -18,7 +18,7 @@ const App = () => (
       <Route path="/projects/sdc" component={SDC} />
       <Route path="/projects/restocking" component={Restocking} />
       <Route path="/projects/payments" component={Payments} />
-      <Route path="/projects/logger" component={SDC} />
+      <Route path="/projects/logger" component={Logger} />
       <Route path="/resume" component={Resume} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
