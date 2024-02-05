@@ -186,6 +186,10 @@ const Logger = () => (
         page to run on a visibility change in case we need to send any queued-up log entries when a
         user exists the browser.
       </p>
+      <div className={styles.mediaWithDescription}>
+        <img src="/batching.png" alt="snippet of batching code" />
+        <p>Function for batching log calls.</p>
+      </div>
       <h3 className={styles.sectionHeader} id="enums">
         Designing Better TypeScript Enums
       </h3>
