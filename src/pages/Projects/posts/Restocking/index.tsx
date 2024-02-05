@@ -395,7 +395,7 @@ const Restocking = () => (
         title1="Credit Card and Payment Management"
         title2="Designing a Custom Logger Tool"
         time1="8 min"
-        time2="4 min"
+        time2="5 min"
         description1="An overview of my journey implementing multiple payment processing methods for Duffl."
         description2="Considerations and functionalities of an internal logging tool I designed and implemented for HealthSafe ID."
         link1="payments"

@@ -351,7 +351,7 @@ const SDC = () => (
         src2="/paymentprocessor.jpg"
         title1="Designing a Custom Logger Tool"
         title2="Credit Card and Payment Management"
-        time1="4 min"
+        time1="5 min"
         time2="8 min"
         description1="Considerations and functionalities of an internal logging tool I designed and implemented for HealthSafe ID."
         description2="An overview of my journey implementing multiple payment processing methods for Duffl."

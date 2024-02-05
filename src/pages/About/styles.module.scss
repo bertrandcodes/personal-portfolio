@@ -16,7 +16,7 @@
 }
 
 .image {
-  height: 600px;
+  height: 700px;
   float: left;
   margin: 0 3rem 3rem 0;
   background-image: url(../../../public/me.jpg);
@@ -29,6 +29,9 @@
 
 .text {
   margin-bottom: 2rem;
+  font-size: 20px;
+  line-height: 2rem;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 768px) {
