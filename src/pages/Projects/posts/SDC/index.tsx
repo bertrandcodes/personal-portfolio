@@ -44,12 +44,12 @@ const SDC = () => (
       </div>
       <p className={styles.text}>
         These were the burning questions my team and I faced in the final phase of our 13-week
-        bootcamp. Up until then, our primary focus has been on the front end. Question about a bug?
+        bootcamp. Up until then, our primary focus had been on the front end. Question about a bug?
         Drop a <span className={styles.code}>console.log()</span>. State not rendering? Consult the
         dev tool GUI. Checking underneath the hood and optimizing server capabilities? Now that’s a
         different story. Our focus had shifted towards areas with less visibility and we had to
         adjust our strategies accordingly. But fret not! After all, decrypting the magic of the
-        servers and databases is essential to becoming a well rounded developer. With that in mind,
+        servers and databases is essential to becoming a well-rounded developer. With that in mind,
         we dove headfirst into the mysteriously exciting world of system design.
       </p>
       <h3 className={styles.sectionHeader} id="10million">
@@ -70,14 +70,15 @@ const SDC = () => (
         To hit this mark, I first needed a function that would generate unique sets of items. Since
         the existing codebase UI copied a Nike product page, this meant generating shoe artifacts
         with fresh new information every time. With help from several helper functions, I created a
-        random shoe generator that encapsulated data points such as shoe name, price, size- the kind
-        of details that come to mind when you think about a Nike shoe.
+        random shoe generator that encapsulated data points such as shoe name, price, size - the
+        kind of details that come to mind when you think about a Nike shoe.
       </p>
       <p className={styles.text}>
         With a generator function up and running, I ran into a new challenge. Turns out writing data
         into a JSON file temporarily took up a sizable chunk of RAM space. How was I supposed to run
         this function ten million times without overloading my machine? After some digging, I found
-        the answer in “fs.createWriteStream” and its “drain” method.
+        the answer in <span className={styles.code}>fs.createWriteStream()</span> and a{" "}
+        <span className={styles.code}>drainer()</span> function.
       </p>
       <img className={styles.image} src="/drain.jpg" alt="code for drain and stream" />
       <p className={styles.text}>
@@ -89,14 +90,15 @@ const SDC = () => (
         >
           documentation
         </a>
-        , everytime we call the write() method we write data to an internal buffer. Once this buffer
-        reaches its capacity (or exceeds its highWaterMark property), the drain event fires to
-        prevent more data from being written while simultaneously “flushing” the previously occupied
-        memory. Doing so prevents high memory bottlenecks and crashes.
+        , everytime we call the <span className={styles.code}>write()</span> method we write data to
+        an internal buffer. Once this buffer reaches its capacity (or exceeds its highWaterMark
+        property), the drain event fires to prevent more data from being written while
+        simultaneously “flushing” the previously occupied memory. Doing so prevents high memory
+        bottlenecks and crashes.
       </p>
       <img className={styles.image} src="/finished.jpg" alt="finished in 256.51 seconds" />
       <p className={styles.text}>
-        And just like that, I had successfully occupied my JSON file with 10 million unique nike
+        And just like that, I had successfully occupied my JSON file with 10-million unique nike
         shoe objects in a little under 5 minutes.*
       </p>
       <p className={styles.highlight}>
@@ -107,7 +109,7 @@ const SDC = () => (
         Choosing a Database
       </h3>
       <p className={styles.text}>
-        Next, my job was to copy these 10 million records over into a database of choice. The legacy
+        Next, my job was to copy these 10-million records over into a database of choice. The legacy
         server had used MongoDB, but switching over to a relational (SQL) database such as
         PostgreSQL was also an option. To identify which better suited our needs, I had to weigh
         some pros and cons and benchmark the two.
@@ -140,7 +142,7 @@ const SDC = () => (
       <p className={styles.text}>
         Considering that my service only required searching an individual product given an ID, I
         decided PostgreSQL would be my best bet. Its JSONB representation automatically assigned an
-        auto incrementing ID to each item. This in conjunction with PostgreSQL’s{" "}
+        auto-incrementing ID to each item. This in conjunction with PostgreSQL’s{" "}
         <a
           href="https://www.postgresql.org/docs/10/indexes-index-only-scans.html"
           target="_blank"
@@ -148,7 +150,7 @@ const SDC = () => (
         >
           index-only scan
         </a>{" "}
-        meant that queries would only check over the auto incrementing ID and save time by ignoring
+        meant that queries would only check over the auto-incrementing ID and save time by ignoring
         the rest of the table’s data (also known as the “heap”).
       </p>
       <p className={styles.text}>
@@ -161,10 +163,10 @@ const SDC = () => (
       <h4 className={styles.sectionHeader}>PostgreSQL:</h4>
       <img className={styles.image} src="/postgresspeed.jpg" alt="query speed on postgresql" />
       <p className={styles.text}>
-        Sure enough, PostgreSQL saw an all around faster querying speed.
+        Sure enough, PostgreSQL saw an all-around faster querying speed.
       </p>
       <h3 className={styles.sectionHeader} id="testing">
-        Stress Testing on Local Machine
+        Stress Testing on a Local Machine
       </h3>
       <p className={styles.text}>
         Now it was time to simulate virtual users making multiple queries on our local machine. I
@@ -176,10 +178,10 @@ const SDC = () => (
       </p>
       <img className={styles.image} src="/k6.jpg" alt="k6 setup" />
       <p className={styles.text}>
-        What this test is saying is that over the duration of ‘X’ seconds, slowly ramp up to ‘X’
-        amount of virtual users making requests. At our breaking point, we aimed to ramp up to 300
-        requests over 20 seconds. While certainly not a lot to handle, it was interesting to see how
-        it would affect the speed of my laptop’s response time (otherwise known as latency).
+        What this test is saying is that over the duration of X seconds, slowly ramp up to X amount
+        of virtual users making requests. At our breaking point, we aimed to ramp up to 300 requests
+        over 20 seconds. While certainly not a lot to handle, it was interesting to see how it would
+        affect the speed of my laptop’s response time (otherwise known as latency).
       </p>
       <img className={styles.image} src="/k6metrics.jpg" alt="k6 metrics" />
       <p className={styles.text}>
@@ -314,8 +316,8 @@ const SDC = () => (
           data caching
         </a>
         . The idea of caching is that data gets stored in an accessible location, such that next
-        time the data is called the server needs not reach all the way into the database to acquire
-        it.
+        time the data is called for the server needs not reach all the way into the database to
+        acquire it.
       </p>
       <img className={styles.image} src="/caching.jpg" alt="5 servers config" />
       <p className={styles.text}>

@@ -141,7 +141,7 @@ const Restocking = () => (
       <h5 className={styles.sectionHeader}>Key findings</h5>
       <div className={styles.text}>
         I conducted a thematic analysis by grouping qualitative responses by the needs they
-        represented and presented these as key findings:
+        represented and presented these as key findings.
         <ul>
           <li>
             There is a need to keep track of every product from the moment it is purchased from the
@@ -172,14 +172,14 @@ const Restocking = () => (
         Solution
       </h3>
       <p className={styles.text}>
-        Based off the data that was collected, we needed an easy-to-use user interface to present
-        warehouse managers with visibility and management options for each product. Within this
-        implementation, we also wanted to reduce points of friction from the existing
-        buying/restocking process and empower users to make informed decisions by offering
-        algorithmically based recommendations along the way.
+        Following successful usability testing, we were ready to build a UI that presents warehouse
+        managers with visibility and management options for each product. Within this
+        implementation, we would also reduce points of friction from the existing buying/restocking
+        process and empower users to make informed decisions by offering algorithmically based
+        recommendations along the way.
       </p>
       <div className={styles.text}>
-        A two-part solution was proposed:
+        The solution involved two parts:
         <ul>
           <li>
             Inventory UI: A user interface and system that works together to track and manage
@@ -189,7 +189,7 @@ const Restocking = () => (
             Supply UI: A user interface to assist with the buying and restocking process and the
             corresponding backend functionalities to support recommendations and interactions with
             the inventory system. I led the charge on this project and will be spending the rest of
-            this article detailing my implementation.
+            this post detailing my implementation. The wireframe above reflects this UI.
           </li>
         </ul>
       </div>
@@ -205,25 +205,25 @@ const Restocking = () => (
       </h3>
       <h4 className={styles.sectionHeader}>Overview</h4>
       <div className={styles.text}>
-        The user interface is located within our internal admin subdomain which is built on top of
-        React. Opening Supply on the menu reveals three subtabs: Buying, Restocking, and Completed.
-        Each page supports a:
+        The UI is located within our internal admin subdomain which is built on top of React.
+        Opening Supply on the menu reveals three subtabs: Buying, Restocking, and Completed. Each
+        page supports a:
         <ul>
           <li>
-            Table view with each row representing a “restock order” and relevant column labels
+            table view with each row representing a “restock order” and relevant column labels
             between tabs.
           </li>
           <li>
-            Filter/Unfilter by date function that defaults to the current day. This feature is
+            filter/unfilter by date function that defaults to the current day. This feature is
             particularly useful for reviewing past restocked orders for potential issues and
             planning for upcoming orders to place.
           </li>
           <li>
-            Debounced search input that sends query params to the backend and receives a filtered
+            debounced search input that sends query params to the backend and receives a filtered
             set of orders to display.
           </li>
           <li>
-            Custom pagination component that sends the page number stored in URL param to the
+            custom pagination component that sends the page number stored in URL param to the
             backend and receives a filtered set of orders to display.
           </li>
         </ul>
@@ -300,9 +300,9 @@ const Restocking = () => (
         A few months after release, a ticketing system was introduced that would make a polling API
         call in the background of the admin application every few seconds. This call would trigger a
         rerender of the restock table and cause a flicker. By wrapping the table render function
-        with a React.memo(), I successfully prevented rerendering when no props were changed. While
-        certainly not everything should be memoized, this was a suitable use case that resulted in a
-        bug fix.
+        with a <span className={styles.code}>React.memo()</span>, I successfully prevented
+        rerendering when no props were changed. While certainly not everything should be memoized,
+        this was a suitable use case that resulted in a bug fix.
       </p>
       <h3 className={styles.sectionHeader} id="backend">
         Backend
@@ -345,12 +345,12 @@ const Restocking = () => (
       <h4 className={styles.sectionHeader}>Generating a restock order</h4>
       <p className={styles.text}>
         When a user generates a new order from the Buying tab, a post request is sent to the backend
-        with the supplier name, expected date, and next restock date. In the backend RestockView, we
-        fetch all active products from the store of the given supplier. We get pack size and price
-        from a previous RestockItem. Then, we create a new RestockItem instance for each item in the
-        order then assign them to the new RestockOrder. Finally, we return the ID of the
-        RestockOrder and a paginated list of RestockItems with product info, recommended # packs,
-        and pack cost for the UI to display.
+        with the supplier name, expected date, and next restock date. In the backend{" "}
+        <span className={styles.code}>RestockView</span>, we fetch all active products from the
+        store of the given supplier. We get pack size and price from a previous RestockItem. Then,
+        we create a new RestockItem instance for each item in the order then assign them to the new
+        RestockOrder. Finally, we return the ID of the RestockOrder and a paginated list of
+        RestockItems with product info, recommended # packs, and pack cost for the UI to display.
       </p>
       <img
         className={styles.image}

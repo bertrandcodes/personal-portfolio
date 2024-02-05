@@ -136,8 +136,8 @@ const Payments = () => (
           <li>
             In contrast to Stripe, Authorize.net does not offer idempotency keys. Duplicate
             transactions with identical amounts from the same payment profile are automatically
-            blocked. However, this posed an issue for users deliberately placing the same order back
-            to back. To fix this, I had to manually configure a transaction window to catch
+            blocked. However, this posed an issue for users deliberately placing the same order
+            back-to-back. To fix this, I had to manually configure a transaction window to catch
             potential network-related duplicate transactions, but not block separate orders with the
             same cart value.
           </li>
@@ -182,7 +182,7 @@ const Payments = () => (
       <p className={styles.text}>
         With conditional logic increasing with each new solution, so did the need for a payment
         processor abstraction we could easily interface with on the backend. As a solution, I
-        introduced a CustomerCard table with columns for{" "}
+        introduced a <span className={styles.code}>CustomerCard</span> model with columns for{" "}
         <span className={styles.code}>stripe_payment_method_id</span>,
         <span className={styles.code}>braintree_payment_method_token</span>, and
         <span className={styles.code}>authorizenet_payment_profile_id</span> to represent a single
@@ -190,12 +190,13 @@ const Payments = () => (
         <span className={styles.code}>last_four_digits</span>,{" "}
         <span className={styles.code}>expiration_month</span>, and
         <span className={styles.code}>expiration_year</span>. When the user reaches the payment
-        screen, a call to the /cards endpoint returns an array of available cards tied to a user for
-        the UI to display. Users are also able to set a default payment method.
+        screen, a call to the <span className={styles.code}>/cards</span> endpoint returns an array
+        of available cards tied to a user for the UI to display. Users are also able to set a
+        default payment method.
       </p>
       <div className={styles.mediaWithDescription}>
         <img src="/customercardcode.jpg" alt="code snippet of the customer card model" />
-        <p>The CustomerCard class that represents a single card to be displayed on the UI.</p>
+        <p>The CustomerCard model that represents a single card to be displayed on the UI.</p>
       </div>
       <h3 className={styles.sectionHeader} id="design">
         Design Considerations
@@ -222,22 +223,22 @@ const Payments = () => (
       <h4 className={styles.sectionHeader}>21+ Cart Flow Design</h4>
       <p className={styles.text}>Imagine this scenario.</p>
       <p className={styles.text}>
-        A few days ago you recently saved a card and placed an order. Today, you are placing an
-        order with a 21+ item, but you have not created an Authorize.net card yet. You land on the
-        review order page and see that not only is the card you previously saved no longer shown,
-        but a brand new UI is trying to collect the same card information again.
+        A few days ago you saved a card and placed an order. Today, you are placing an order with a
+        21+ item, but you have not created an Authorize.net card yet. You land on the review order
+        page and see that not only is the card you previously saved no longer shown, but a brand new
+        UI is trying to collect the same card information again.
       </p>
       <p className={styles.text}>You can imagine this would be a confusing experience.</p>
       <p className={styles.text}>
-        With an abstraction of different processors onto fields of a CustomerCard class, we can
-        address this scenario without offering more explanation than necessary. If a user checks out
-        with a 21+ item, but their card cannot handle HRT, we still display the card as an option.
-        If they select that card option, we direct that user to a “Verify Card” flow that is
-        visually designed to look identical to the “Add Card” UI (except for terms and conditions
-        text). Under the hood, we are using this information to create an HRT profile that later
-        gets associated with the{" "}
+        With an abstraction of different processors onto fields of a{" "}
+        <span className={styles.code}>CustomerCard</span> class, we can address this scenario
+        without offering more explanation than necessary. If a user checks out with a 21+ item, but
+        their card cannot handle HRT, we still display the card as an option. If they select that
+        card option, we direct that user to a “Verify Card” flow that is designed to look visually
+        identical to the “Add Card” UI (except for terms and conditions text). Under the hood, we
+        are using this information to create an HRT profile that later gets associated with the{" "}
         <span className={styles.code}>authorizenet_payment_profile_id</span> column on their
-        CustomerCard object.
+        <span className={styles.code}>CustomerCard</span> object.
       </p>
       <div
         className={styles.mediaWithDescription}
