@@ -33,6 +33,10 @@ const SDC = () => (
             <span className={styles.descriptor1}>Role</span>
             <span className={styles.descriptor2}>Hack Reactor Student</span>
           </div>
+          <div>
+            <span className={styles.descriptor1}>Core Responsibilities</span>
+            <span className={styles.descriptor2}>Backend</span>
+          </div>
         </div>
         <p className={styles.subtext}>
           <i>
