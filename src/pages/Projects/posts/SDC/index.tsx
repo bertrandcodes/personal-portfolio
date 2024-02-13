@@ -56,7 +56,7 @@ const SDC = () => (
         servers and databases is essential to becoming a well-rounded developer. With that in mind,
         we dove headfirst into the mysteriously exciting world of system design.
       </p>
-      <h3 className={styles.sectionHeader} id="10million">
+      <h3 className={styles.sectionHeader} id="tenmillion">
         Creating the 10,000,000
       </h3>
       <p className={styles.text}>
