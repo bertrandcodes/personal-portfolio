@@ -1,5 +1,15 @@
 [
   {
+    "title": "Designing a Custom Logger Tool",
+    "imgSrc": "/bug.png",
+    "alt": "lady bug in computer screen graphic",
+    "link": "logger",
+    "timePeriod": "August 2023 - September 2023",
+    "tags": ["Frontend"],
+    "description": "Considerations and functionalities of an internal logging tool I designed and implemented for HealthSafe ID. Featuring some nuances of TypeScript enums and JavaScript symbols.",
+    "readTime": 5
+  },
+  {
     "title": "Augmenting Duffl's Restock Process",
     "imgSrc": "/duffl.jpg",
     "alt": "warehouse at Duffl",

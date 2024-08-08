@@ -38,8 +38,8 @@ const Logger = () => (
             HealthSafe ID (HSID) is an authentication product that provides login and registration
             services to millions of users a month. Due to the significance and scale of this system,
             my team dedicates a good amount of effort to ensure resilience by improving the
-            developer experience and enhancing error handling. My custom logger contributes to these
-            two areas and I will be discussing implementation details below.
+            developer experience and enhancing error handling. Our custom logger contributes to
+            these two areas and I will be discussing implementation details below.
           </i>
         </p>
       </div>
@@ -47,7 +47,7 @@ const Logger = () => (
         Functionality
       </h3>
       <p className={styles.text}>
-        In the simplest form, a logger logs data from one place to another. You may be familiar with{" "}
+        In the simplest form, a logger logs data from one place to another. You may be familiar with
         <span className={styles.code}>console.log()</span>, which has the function of logging
         passed-in data from the code to the browser console.
       </p>
@@ -68,11 +68,11 @@ const Logger = () => (
         </p>
       </div>
       <p className={styles.text}>
-        There are many use cases for this logger. Originally, I implemented it as a way to extend
+        There are many use cases for this logger. Originally, it was implemented as a way to extend
         error-handling functionalities cleanly. Imagine we have an Axios call that fails. The catch
-        block may contain a switch case that deals with multiple known errors and defaults to a case
-        with an unexpected error. We may very well want to handle the default case (likely a network
-        issue) differently from the others. Perhaps we want to send unexpected errors to a backend
+        block may contain a switch case that deals with multiple known errors and defaults to a
+        certain case for an unexpected error. We may want to handle something like a network issue
+        differently from the other issues, or perhaps we want to send unexpected errors to a backend
         logging service while warning the user in the case of an expected error. The logger makes
         this flexibility possible and allows for these additional features to be easily adjustable.
       </p>
@@ -81,7 +81,7 @@ const Logger = () => (
         style={{ width: "500px", maxWidth: "100%", margin: "3rem auto" }}
       >
         <img src="/switchcase.jpg" alt="snippet of error handling code with logger" />
-        <p>An example of how we may use the logger to handle a failed network request.</p>
+        <p>A simplified example of how we may use the logger to handle a failed network request.</p>
       </div>
       <p className={styles.text}>
         Other uses of the logger include being able to easily send data to different services
@@ -103,8 +103,8 @@ const Logger = () => (
         </p>
       </div>
       <p className={styles.text}>
-        In my initial design, I narrowed the requirements of the logger down to two: classifying the
-        type of log entry and determining where to send that log entry.
+        In the initial design, we narrowed the requirements of the logger down to two: classifying
+        the type of log entry and determining where to send that log entry.
       </p>
 
       <p className={styles.text}>
@@ -131,19 +131,32 @@ const Logger = () => (
         <p>A functional programming pattern allows us to compose log functions together like so.</p>
       </div>
       <p className={styles.text}>
-        During the research phase, I found that many logger libraries use Java-like class
-        instantiation. However, I decided to lean into the functional programming nature of
+        During the research phase, we found that many logger libraries are built with Java-like
+        class instantiation. However, we decided to lean into the functional programming nature of
         JavaScript to gain advantages from patterns such as higher-order functions and composable
         units of functionality. With a common function interface, we gain access to the above
         side-effect composition utility function that can sequentially call logger functions for
         each destination with the same data.
       </p>
       <p className={styles.text}>
+        Our implementation highlights a few other advantages that functional programming holds over
+        object-oriented programming. By breaking down units of composition into smaller chunks, we
+        were able to verify all functionality through easy-to-write unit tests. Functions also have
+        clearer boundaries as opposed to classes which may involve various potential permutations
+        that affect many different features. In line with this thinking, we can avoid the{" "}
+        <a href="https://en.wikipedia.org/wiki/Fragile_base_class" target="_blank" rel="noreferrer">
+          fragile base class problem
+        </a>{" "}
+        by opting in and out of shared features we want to access, decreasing the risk of bugs as
+        more features are added over time. As a bonus, the finished code is a lot more readable and
+        less verbose than the class-based counterpart.
+      </p>
+      <p className={styles.text}>
         The <span className={styles.code}>createLogger()</span> function accepts a{" "}
         <span className={styles.code}>LogFn</span> as an argument and supplies a default one if none
         are provided. The other optional argument on{" "}
         <span className={styles.code}>createLogger()</span> is the current time using{" "}
-        <span className={styles.code}>new Date()</span>. I chose to make this dependency injectable
+        <span className={styles.code}>new Date()</span>. We chose to make this dependency injectable
         rather than creating it within so that for testing we may provide an external time stamp to
         measure against.
       </p>
@@ -180,11 +193,11 @@ const Logger = () => (
         Batching Log Calls
       </h3>
       <p className={styles.text}>
-        To avoid potentially sending a new network request for each log, I implemented a
+        To avoid potentially sending a new network request for each log, we implemented a
         configurable function that flushes a queue of batched logs into a network request either
         after a certain number or a certain timeframe. We also attached an event listener to the
         page to run on a visibility change in case we need to send any queued-up log entries when a
-        user exists the browser.
+        user exits the browser.
       </p>
       <div className={styles.mediaWithDescription}>
         <img src="/batching.png" alt="snippet of batching code" />
@@ -220,7 +233,7 @@ const Logger = () => (
         >
           here
         </a>
-        , I arrived at a solution involving JavaScript symbols. Symbols are a frequently overlooked
+        , We arrived at a solution involving JavaScript symbols. Symbols are a frequently overlooked
         data type in JavaScript that guarantees values to be unique. In short, following the idea
         from the code below, a <span className={styles.code}>LogLevel</span> type must be an object
         with the specific Symbol instance above defined as a property key.
@@ -233,7 +246,7 @@ const Logger = () => (
         <p>How symbols are used to guarantee uniqueness.</p>
       </div>
       <p className={styles.text}>
-        To further establish type safety, I built a <span className={styles.code}>from()</span>{" "}
+        To further establish type safety, we built a <span className={styles.code}>from()</span>{" "}
         function within <span className={styles.code}>LogLevel</span> that checks if the{" "}
         <span className={styles.code}>LogLevel</span> is a defined value. This way instead of using
         TypeScript to coerce with “as LogLevel” we can check using the{" "}
@@ -255,8 +268,8 @@ const Logger = () => (
         Reflection
       </h3>
       <p className={styles.text}>
-        By starting from bare requirements and planning deeply about the features needed, I was able
-        to successfully design a tool that improves application resiliency and the developer
+        By starting from bare requirements and planning deeply about the features needed, we were
+        able to successfully design a tool that improves application resiliency and the developer
         experience. A bonus was that I got to play around with symbols, something I had learned
         about quite early on but rarely came in contact with. Here’s to consistently working with
         new concepts and always expanding your repertoire!
