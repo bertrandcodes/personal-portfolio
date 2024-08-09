@@ -397,7 +397,7 @@ const Restocking = () => (
         time1="8 min"
         time2="5 min"
         description1="An overview of my journey implementing multiple payment processing methods for Duffl."
-        description2="Considerations and functionalities of an internal logging tool I designed and implemented for HealthSafe ID."
+        description2="Considerations and functionalities of the custom internal logging tool for HealthSafe ID. Featuring some nuances of TypeScript enums and JavaScript symbols."
         link1="payments"
         link2="logger"
       />
