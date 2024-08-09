@@ -359,7 +359,7 @@ const SDC = () => (
         title2="Credit Card and Payment Management"
         time1="5 min"
         time2="8 min"
-        description1="Considerations and functionalities of an internal logging tool I designed and implemented for HealthSafe ID."
+        description1="Considerations and functionalities of the custom internal logging tool for HealthSafe ID. Featuring some nuances of TypeScript enums and JavaScript symbols."
         description2="An overview of my journey implementing multiple payment processing methods for Duffl."
         link1="logger"
         link2="payments"
